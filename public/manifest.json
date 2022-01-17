@@ -1,0 +1,15 @@
+{
+	"short_name": "Singer Chantepie",
+	"name": "Singer Chantepie",
+	"icons": [
+		{
+			"src": "singer.png",
+			"sizes": "73x81",
+			"type": "image/png"
+		}
+	],
+	"start_url": ".",
+	"display": "standalone",
+	"theme_color": "#e30044",
+	"background_color": "#f5f5f5"
+}

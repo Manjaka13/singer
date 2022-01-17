@@ -1,0 +1,20 @@
+/*
+	Transitions
+*/
+
+.trans {
+	@include transition;
+}
+
+@mixin trans-generate {
+	$trans: 100;
+	$transStep: 100;
+	@while $trans <= 10000 {
+		.trans-#{$trans} {
+			@include transition(#{$trans}ms);
+		}
+		$trans: $trans + $transStep;
+	}
+}
+
+@include trans-generate;

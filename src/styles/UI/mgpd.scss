@@ -1,0 +1,48 @@
+/*
+	Margins and paddings
+*/
+
+$mg-max: 200;
+$mg-step: 5;
+
+@mixin mg-generate {
+	$n: 0;
+	@while $n <= $mg-max {
+		.mt-#{$n} {
+			margin-top: #{$n}px;
+		}
+		.mb-#{$n} {
+			margin-bottom: #{$n}px;
+		}
+		.ml-#{$n} {
+			margin-left: #{$n}px;
+		}
+		.mr-#{$n} {
+			margin-right: #{$n}px;
+		}
+		$n: $n + $mg-step;
+	}
+}
+
+@include mg-generate;
+
+@mixin pd-generate {
+	$n: 0;
+	@while $n <= $mg-max {
+		.pt-#{$n} {
+			padding-top: #{$n}px;
+		}
+		.pb-#{$n} {
+			padding-bottom: #{$n}px;
+		}
+		.pl-#{$n} {
+			padding-left: #{$n}px;
+		}
+		.pr-#{$n} {
+			padding-right: #{$n}px;
+		}
+		$n: $n + $mg-step;
+	}
+}
+
+@include pd-generate;

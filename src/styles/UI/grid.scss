@@ -1,0 +1,126 @@
+/*
+	Grid positioning system
+*/
+
+/*
+	Rows
+*/
+
+@mixin row-create {
+	@include flexrow(initial, flex-start);
+	@include transition;
+	flex-wrap: wrap;
+	// height: 100%;
+}
+
+@mixin row-generate {
+	.row-auto {
+		width: auto;
+	}
+	@each $size in $screen-sizes {
+		@for $n from 0 through 10 {
+			.row-#{$n} {
+				@include row-create;
+				@if $n == 0 {
+					display: none;
+				} @else {
+					width: calc($n * 10%);
+				}
+			}
+			@include responsive(
+				if(
+					$size == xlg,
+					$screen-xlg,
+					if(
+						$size == lg,
+						$screen-lg,
+						if($size == md, $screen-md, if($size == sm, $screen-sm, $screen-xsm))
+					)
+				)
+			) {
+				.row-#{$size}-#{$n} {
+					@include row-create;
+					@if $n == 0 {
+						display: none;
+					} @else {
+						width: calc($n * 10%);
+					}
+				}
+				.row-#{$size}-auto {
+					// @include row-create;
+					width: auto;
+				}
+			}
+		}
+	}
+}
+
+@include row-generate;
+
+/*
+	Columns
+*/
+
+@mixin col-create {
+	@include flexcol(initial, flex-start);
+	@include transition;
+	// width: 100%;
+}
+
+@mixin col-generate {
+	.col-auto {
+		height: auto;
+	}
+	@each $size in $screen-sizes {
+		@for $n from 0 through 10 {
+			.col-#{$n} {
+				@include col-create;
+				@if $n == 0 {
+					display: none;
+				} @else {
+					height: calc($n * 10vh);
+				}
+			}
+			@include responsive(
+				if(
+					$size == xlg,
+					$screen-xlg,
+					if(
+						$size == lg,
+						$screen-lg,
+						if($size == md, $screen-md, if($size == sm, $screen-sm, $screen-xsm))
+					)
+				)
+			) {
+				.col-#{$size}-#{$n} {
+					@include col-create;
+					@if $n == 0 {
+						display: none;
+					} @else {
+						height: calc($n * 10vh);
+					}
+				}
+				.col-#{$size}-auto {
+					// @include col-create;
+					height: auto;
+				}
+			}
+		}
+	}
+}
+
+@include col-generate;
+
+.f-center {
+	justify-content: center;
+	align-items: center;
+}
+
+.d-flex {
+	display: flex;
+}
+
+.f-end {
+	justify-content: flex-end;
+	align-items: flex-end;
+}
