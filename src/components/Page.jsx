@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Navbar from "./Navbar";
 import Menu from "./Menu";
-import Copyright from "./Copyright";
+import Footer from "./Footer";
 import Cover from "./Cover";
 import Type from "./Type";
 
@@ -58,7 +58,7 @@ const Page = ({ children }) => {
 						LAST
 					</p>
 				</div>
-				<Copyright />
+				<Footer />
 			</div>
 		</main>
 	);

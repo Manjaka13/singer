@@ -1,0 +1,155 @@
+/*
+	Footer styles
+*/
+
+.contacts {
+	background: white;
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+}
+
+.contacts__container {
+	justify-content: space-between;
+}
+
+.contacts__box {
+	width: 30%;
+	padding-bottom: 40px;
+}
+
+.contacts__title {
+	color: rgb(40, 40, 40);
+	font-size: 20pt;
+	padding: 20px 0 20px 0;
+}
+
+.contacts__separator {
+	width: 40%;
+	height: 5px;
+	background: #e30044;
+	border-radius: 3px;
+	margin-bottom: 20px;
+}
+
+.contacts__map-box {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 200px;
+	background: rgb(245, 245, 245);
+	border-radius: 5px;
+	overflow: hidden;
+	box-shadow: 0px 0px 1px black;
+
+	& > div {
+		width: 100%;
+		height: 100%;
+	}
+}
+
+.contacts__bottom {
+	flex-direction: column;
+	padding-bottom: 20px;
+}
+
+.contacts__bottom-separator {
+	width: 100%;
+	height: 2px;
+	background: rgb(200, 200, 200);
+	margin: auto;
+}
+
+.contacts__bottom-phrase {
+	padding: 20px 0 0 0;
+	color: rgb(120, 120, 120);
+	text-align: justify;
+	font-size: 10pt;
+}
+
+.contacts__item {
+	padding: 19px 0;
+	color: rgb(80, 80, 80);
+	font-size: 13pt;
+}
+
+.contacts__item:first-child {
+	padding-top: 0;
+}
+
+.contacts__item:last-child {
+	padding-bottom: 0;
+}
+
+.contacts__link {
+	color: rgb(80, 80, 80);
+}
+
+.contacts__link:hover {
+	color: #e30044;
+}
+
+.contacts__about {
+	margin-bottom: 20px;
+	text-align: justify;
+}
+
+.contacts__about,
+.contacts__hours,
+.contacts__calendar-row {
+	color: rgb(80, 80, 80);
+}
+
+.contacts__calendar .green {
+	color: green;
+	font-weight: bold;
+}
+
+.contacts__calendar .red {
+	color: #e30044;
+}
+
+.contacts__calendar {
+	display: flex;
+	width: 100%;
+	box-shadow: 0px 0px 1px black;
+	background: rgb(245, 245, 245);
+	margin-top: 20px;
+	border-radius: 5px;
+	overflow: hidden;
+}
+
+.contacts__calendar-col {
+	flex: 1;
+}
+
+.contacts__calendar-row {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	box-shadow: 0px 0px 1px black;
+	padding: 5px 0;
+}
+
+@media only screen and (max-width: 900px) {
+	.contacts__container {
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items: flex-start;
+	}
+	.contacts__box {
+		width: 100%;
+		padding-bottom: 50px;
+	}
+	.contacts__item {
+		padding: 10px 0;
+	}
+}
+
+.leaflet-default-icon-path {
+    background-image: url(https://unpkg.com/leaflet@1.7.1/dist/images/marker-icon.png);
+}
+
+.leaflet-container {
+	width: 100%;
+	height: 100%;
+}

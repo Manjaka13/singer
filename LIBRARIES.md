@@ -79,3 +79,7 @@ For doing http requests
 ### react-router-dom
 
 Page routing in the app
+
+### leaflet, react-leaflet
+
+For displaying map
