@@ -27,9 +27,9 @@ module.exports = (env) => {
 					use: {
 						loader: "babel-loader",
 						options: {
-							presets: ["@babel/preset-env", "@babel/preset-react"],
-						},
-					},
+							presets: ["@babel/preset-env", "@babel/preset-react"]
+						}
+					}
 				},
 				// Here how to manage styles files
 				{
@@ -37,9 +37,16 @@ module.exports = (env) => {
 					use: [
 						{ loader: "style-loader" },
 						{ loader: "css-loader" },
-						{ loader: "sass-loader" },
-					],
+						{ loader: "sass-loader" }
+					]
 				},
+				// Here how to manage simple files
+				{
+					test: /\.(png|jpe?g|gif)$/i,
+					use: [
+						{ loader: "file-loader" }
+					]
+				}
 			],
 		},
 

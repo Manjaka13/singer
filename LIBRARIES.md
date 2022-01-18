@@ -60,6 +60,10 @@ That will help webpack to bundling styles files
 
 To compile sass files into css files
 
+### file-loader
+
+To bundle simple files
+
 ### dotenv
 
 To load environment variables
