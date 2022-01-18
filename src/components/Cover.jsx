@@ -1,9 +1,15 @@
 import React, { useState, useEffect } from "react";
 import { v4 as uuidv4 } from "uuid";
+import { Slide } from "react-slideshow-image";
 import { FontAwesomeIcon as Icon } from "@fortawesome/react-fontawesome";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { faEnvelope, faStar } from "@fortawesome/free-solid-svg-icons";
 import { faFacebook, faInstagram } from "@fortawesome/free-brands-svg-icons";
+
+import img1 from "../assets/brodeuse.jpg";
+import img2 from "../assets/machine electronique.jpg";
+import img3 from "../assets/machine mecanique.jpg";
+import img4 from "../assets/surjeteuse.jpg";
 
 library.add(
 	faFacebook,
@@ -26,6 +32,14 @@ const months = [
 	"Décembre"
 ];
 
+const slideImages = [img1, img2, img3, img4];
+const machines = [
+	"Brodeuse",
+	"Machine à coudre électronique",
+	"Machine à coudre mécanique",
+	"Surjeteuse"
+];
+
 const Cover = () => {
 	const [currentService, setCurrentService] = useState(0);
 	const services = ["services", "promotions", "produits"];
@@ -44,6 +58,14 @@ const Cover = () => {
 		>
 			{item}
 		</span>
+	));
+
+	const mappedSlide = slideImages.map((item, key) => (
+		<div className="each-slide" key={uuidv4()}>
+			<div style={{"background": `url(${item}) center center no-repeat`, "backgroundSize": "cover"}}>
+				<span className="ctn-5-10 br-5 white no-select">{machines[key]}</span>
+			</div>
+		</div>
 	));
 
 	return (
@@ -71,6 +93,11 @@ const Cover = () => {
 							</div>
 							<div className="divider"></div>
 							<p className="prg ctn-10-10">Quisque pellentesque in sem at commodo. Nulla ut quam maximus, rutrum neque ut, interdum est. Praesent in euismod nunc. Ut vel lorem a velit venenatis convallis mollis eu nisi !</p>
+							<div className="cover__slide o-hidden">
+								<Slide easing="ease">
+									{mappedSlide}
+						        </Slide>
+							</div>
 						</div>
 					</div>
 				</div>
