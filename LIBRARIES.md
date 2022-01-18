@@ -38,6 +38,10 @@ To serve the project locally
 
 To inject script in the html document
 
+### copy-webpack-plugin
+
+To copy static files to build folder
+
 ### @babel/core
 
 To transpile our Javascript code to handle backward compatibility with ancient browsers

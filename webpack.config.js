@@ -1,6 +1,7 @@
 const path = require("path");
 const webpack = require("webpack");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const CopyWebpackPlugin = require("copy-webpack-plugin");
 const dotenv = require("dotenv");
 
 module.exports = (env) => {
@@ -15,6 +16,11 @@ module.exports = (env) => {
 		//Output directory
 		output: {
 			path: path.resolve(__dirname, "build"),
+		},
+
+		// Some tweaks
+		performance: {
+			hints: false
 		},
 
 		// Declare rules
@@ -63,6 +69,13 @@ module.exports = (env) => {
 			new webpack.DefinePlugin({
 				"process.env": JSON.stringify(dotenv.config().parsed),
 			}),
+			new CopyWebpackPlugin([
+				{ from: "public/cover.jpg" },
+				{ from: "public/manifest.json" },
+				{ from: "public/robots.txt" },
+				{ from: "public/singer-text.png" },
+				{ from: "public/singer.png" }
+			])
 		],
 
 		// Setup development server
