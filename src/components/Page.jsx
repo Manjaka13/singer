@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Navbar from "./Navbar";
 import Menu from "./Menu";
+import Copyright from "./Copyright";
 
 /*
 	Page layout
@@ -16,7 +17,7 @@ const Page = ({ children }) => {
 			<Menu opened={menuOpened} atClose={toggleMenu} />
 			<div className="page w-100 o-scroll">
 				{children}
-				<div class="ctn">
+				<div className="ctn">
 					<p className="prg ctn-20-0">
 						Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet
 						consectetur. Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit
@@ -25,7 +26,7 @@ const Page = ({ children }) => {
 						ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur.
 					</p>
 				</div>
-				<div class="ctn">
+				<div className="ctn">
 					<p className="prg ctn-20-0">
 						Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet
 						consectetur. Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit
@@ -34,7 +35,7 @@ const Page = ({ children }) => {
 						ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur.
 					</p>
 				</div>
-				<div class="ctn">
+				<div className="ctn">
 					<p className="prg ctn-20-0">
 						Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet
 						consectetur. Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit
@@ -43,7 +44,7 @@ const Page = ({ children }) => {
 						ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur.
 					</p>
 				</div>
-				<div class="ctn">
+				<div className="ctn">
 					<p className="prg ctn-20-0">
 						Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet
 						consectetur. Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit
@@ -53,6 +54,7 @@ const Page = ({ children }) => {
 						LAST
 					</p>
 				</div>
+				<Copyright />
 			</div>
 		</main>
 	);
