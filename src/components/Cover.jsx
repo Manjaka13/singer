@@ -6,10 +6,10 @@ import { library } from "@fortawesome/fontawesome-svg-core";
 import { faEnvelope, faStar } from "@fortawesome/free-solid-svg-icons";
 import { faFacebook, faInstagram } from "@fortawesome/free-brands-svg-icons";
 
-import img1 from "../assets/brodeuse.jpg";
-import img2 from "../assets/machine electronique.jpg";
-import img3 from "../assets/machine mecanique.jpg";
-import img4 from "../assets/surjeteuse.jpg";
+import img1 from "../assets/slide1.jpg";
+import img2 from "../assets/slide2.jpg";
+import img3 from "../assets/slide3.jpg";
+import img4 from "../assets/slide4.jpg";
 
 library.add(
 	faFacebook,

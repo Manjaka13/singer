@@ -161,3 +161,19 @@ textarea {
             user-select: none; /* Non-prefixed version, currently
                                   supported by Chrome, Edge, Opera and Firefox */
 }
+
+.section {
+	&__head {
+		display: flex;
+		align-items: center;
+	}
+
+	&__bar {
+		width: 5px;
+		height: 40px;
+	}
+
+	&__title {
+		font-size: 30pt;
+	}
+}

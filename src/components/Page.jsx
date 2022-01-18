@@ -3,6 +3,7 @@ import Navbar from "./Navbar";
 import Menu from "./Menu";
 import Copyright from "./Copyright";
 import Cover from "./Cover";
+import Type from "./Type";
 
 /*
 	Page layout
@@ -18,6 +19,7 @@ const Page = ({ children }) => {
 			<Menu opened={menuOpened} atClose={toggleMenu} />
 			<div className="page w-100 o-scroll">
 				<Cover />
+				<Type />
 				{children}
 				<div className="ctn">
 					<p className="prg ctn-20-0">
