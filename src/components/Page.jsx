@@ -4,6 +4,7 @@ import Menu from "./Menu";
 import Footer from "./Footer";
 import Cover from "./Cover";
 import Type from "./Type";
+import Produits from "./Produits";
 
 /*
 	Page layout
@@ -20,6 +21,7 @@ const Page = ({ children }) => {
 			<div className="page w-100 o-scroll">
 				<Cover />
 				<Type />
+				<Produits />
 				{children}
 				<div className="ctn">
 					<p className="prg ctn-20-0">
