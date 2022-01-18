@@ -1,5 +1,8 @@
 import React, { useState } from "react";
 import { v4 as uuidv4 } from "uuid";
+import { Loading } from "./UI";
+import { useProduit } from "../hooks";
+import Card from "./Card";
 
 const filters = [
 	{name: "Tous les produits", tag: "all"},
@@ -10,8 +13,42 @@ const filters = [
 ];
 
 const Produits = () => {
+	const [
+		electronique,
+		mecanique,
+		brodeuse,
+		surjeteuse
+	] = useProduit();
+	const loaded = electronique && mecanique && brodeuse && surjeteuse;
+	const productList = null;
 	const [currentFilter, setCurrentFilter] = useState(0);
 	const chooseFilter = (n) => setCurrentFilter(n);
+	let displayedProducts = [];
+
+	if(loaded) {
+		switch(currentFilter) {
+			case 0:
+				displayedProducts = displayedProducts.concat(electronique);
+				displayedProducts = displayedProducts.concat(mecanique);
+				displayedProducts = displayedProducts.concat(brodeuse);
+				displayedProducts = displayedProducts.concat(surjeteuse);
+				break;
+			case 1:
+				displayedProducts = electronique;
+				break;
+			case 2:
+				displayedProducts = mecanique;
+				break;
+			case 3:
+				displayedProducts = brodeuse;
+				break;
+			case 4:
+				displayedProducts = surjeteuse;
+				break;
+		}
+	}
+
+	const mappedDisplayedProducts = displayedProducts.map(product => (<Card product={product} />));
 
 	const mappedFilters = filters.map((filter, key) => (
 		<div className={(currentFilter === key ? 'produit__filter produit__filter--checked' : 'produit__filter') + " o-hidden bg-white br-5 mr-10 mb-10 trans-200 no-select"} key={ uuidv4() }>
@@ -33,6 +70,18 @@ const Produits = () => {
 			</div>
 			<div className="ctn produit__filter-container">
 				{ mappedFilters }
+			</div>
+			<div className="ctn">
+				{loaded && (
+					<div className="produit__list row-10 mt-10">
+						{ mappedDisplayedProducts }
+					</div>
+				)}
+				{!loaded && (
+					<div className="produit__list-empty row-10 mt-10 bg-white d-flex f-center">
+						<Loading />
+					</div>
+				)}
 			</div>
 		</section>
 	);

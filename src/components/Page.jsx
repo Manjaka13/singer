@@ -23,43 +23,6 @@ const Page = ({ children }) => {
 				<Type />
 				<Produits />
 				{children}
-				<div className="ctn">
-					<p className="prg ctn-20-0">
-						Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet
-						consectetur. Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit
-						amet consectetur. Lorem ipsum dolor sit amet consectetur. Lorem ipsum
-						dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur. Lorem
-						ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur.
-					</p>
-				</div>
-				<div className="ctn">
-					<p className="prg ctn-20-0">
-						Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet
-						consectetur. Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit
-						amet consectetur. Lorem ipsum dolor sit amet consectetur. Lorem ipsum
-						dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur. Lorem
-						ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur.
-					</p>
-				</div>
-				<div className="ctn">
-					<p className="prg ctn-20-0">
-						Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet
-						consectetur. Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit
-						amet consectetur. Lorem ipsum dolor sit amet consectetur. Lorem ipsum
-						dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur. Lorem
-						ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur.
-					</p>
-				</div>
-				<div className="ctn">
-					<p className="prg ctn-20-0">
-						Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet
-						consectetur. Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit
-						amet consectetur. Lorem ipsum dolor sit amet consectetur. Lorem ipsum
-						dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur. Lorem
-						ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur.
-						LAST
-					</p>
-				</div>
 				<Footer />
 			</div>
 		</main>

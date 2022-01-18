@@ -15,7 +15,7 @@ const App = () => {
 	return (
 		<Page>
 			<React.Fragment>
-				<h1 className="ctn-20-20">Hello from React !</h1>
+				{/*<h1 className="ctn-20-20">Hello from React !</h1>
 				<p className="ctn-0-20">
 					Service status: <span style={{ color: color }}>{status}</span>
 				</p>
@@ -47,7 +47,7 @@ const App = () => {
 						amet consectetur. Lorem ipsum dolor sit amet consectetur.
 					</p>
 				</Modal>
-			</React.Fragment>
+*/}			</React.Fragment>
 		</Page>
 	);
 };

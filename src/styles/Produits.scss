@@ -21,4 +21,17 @@
 			cursor: pointer;
 		}
 	}
+
+	&__list,
+	&__list-empty {
+		min-height: 350px;
+	}
+
+	&__list {
+		justify-content: space-between;
+	}
+
+	&__list-empty {
+		box-shadow: 0px 0px 1px black;
+	}
 }
