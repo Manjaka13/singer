@@ -94,9 +94,9 @@ const Cover = () => {
 							<div className="divider"></div>
 							<p className="prg ctn-10-10">Quisque pellentesque in sem at commodo. Nulla ut quam maximus, rutrum neque ut, interdum est. Praesent in euismod nunc. Ut vel lorem a velit venenatis convallis mollis eu nisi !</p>
 							<div className="cover__slide o-hidden">
-								<Slide easing="ease">
+								{/*<Slide easing="ease">
 									{ mappedSlide }
-						        </Slide>
+						        </Slide>*/}
 							</div>
 						</div>
 					</div>

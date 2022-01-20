@@ -6,10 +6,11 @@ import Card from "./Card";
 
 const filters = [
 	{name: "Tous les produits", tag: "all"},
+	{name: "En promotion", tag: "promotion"},
 	{name: "Machine à coudre électroniques", tag: "machine-electronique"},
 	{name: "Machine à coudre mécaniques", tag: "machine-mecanique"},
 	{name: "Brodeuses", tag: "brodeuse"},
-	{name: "Surjeteuse", tag: "surjeteuse"},
+	{name: "Surjeteuse", tag: "surjeteuse"}
 ];
 
 const Produits = () => {
@@ -25,6 +26,8 @@ const Produits = () => {
 	const chooseFilter = (n) => setCurrentFilter(n);
 	let displayedProducts = [];
 
+	const inPromotion = (item) => item.promotion && item.promotion.type && !item.outstock;
+
 	if(loaded) {
 		switch(currentFilter) {
 			case 0:
@@ -34,15 +37,21 @@ const Produits = () => {
 				displayedProducts = displayedProducts.concat(surjeteuse);
 				break;
 			case 1:
-				displayedProducts = electronique;
+				displayedProducts = displayedProducts.concat(electronique.filter(inPromotion));
+				displayedProducts = displayedProducts.concat(mecanique.filter(inPromotion));
+				displayedProducts = displayedProducts.concat(brodeuse.filter(inPromotion));
+				displayedProducts = displayedProducts.concat(surjeteuse.filter(inPromotion));
 				break;
 			case 2:
-				displayedProducts = mecanique;
+				displayedProducts = electronique;
 				break;
 			case 3:
-				displayedProducts = brodeuse;
+				displayedProducts = mecanique;
 				break;
 			case 4:
+				displayedProducts = brodeuse;
+				break;
+			case 5:
 				displayedProducts = surjeteuse;
 				break;
 		}
@@ -68,9 +77,11 @@ const Produits = () => {
 			<div className="ctn">
 				<p className="prg ctn-20-0">Suspendisse pellentesque vehicula nulla vel faucibus. Nullam hendrerit augue in dapibus eleifend. Nullam aliquet luctus posuere. Morbi ornare porttitor sodales. In luctus feugiat malesuada. Phasellus consectetur nec ligula vitae commodo. Praesent sodales lacinia facilisis. Quisque id ligula vitae turpis blandit ullamcorper.</p>
 			</div>
-			<div className="ctn produit__filter-container">
-				{ mappedFilters }
-			</div>
+			{loaded && (
+				<div className="ctn produit__filter-container">
+					{ mappedFilters }
+				</div>
+			)}
 			<div className="ctn">
 				{loaded && (
 					<div className="produit__list row-10 mt-10">

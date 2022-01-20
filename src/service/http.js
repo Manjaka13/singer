@@ -8,11 +8,11 @@ const headers = {
 };
 
 // Gets
-const get = (endpoint = "8c73e05d-849e-45da-b7d7-5af81bc79f63") => {
+const get = (endpoint) => {
 	return new Promise((resolve, reject) => {
 		axios
 			.get(
-				`${process.env.BASE_URL || "https://run.mocky.io/v3"}/${ws[endpoint]}`,
+				`${process.env.MODE === "local" ? "http://localhost:3000" : process.env.BASE_URL}/${ws[endpoint]}`,
 				{
 					headers,
 				}

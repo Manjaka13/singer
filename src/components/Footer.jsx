@@ -131,7 +131,9 @@ const Footer = () => {
 					</h2>
 					<div className="contacts__separator"></div>
 					<div className="contacts__map-box">
-						<SingerMap />
+						{process.env.MODE != "local" && (
+							<SingerMap />
+						)}
 					</div>
 				</div>
 				<div className="contacts__box">
