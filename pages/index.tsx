@@ -1,6 +1,7 @@
 import React from "react";
 import Page from "components/Page";
 import Cover from "components/Cover";
+import TypeMachine from "components/TypeMachine";
 
 /*
 	Home page
@@ -14,6 +15,7 @@ const HomePage = (): JSX.Element => (
 	>
 		<React.Fragment>
 			<Cover />
+			<TypeMachine />
 		</React.Fragment>
 	</Page>
 );

@@ -22,3 +22,12 @@ main {
 @import "./Menu.scss";
 @import "./Waves.scss";
 @import "./Cover.scss";
+@import "./TypeMachine.scss";
+
+.bg-theme {
+	background: $color-theme;
+}
+
+.theme {
+	color: $color-theme;
+}

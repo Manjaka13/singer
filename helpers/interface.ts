@@ -59,3 +59,10 @@ export interface IMenuItem {
 	title: string;
 	link: string;
 }
+
+export interface ITypeMachineItem {
+	name: string;
+	description: string;
+	image: string;
+	link: string;
+}
