@@ -2,7 +2,7 @@
 	All typescript interfaces
 */
 
-// import { IconProp } from "@fortawesome/fontawesome-svg-core";
+import { IconProp } from "@fortawesome/fontawesome-svg-core";
 import { IconName } from "@fortawesome/fontawesome-svg-core";
 
 export interface ISingerProps {
@@ -46,4 +46,16 @@ export interface IBadgeProps {
 
 export interface INavbarProps {
 	atTrigger?: () => void;
+}
+
+export interface IMenuProps {
+	opened?: boolean;
+	atClose?: () => void;
+}
+
+export interface IMenuItem {
+	name: string;
+	icon: IconProp;
+	title: string;
+	link: string;
 }

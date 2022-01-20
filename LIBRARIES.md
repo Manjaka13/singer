@@ -6,7 +6,7 @@ Here are listed all liraries used and their role in the project
 
 Project skeleton
 
-### typescript, @types/node, @types/react
+### typescript, @types/node, @types/react, @types/uuid
 
 Used for static typing our javascript and avoid common bugs, better code and bug free
 
@@ -37,3 +37,7 @@ To display icons
 ### axios
 
 For doing REST API calls
+
+### @babel/core
+
+Peer dependency for @types/uuid
