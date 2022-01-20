@@ -3,7 +3,6 @@ import { v4 as uuidv4 } from "uuid";
 import { FontAwesomeIcon as Icon } from "@fortawesome/react-fontawesome";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { IMenuProps, IMenuItem } from "helpers/interface";
-import menuList from "public/data/menu.json";
 import Button from "components/Button";
 import {
 	faUser,
