@@ -1,0 +1,15 @@
+/*
+	Badge styles
+*/
+
+.badge {
+	position: absolute;
+	bottom: -7px;
+	right: -7px;
+	border: 2px white solid;
+	background: $color-theme;
+
+	&--full {
+		font-size: 0.7rem;
+	}
+}

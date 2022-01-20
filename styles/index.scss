@@ -1,0 +1,15 @@
+/*
+	Import necessary styles here
+*/
+
+#__next,
+main {
+	height: 100%;
+}
+
+@import "./fastui.css";
+@import "./vars.scss";
+@import "./mixins.scss";
+@import "./Button.scss";
+@import "./Badge.scss";
+@import "./Loading.scss";

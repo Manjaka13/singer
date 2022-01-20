@@ -1,85 +1,39 @@
-# Libraries used on the app
+# LIRARIES USED
 
-Please describe here the libraries you are using.
+Here are listed all liraries used and their role in the project
 
-### react, react-dom
+### next, react, react-dom
 
-Our front end library
+Project skeleton
+
+### typescript, @types/node, @types/react
+
+Used for static typing our javascript and avoid common bugs, better code and bug free
 
 ### prettier
 
-Formating code to the same basis
-
-### husky
-
-Hooking git commands to perform typescript and eslint checks
-
-### eslint
-
-To avoid most common bugs and have better codebase
-
-### eslint-plugin-react
-
-Eslint plugin for checking react errors
-
-### webpack
-
-For bundling files
-
-### webpack-cli
-
-To run webpack commands
-
-### webpack-dev-server
-
-To serve the project locally
-
-### html-webpack-plugin
-
-To inject script in the html document
-
-### copy-webpack-plugin
-
-To copy static files to build folder
-
-### @babel/core
-
-To transpile our Javascript code to handle backward compatibility with ancient browsers
-
-### babel-loader
-
-That will help webpack to use the babel transpiler
-
-### @babel/preset-env, @babel/preset-react
-
-We are using these presets to tell babel what to transpile and setup predefined configuration
-@babel/preset-env: for transpiling ES2015+ syntax
-@babel/preset-react: for transpiling react code
-
-### style-loader, css-loader, sass-loader
-
-That will help webpack to bundling styles files
+For formating our files to the same basis and enforces code style
 
 ### sass
 
-To compile sass files into css files
+For a better style codebase and readability
 
-### file-loader
+### uuid
 
-To bundle simple files
+Provide unique ID to all mapped JSX elements
 
-### dotenv
+### eslint, eslint-plugin-react, @typescript-eslint/eslint-plugin, @typescript-eslint/parser
 
-To load environment variables
+For code linting
+
+### eslint-config-prettier
+
+Avoid prettier and eslint conflicts
+
+### @fortawesome/\*
+
+To display icons
 
 ### axios
 
-For doing http requests
-
-### react-router-dom
-
-Page routing in the app
-
-### leaflet, react-leaflet
-
-For displaying map
+For doing REST API calls

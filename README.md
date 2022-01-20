@@ -1,43 +1,39 @@
-# Singer Chantepie
+# Singer chantepie
 
-Singer Chantepie front end app
+Website for singer chantepie
 
-## Project setup
+### Project setup
 
 ```
 npm install
 ```
 
-### Start project in development mode
+### Run in development mode
 
 ```
 npm run dev
 ```
 
-### Start project in production mode
+### Run in production mode
 
 ```
 npm start
 ```
 
-### Build project for production
+### Build project
 
 ```
 npm run build
 ```
 
-### Format project code
+### Format project with prettier
 
 ```
 npm run format
 ```
 
-### Run eslint checks
+### Check errors in project
 
 ```
 npm run check
 ```
-
-### Live link
-
-Check the [project live](https://singer-chantepie.netlify.app) on netlify.
