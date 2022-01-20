@@ -21,7 +21,9 @@ const Page: React.FC<IPageProps> = ({
 		<Heading title={title} image={image}>
 			{description}
 		</Heading>
-		<main>{children}</main>
+		<main>
+			{children}
+		</main>
 	</>
 );
 

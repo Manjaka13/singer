@@ -43,3 +43,7 @@ export interface IButtonProps {
 export interface IBadgeProps {
 	content: number;
 }
+
+export interface INavbarProps {
+	atTrigger?: () => void;
+}

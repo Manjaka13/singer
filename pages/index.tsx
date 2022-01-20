@@ -1,5 +1,6 @@
 import React from "react";
 import Page from "components/Page";
+import Navbar from "components/Navbar";
 
 /*
 	Home page
@@ -12,7 +13,7 @@ const HomePage = (): JSX.Element => {
 			description="Achetez des produits Singer France ou profitez de divers services."
 			image="cover.jpg"
 		>
-			<h1>Hello world !</h1>
+			<Navbar />
 		</Page>
 	);
 };
