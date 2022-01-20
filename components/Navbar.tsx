@@ -15,7 +15,7 @@ const Navbar: React.FC<INavbarProps> = ({ atTrigger }): JSX.Element => {
 		<nav className="navbar w-100 f-row-center-center">
 			<div className="ctn f-row-between-center">
 				<div className="navbar__logo w-70 f-row-start-center">
-					<img className="h-100" src="/singer.png" alt="Singer logo" />
+					<img className="h-100 mg-right-10" src="/singer.png" alt="Singer logo" />
 					<img className="h-100" src="/singer-text.png" alt="Singer text logo" />
 				</div>
 				<div className="w-30 f-row-end-center">

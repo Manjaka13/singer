@@ -7,6 +7,11 @@ main {
 	height: 100%;
 }
 
+.page {
+	height: calc(100% - 76px);
+	margin-top: 76px;
+}
+
 @import "./fastui.css";
 @import "./vars.scss";
 @import "./mixins.scss";
@@ -15,3 +20,5 @@ main {
 @import "./Loading.scss";
 @import "./Navbar.scss";
 @import "./Menu.scss";
+@import "./Waves.scss";
+@import "./Cover.scss";
