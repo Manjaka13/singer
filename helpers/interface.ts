@@ -66,3 +66,14 @@ export interface ITypeMachineItem {
 	image: string;
 	link: string;
 }
+
+export interface IContactItem {
+	icon: IconProp;
+	content: string;
+}
+
+export interface ICalendarItem {
+	day: string;
+	opening: string;
+	opened: boolean;
+}
