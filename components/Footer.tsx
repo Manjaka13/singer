@@ -2,7 +2,7 @@ import React from "react";
 import { v4 as uuidv4 } from "uuid";
 import { IContactItem, ICalendarItem } from "helpers/interface";
 import Copyright from "components/Copyright";
-// import SingerMap from "./SingerMap";
+import SingerMap from "components/SingerMap";
 import { FontAwesomeIcon as Icon } from "@fortawesome/react-fontawesome";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import {
@@ -134,7 +134,7 @@ const Footer = (): JSX.Element => {
 					<div
 						className="contacts__map-box f-row-center-center w-100 h-200px br-5 o-hidden border"
 					>
-						{/*<SingerMap />*/}
+						<SingerMap />
 					</div>
 				</div>
 				<div className="contacts__box w-30 pd-bottom-40">

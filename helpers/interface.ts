@@ -70,6 +70,7 @@ export interface ITypeMachineItem {
 export interface IContactItem {
 	icon: IconProp;
 	content: string;
+	link?: string;
 }
 
 export interface ICalendarItem {

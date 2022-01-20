@@ -41,3 +41,7 @@ For doing REST API calls
 ### @babel/core
 
 Peer dependency for @types/uuid
+
+### leaflet, react-leaflet
+
+For displaying map
