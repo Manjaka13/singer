@@ -48,7 +48,7 @@ module.exports = (env) => {
 				},
 				// Here how to manage simple files
 				{
-					test: /\.(png|jpe?g|gif)$/i,
+					test: /\.(png|jpe?g|gif|json)$/i,
 					use: [
 						{ loader: "file-loader" }
 					]

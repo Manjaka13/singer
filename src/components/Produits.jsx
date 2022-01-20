@@ -57,7 +57,9 @@ const Produits = () => {
 		}
 	}
 
-	const mappedDisplayedProducts = displayedProducts.map(product => (<Card product={product} />));
+	const mappedDisplayedProducts = displayedProducts.map(product => (
+		<Card product={product} key={uuidv4()} />
+	));
 
 	const mappedFilters = filters.map((filter, key) => (
 		<div className={(currentFilter === key ? 'produit__filter produit__filter--checked' : 'produit__filter') + " o-hidden bg-white br-5 mr-10 mb-10 trans-200 no-select"} key={ uuidv4() }>

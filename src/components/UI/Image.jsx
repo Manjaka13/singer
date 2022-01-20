@@ -5,7 +5,7 @@ import React from "react";
 */
 
 const Image = ({ className, src, alt }) => (
-	<figure className={"h-100 figure " + className}>
+	<figure className={"h-100 figure " + (className || '')}>
 		<img className="h-100 figure__img" src={src} alt={alt || "Image"} />
 	</figure>
 );

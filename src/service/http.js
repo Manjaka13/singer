@@ -12,7 +12,7 @@ const get = (endpoint) => {
 	return new Promise((resolve, reject) => {
 		axios
 			.get(
-				`${process.env.MODE === "local" ? "http://localhost:3000" : process.env.BASE_URL}/${ws[endpoint]}`,
+				`${process.env.MODE === "local" ? "" : process.env.BASE_URL}/${ws[endpoint]}`,
 				{
 					headers,
 				}
