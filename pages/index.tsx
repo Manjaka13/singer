@@ -3,6 +3,7 @@ import Page from "components/Page";
 import Cover from "components/Cover";
 import TypeMachine from "components/TypeMachine";
 import Footer from "components/Footer";
+import ProductList from "components/ProductList";
 
 /*
 	Home page
@@ -17,6 +18,7 @@ const HomePage = (): JSX.Element => (
 		<React.Fragment>
 			<Cover />
 			<TypeMachine />
+			<ProductList />
 			<Footer />
 		</React.Fragment>
 	</Page>

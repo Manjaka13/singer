@@ -3,7 +3,11 @@
 */
 
 const isLocal = (): boolean =>
-	process.env && process.env.MODE && process.env.MODE === "local" ? true : false;
+	process.env &&
+	process.env.NEXT_PUBLIC_MODE &&
+	process.env.NEXT_PUBLIC_MODE === "local"
+		? true
+		: false;
 
 const ws = (endpoint: string): string => {
 	let ep = "";

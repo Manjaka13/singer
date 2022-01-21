@@ -20,7 +20,11 @@ const CardProduct: React.FC<ICardProductProps> = ({ product }): JSX.Element => (
 			<img
 				className="card-product__image tr-500"
 				src={
-					product.photo && product.photo[0] ? product.photo[0] : "/fake-machine.jpg"
+					process.env.NEXT_PUBLIC_MODE === "local"
+						? "/fake-machine.jpg"
+						: product.photo && product.photo[0]
+						? product.photo[0]
+						: "/fake-machine.jpg"
 				}
 				alt="Machine"
 			/>

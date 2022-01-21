@@ -15,6 +15,10 @@ const filters: Array<IProductFilter> = [
 ];
 
 const Produits = (): JSX.Element => {
+	// let electronique: Array<IProduct> = [];
+	// let mecanique: Array<IProduct> = [];
+	// let brodeuse: Array<IProduct> = [];
+	// let surjeteuse: Array<IProduct> = [];
 	const [electronique, mecanique, brodeuse, surjeteuse] = useProduct();
 	const loaded: boolean =
 		electronique.length > 0 &&
@@ -69,10 +73,8 @@ const Produits = (): JSX.Element => {
 		(filter: IProductFilter, key: number) => (
 			<div
 				className={
-					(currentFilter === key
-						? "produit__filter produit__filter--checked"
-						: "produit__filter") +
-					" o-hidden bg-white br-5 mr-10 mb-10 trans-200 no-select"
+					(currentFilter === key ? "product__filter border" : "product__filter") +
+					" pd-5 pointer o-hidden bg-white br-5 mg-right-10 mg-top-20 tr-200 no-select"
 				}
 				key={uuidv4()}
 			>
@@ -83,37 +85,37 @@ const Produits = (): JSX.Element => {
 					onChange={() => chooseFilter(key)}
 					checked={currentFilter === key}
 				/>
-				<label htmlFor={filter.tag}>{filter.name}</label>
+				<label className="pointer" htmlFor={filter.tag}>
+					{filter.name}
+				</label>
 			</div>
 		)
 	);
 
 	return (
-		<section className="produit section pt-40 pb-20">
-			<div className="ctn">
-				<div className="section__head">
-					<div className="section__bar bg-theme mr-15"></div>
-					<h2 className="section__title m-20">Nos produits</h2>
+		<section className="product pt-40 pb-20">
+			<div className="ctn pd-top-40">
+				<div className="f-row-start-center pd-bottom-20">
+					<div className="bg-theme mg-right-15 w-5px h-40px br-5"></div>
+					<h2 className="fs-250">Nos produits</h2>
 				</div>
-			</div>
-			<div className="ctn">
-				<p className="prg ctn-20-0">
+				<p className="tx-justify">
 					Suspendisse pellentesque vehicula nulla vel faucibus. Nullam hendrerit
 					augue in dapibus eleifend. Nullam aliquet luctus posuere. Morbi ornare
 					porttitor sodales. In luctus feugiat malesuada. Phasellus consectetur nec
 					ligula vitae commodo. Praesent sodales lacinia facilisis. Quisque id ligula
 					vitae turpis blandit ullamcorper.
 				</p>
-			</div>
-			{loaded && (
-				<div className="ctn produit__filter-container">{mappedFilters}</div>
-			)}
-			<div className="ctn">
 				{loaded && (
-					<div className="produit__list row-10 mt-10">{mappedDisplayedProducts}</div>
+					<React.Fragment>
+						<div className="f-row-start-center f-wrap">{mappedFilters}</div>
+						<div className="f-row-between-start mg-top-20 f-wrap">
+							{mappedDisplayedProducts}
+						</div>
+					</React.Fragment>
 				)}
 				{!loaded && (
-					<div className="produit__list-empty row-10 mt-10 bg-white d-flex f-center">
+					<div className="h-350px border mg-top-20 bg-white f-row-center-center">
 						<Loading />
 					</div>
 				)}

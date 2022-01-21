@@ -13,9 +13,14 @@ const headers = {
 const get = (endpoint: string): Promise<Array<IProduct>> => {
 	return new Promise((resolve, reject) => {
 		axios
-			.get(`${process.env.MODE === "local" ? "" : PROXY}/${ws(endpoint)}`, {
-				headers,
-			})
+			.get(
+				`${
+					process.env && process.env.NEXT_PUBLIC_MODE === "local" ? "" : PROXY
+				}/${ws(endpoint)}`,
+				{
+					headers,
+				}
+			)
 			.then(({ data }) => resolve(data.data))
 			.catch((e) => reject(e));
 	});
