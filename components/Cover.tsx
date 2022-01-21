@@ -97,7 +97,7 @@ const Cover = (): JSX.Element => {
 		<div className="cover o-hidden">
 			<div className="cover__overlay h-80 o-hidden">
 				<div className="ctn h-100 f-row-between-start">
-					<div className="w-xlg-60 w-sm-100 h-100 f-col-center-center">
+					<div className="w-60 w-sm-100 h-100 f-col-center-center">
 						<div className="h-auto w-100">
 							<h2 className="cover__title white mg-bottom-20">
 								Chez Singer, profitez de divers{" "}
@@ -113,7 +113,7 @@ const Cover = (): JSX.Element => {
 							</p>
 						</div>
 					</div>
-					<div className="cover__prom w-xlg-40 h-100 w-sm-0 f-row-end-center">
+					<div className="cover__prom w-40 h-100 w-sm-0 f-row-end-center">
 						<div className="cover__promotion bg-white br-10 o-hidden">
 							<div className="w-100 f-row-between-center">
 								<h2 className="pd-10">Promotions</h2>

@@ -17,5 +17,11 @@
 		"baseUrl": "."
 	},
 	"include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
-	"exclude": ["node_modules", "build", "dist"]
+	"exclude": [
+		"node_modules",
+		"build",
+		"dist",
+		"/components/Cover.tsx",
+		"/components/Servive.tsx"
+	]
 }
