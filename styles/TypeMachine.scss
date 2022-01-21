@@ -57,12 +57,13 @@
 	}
 
 	.view {
+		display: inline-block;
 		color: #505050;
-		:hover {
+		&:hover {
 			background: #e6e6e6;
 			color: black;
 		}
-		:active {
+		&:active {
 			background: #fff;
 		}
 	}
