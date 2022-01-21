@@ -3,7 +3,7 @@ import { v4 as uuidv4 } from "uuid";
 import { FontAwesomeIcon as Icon } from "@fortawesome/react-fontawesome";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { IMenuProps, IMenuItem } from "helpers/interface";
-import Button from "components/Button";
+// import Button from "components/Button";
 import {
 	faUser,
 	faLock,
@@ -12,12 +12,22 @@ import {
 	faShoppingCart,
 	faEnvelope,
 } from "@fortawesome/free-solid-svg-icons";
+import { faFacebook, faInstagram } from "@fortawesome/free-brands-svg-icons";
 
 /*
 	Navbar menu
 */
 
-library.add(faUser, faLock, faStar, faWrench, faShoppingCart, faEnvelope);
+library.add(
+	faUser,
+	faLock,
+	faStar,
+	faWrench,
+	faShoppingCart,
+	faEnvelope,
+	faFacebook,
+	faInstagram
+);
 
 const menuList: Array<IMenuItem> = [
 	{
@@ -78,7 +88,25 @@ const Menu: React.FC<IMenuProps> = ({ opened, atClose }): JSX.Element => {
 							</h1>
 						</div>
 						<div className="menu__login w-60 w-md-70 f-row-end-center">
-							<Button
+							<ul className="f-row-center-center">
+								<li>
+									<a className="theme fs-200" href="#0" title="Visiter notre page Facebook">
+										<Icon icon={["fab", "facebook"]} />
+									</a>
+								</li>
+								<li className="mg-left-20">
+									<a className="theme fs-200" href="#0" title="Suivez nous sur insta !">
+										<Icon icon={["fab", "instagram"]} />
+									</a>
+								</li>
+								<li className="mg-left-20">
+									<a className="theme fs-200" href="#0" title="Contactez-nous par mail">
+										<Icon icon={["fas", "envelope"]} />
+									</a>
+								</li>
+							</ul>
+
+							{/*<Button
 								title="Connexion au compte admnistrateur"
 								className="mg-right-20"
 								alt
@@ -91,7 +119,7 @@ const Menu: React.FC<IMenuProps> = ({ opened, atClose }): JSX.Element => {
 								<React.Fragment>
 									<Icon icon={["fas", "user"]} /> Inscription
 								</React.Fragment>
-							</Button>
+							</Button>*/}
 						</div>
 					</div>
 					<div className="menu__separator w-100 mg-top-20 mg-bottom-20"></div>
