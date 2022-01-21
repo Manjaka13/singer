@@ -1,6 +1,6 @@
 {
 	"compilerOptions": {
-		"target": "es5",
+		"target": "es6",
 		"lib": ["dom", "dom.iterable", "esnext"],
 		"allowJs": true,
 		"skipLibCheck": true,
@@ -14,14 +14,13 @@
 		"resolveJsonModule": true,
 		"isolatedModules": true,
 		"jsx": "preserve",
-		"baseUrl": "."
+		"baseUrl": ".",
+		"noImplicitAny": false
 	},
 	"include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
 	"exclude": [
-		"node_modules",
-		"build",
-		"dist",
-		"/components/Cover.tsx",
-		"/components/Servive.tsx"
+		"**/node_modules",
+		"**/build",
+		"**/dist"
 	]
 }

@@ -39,7 +39,7 @@ const machines: Array<IPromotionSlide> = [
 	}
 ];
 
-const mappedSlide: Array<JSX.Element> = machines.map((item: string, key: number) => (
+const mappedSlide: Array<JSX.Element> = machines.map((item: IPromotionSlide) => (
 	<div className="each-slide" key={ uuidv4() }>
 		<div
 			className="f-col-start-start no-select"
@@ -114,7 +114,7 @@ const Cover = (): JSX.Element => {
 						</div>
 					</div>
 					<div className="cover__prom w-40 h-100 w-sm-0 f-row-end-center">
-						<div className="cover__promotion bg-white br-10 o-hidden">
+						<div className="cover__promotion f-col-initial-initial bg-white br-10 o-hidden">
 							<div className="w-100 f-row-between-center">
 								<h2 className="pd-10">Promotions</h2>
 								<p className="bold gold pd-10">
@@ -131,7 +131,7 @@ const Cover = (): JSX.Element => {
 							<div className="cover__slide o-hidden">
 								<Slide easing="ease">
 									{ mappedSlide }
-						        </Slide>
+								</Slide>
 							</div>
 						</div>
 					</div>

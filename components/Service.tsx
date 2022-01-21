@@ -57,7 +57,7 @@ const Service = (): JSX.Element => {
 					<div className="item slide h-100 bg-white border">
 						<Slide easing="ease">
 							{ mappedSlide }
-				        </Slide>
+						</Slide>
 					</div>
 					<div className="item h-100 f-col-center-between">
 						<div className="little bg-white border w-100">

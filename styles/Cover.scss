@@ -105,6 +105,7 @@
 	}
 
 	&__slide {
+		flex: 1 0 auto;
 		width: calc(100% - 20px);
 		height: 300px;
 		box-shadow: 0px 0px 1px black;
