@@ -45,3 +45,7 @@ Peer dependency for @types/uuid
 ### leaflet, react-leaflet
 
 For displaying map
+
+### swiper
+
+For diapos

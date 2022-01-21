@@ -108,3 +108,8 @@ export interface ICardProductProps {
 export interface IWebServiceResponse {
 	data: Array<IProduct>;
 }
+
+export interface IServiceItem {
+	title: string;
+	content: string;
+}
