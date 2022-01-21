@@ -1,6 +1,6 @@
 import { ISocial } from "helpers/interface";
 
-const PROXY = "api/";
+const PROXY = "api";
 const SOCIAL: Array<ISocial> = [
 	{
 		icon: "facebook",

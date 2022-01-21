@@ -78,3 +78,33 @@ export interface ICalendarItem {
 	opening: string;
 	opened: boolean;
 }
+
+export interface IPromotion {
+	type: string;
+	name: string;
+	value?: string | number;
+}
+
+export interface IProduct {
+	id: string;
+	type: string;
+	title: string;
+	description?: string;
+	photo?: Array<string>;
+	details?: Array<string>;
+	promotion?: IPromotion;
+	outstock?: boolean;
+}
+
+export interface IProductFilter {
+	name: string;
+	tag: string;
+}
+
+export interface ICardProductProps {
+	product: IProduct;
+}
+
+export interface IWebServiceResponse {
+	data: Array<IProduct>;
+}

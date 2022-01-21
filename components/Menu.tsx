@@ -17,40 +17,33 @@ import {
 	Navbar menu
 */
 
-library.add(
-	faUser,
-	faLock,
-	faStar,
-	faWrench,
-	faShoppingCart,
-	faEnvelope
-);
+library.add(faUser, faLock, faStar, faWrench, faShoppingCart, faEnvelope);
 
 const menuList: Array<IMenuItem> = [
 	{
 		name: "Nos promotions",
-		icon: ['fas', 'star'],
+		icon: ["fas", "star"],
 		title: "Profitez de nos dernières promotions de Singer",
-		link: "#promotions"
+		link: "#promotions",
 	},
 	{
 		name: "Offres et services",
-		icon: ['fas', 'wrench'],
+		icon: ["fas", "wrench"],
 		title: "Découvrez les services offerts chez Singer",
-		link: "#services"
+		link: "#services",
 	},
 	{
 		name: "Nos produits",
-		icon: ['fas', 'shopping-cart'],
+		icon: ["fas", "shopping-cart"],
 		title: "Les articles et produits en vente chez Singer",
-		link: "#produits"
+		link: "#produits",
 	},
 	{
 		name: "Contacts",
-		icon: ['fas', 'envelope'],
+		icon: ["fas", "envelope"],
 		title: "Nous joindre",
-		link: "#contacts"
-	}
+		link: "#contacts",
+	},
 ];
 
 const Menu: React.FC<IMenuProps> = ({ opened, atClose }): JSX.Element => {
@@ -68,8 +61,7 @@ const Menu: React.FC<IMenuProps> = ({ opened, atClose }): JSX.Element => {
 	));
 
 	const delayedClose = () => {
-		if(typeof atClose === "function")
-			setTimeout(() => atClose(), 100);
+		if (typeof atClose === "function") setTimeout(() => atClose(), 100);
 	};
 
 	return (
@@ -103,7 +95,9 @@ const Menu: React.FC<IMenuProps> = ({ opened, atClose }): JSX.Element => {
 						</div>
 					</div>
 					<div className="menu__separator w-100 mg-top-20 mg-bottom-20"></div>
-					<ul className="menu__list f-row-between-center mg-auto w-60">{mappedMenu}</ul>
+					<ul className="menu__list f-row-between-center mg-auto w-60">
+						{mappedMenu}
+					</ul>
 				</div>
 			</div>
 		</div>

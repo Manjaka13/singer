@@ -30,12 +30,10 @@ const Page: React.FC<IPageProps> = ({
 			<main className="h-100 o-hidden">
 				<Navbar atTrigger={toggleMenu} />
 				<Menu opened={menuOpened} atClose={toggleMenu} />
-				<div className="page w-100 o-auto">
-					{children}
-				</div>
+				<div className="page w-100 o-auto">{children}</div>
 			</main>
 		</React.Fragment>
 	);
-}
+};
 
 export default Page;

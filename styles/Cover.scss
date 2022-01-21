@@ -92,7 +92,7 @@
 	}
 
 	.star {
-		animation: rotateAnim 8s cubic-bezier(.55,.5,.45,.5) infinite;
+		animation: rotateAnim 8s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
 	}
 
 	@keyframes rotateAnim {

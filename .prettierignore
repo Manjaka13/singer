@@ -19,3 +19,4 @@ tsconfig.tsbuildinfo
 *.db
 package-lock.json
 yarn.lock
+styles/fastui.css

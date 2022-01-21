@@ -7,7 +7,7 @@ import React from "react";
 // } from "react-leaflet";
 // import "leaflet/dist/images/marker-shadow.png";
 
-const position = [48.08930332178957, -1.6213132083998467];
+// const position = [48.08930332178957, -1.6213132083998467];
 
 const SingerMap = (): JSX.Element => (
 	<React.Fragment>

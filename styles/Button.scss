@@ -39,10 +39,10 @@ $btn-colors: (red, green);
 
 @mixin btn-generate {
 	@each $color in $btn-colors {
-		.btn-#{unquote('' + $color)} {
+		.btn-#{unquote("" + $color)} {
 			@include btn-create($color);
 		}
-		.btn-alt-#{unquote('' + $color)} {
+		.btn-alt-#{unquote("" + $color)} {
 			@include btn-alt-create($color);
 		}
 	}
