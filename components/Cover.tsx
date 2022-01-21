@@ -1,13 +1,14 @@
 import React, { useState, useEffect } from "react";
 import Waves from "components/Waves";
+import { IPromotionSlide } from "helpers/interface";
 import { Slide } from "react-slideshow-image";
 import { v4 as uuidv4 } from "uuid";
 import { FontAwesomeIcon as Icon } from "@fortawesome/react-fontawesome";
 import { library } from "@fortawesome/fontawesome-svg-core";
-import { faStar } from "@fortawesome/free-solid-svg-icons";
+import { faStar, faShoppingCart } from "@fortawesome/free-solid-svg-icons";
 
 
-library.add(faStar);
+library.add(faStar, faShoppingCart);
 
 const months: Array<string> = [
 	"Janvier",
@@ -23,25 +24,43 @@ const months: Array<string> = [
 	"Décembre",
 ];
 
-const slides: Array<string> = [
-	"/cover-slide/slide1.jpg",
-	"/cover-slide/slide2.jpg",
-	"/cover-slide/slide3.jpg"
+const machines: Array<IPromotionSlide> = [
+	{
+		name: "SUPERA 5523",
+		type: "Machine à coudre mécanique"
+	},
+	{
+		name: "M2105",
+		type: "Machine à coudre mécanique"
+	},
+	{
+		name: "S0705",
+		type: "Surjeteuse"
+	}
 ];
 
-const machines: Array<string> = [
-	"Brodeuse",
-	"Machine à coudre électronique",
-	"Machine à coudre mécanique",
-	"Surjeteuse"
-];
-
-const mappedSlide = slides.map((item, key) => (
+const mappedSlide: Array<JSX.Element> = machines.map((item: string, key: number) => (
 	<div className="each-slide" key={ uuidv4() }>
-		<div style={{"background": `url(${item}) center center no-repeat`, "backgroundSize": "cover"}}>
-			<span className="pd-10 pd-top-5 pd-bottom-5 br-5 white no-select">
-				{ machines[key] }
-			</span>
+		<div
+			className="f-col-start-start no-select"
+			style={{
+				"background": `url(fake-machine.jpg) center center no-repeat`, "backgroundSize": "cover"
+			}}
+		>
+			<div className="w-70 machine-info pd-10 br-5 f-row-between-center">
+				<div className="info">
+					<h3 className="white fs-100 mg-bottom-5">
+						{ item.name }
+					</h3>
+					<p className="white fs-80">{ item.type }</p>
+				</div>
+				<div
+					className="details w-30px h-30px bg-theme white mg-right-10 br-round f-row-center-center pointer tr-200"
+					title="Détails"
+				>
+					<Icon icon={ ['fas', 'shopping-cart'] } />
+				</div>
+			</div>
 		</div>
 	</div>
 ));

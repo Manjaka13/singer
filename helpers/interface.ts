@@ -113,3 +113,8 @@ export interface IServiceItem {
 	title: string;
 	content: string;
 }
+
+export interface IPromotionSlide {
+	name: string;
+	type: string;
+}

@@ -137,13 +137,30 @@
 		background-size: cover;
 		height: 100%;
 	}
-	.each-slide span {
-		display: block;
-		font-size: 11pt;
-		background: rgba(0, 0, 0, 0.7);
-		text-align: center;
-		pointer-events: none;
-		margin-left: 40px;
-		margin-right: 40px;
+
+	.machine-info {
+		background: rgba(0, 0, 0, 0.7);	
+		@include screen-x($screen-md) {
+			width: 100%;
+			height: 100%;
+			padding: 0;
+			border-radius: 0;
+		}
+	}
+
+	.info {
+		flex: 1;
+		@include screen-x($screen-md) {
+			padding-left: 40px;
+		}
+	}
+
+	.details {
+		@include screen-x($screen-md) {
+			margin-right: 40px;
+		}
+		&:hover {
+			box-shadow: 0px 0px 10px white;
+		}
 	}
 }
