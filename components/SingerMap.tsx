@@ -16,9 +16,9 @@ const SingerMap = (): JSX.Element => (
 			zoom={13}
 			scrollWheelZoom={false}
 		>
-		    <TileLayer
-		    	url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-		    />
+			<TileLayer
+				url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+			/>
 			<Marker position={position}>
 				<Popup>
 					Notre magasin se trouve ici !
