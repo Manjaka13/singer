@@ -15,10 +15,6 @@ const filters: Array<IProductFilter> = [
 ];
 
 const Produits = (): JSX.Element => {
-	// let electronique: Array<IProduct> = [];
-	// let mecanique: Array<IProduct> = [];
-	// let brodeuse: Array<IProduct> = [];
-	// let surjeteuse: Array<IProduct> = [];
 	const [electronique, mecanique, brodeuse, surjeteuse] = useProduct();
 	const loaded: boolean =
 		electronique.length > 0 &&

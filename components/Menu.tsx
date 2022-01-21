@@ -56,20 +56,20 @@ const menuList: Array<IMenuItem> = [
 	},
 ];
 
-const Menu: React.FC<IMenuProps> = ({ opened, atClose }): JSX.Element => {
-	const mappedMenu: Array<JSX.Element> = menuList.map((item: IMenuItem) => (
-		<li className="menu__item" key={uuidv4()}>
-			<a
-				className="menu__link bold pd-10 br-5"
-				href={item.link}
-				title={item.title}
-			>
-				<Icon icon={item.icon} /> {item.name}
-			</a>
-			<div className="menu__underline tr-200 mg-auto w-0 h-5px"></div>
-		</li>
-	));
+const mappedMenu: Array<JSX.Element> = menuList.map((item: IMenuItem) => (
+	<li className="menu__item" key={uuidv4()}>
+		<a
+			className="menu__link bold pd-10 br-5"
+			href={item.link}
+			title={item.title}
+		>
+			<Icon icon={item.icon} /> {item.name}
+		</a>
+		<div className="menu__underline tr-200 mg-auto w-0 h-5px"></div>
+	</li>
+));
 
+const Menu: React.FC<IMenuProps> = ({ opened, atClose }): JSX.Element => {
 	const delayedClose = () => {
 		if (typeof atClose === "function") setTimeout(() => atClose(), 100);
 	};
