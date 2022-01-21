@@ -121,13 +121,12 @@
 			height: 160px;
 		}
 		& > div,
+		.slide > div,
 		.react-slideshow-container,
 		.react-slideshow-wrapper,
-		.images-wrap {
+		.each-slide,
+		.each-slide > div {
 			height: 100%;
-			div {
-				height: 100%;
-			}
 		}
 	}
 

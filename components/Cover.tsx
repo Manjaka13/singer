@@ -1,14 +1,11 @@
 import React, { useState, useEffect } from "react";
 import Waves from "components/Waves";
+import { Slide } from "react-slideshow-image";
 import { v4 as uuidv4 } from "uuid";
 import { FontAwesomeIcon as Icon } from "@fortawesome/react-fontawesome";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
 
-// import img1 from "public/cover-slide/slide1.jpg";
-// import img2 from "public/cover-slide/slide2.jpg";
-// import img3 from "public/cover-slide/slide3.jpg";
-// import img4 from "public/cover-slide/slide4.jpg";
 
 library.add(faStar);
 
@@ -26,13 +23,28 @@ const months: Array<string> = [
 	"Décembre",
 ];
 
-// const slideImages = [img1, img2, img3, img4];
-// const machines: Array<string> = [
-// 	"Brodeuse",
-// 	"Machine à coudre électronique",
-// 	"Machine à coudre mécanique",
-// 	"Surjeteuse"
-// ];
+const slides: Array<string> = [
+	"/cover-slide/slide1.jpg",
+	"/cover-slide/slide2.jpg",
+	"/cover-slide/slide3.jpg"
+];
+
+const machines: Array<string> = [
+	"Brodeuse",
+	"Machine à coudre électronique",
+	"Machine à coudre mécanique",
+	"Surjeteuse"
+];
+
+const mappedSlide = slides.map((item, key) => (
+	<div className="each-slide" key={ uuidv4() }>
+		<div style={{"background": `url(${item}) center center no-repeat`, "backgroundSize": "cover"}}>
+			<span className="pd-10 pd-top-5 pd-bottom-5 br-5 white no-select">
+				{ machines[key] }
+			</span>
+		</div>
+	</div>
+));
 
 const Cover = (): JSX.Element => {
 	const [currentService, setCurrentService] = useState<number>(0);
@@ -61,14 +73,6 @@ const Cover = (): JSX.Element => {
 			</span>
 		)
 	);
-
-	// const mappedSlide = slideImages.map((item, key) => (
-	// 	<div className="each-slide" key={uuidv4()}>
-	// 		<div style={{"background": `url(${item}) center center no-repeat`, "backgroundSize": "cover"}}>
-	// 			<span className="ctn-5-10 br-5 white no-select">{machines[key]}</span>
-	// 		</div>
-	// 	</div>
-	// ));
 
 	return (
 		<div className="cover o-hidden">
@@ -106,9 +110,9 @@ const Cover = (): JSX.Element => {
 								venenatis convallis mollis eu nisi !
 							</p>
 							<div className="cover__slide o-hidden">
-								{/*<Slide easing="ease">
+								<Slide easing="ease">
 									{ mappedSlide }
-						        </Slide>*/}
+						        </Slide>
 							</div>
 						</div>
 					</div>
