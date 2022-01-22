@@ -27,10 +27,10 @@ const Page: React.FC<IPageProps> = ({
 			<Heading title={title} image={image}>
 				{description}
 			</Heading>
-			<main className="h-100 o-hidden">
+			<main className="h-100 o-h">
 				<Navbar atTrigger={toggleMenu} />
 				<Menu opened={menuOpened} atClose={toggleMenu} />
-				<div className="page w-100 o-auto">{children}</div>
+				<div className="page w-100 o-a">{children}</div>
 			</main>
 		</React.Fragment>
 	);

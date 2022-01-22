@@ -27,12 +27,12 @@ const service: Array<IServiceItem> = [
 const mappedSlide = slides.map((item: string, key: number) => (
 	<div className="each-slide" key={ uuidv4() }>
 		<div
-			className="f-col-center-end pointer-none no-select"
+			className="f-c-ce-en p-n n-s"
 			style={{"background": `url(${item}) center center no-repeat`, "backgroundSize": "cover"}}
 		>
-			<div className="slide__item w-80 pd-10 br-10 mg-bottom-20">
-				<h3 className="bg-theme white br-5 pd-10 w-auto mg-left-10">{ service[key].title }</h3>
-				<p className="white pd-10 tx-justify">{ service[key].content }</p>
+			<div className="slide__item w-80 pd-10 br-10 mg-b-20">
+				<h3 className="bg-theme white br-5 pd-10 w-a mg-l-10">{ service[key].title }</h3>
+				<p className="white pd-10 tx-j">{ service[key].content }</p>
 			</div>
 		</div>
 	</div>
@@ -40,37 +40,37 @@ const mappedSlide = slides.map((item: string, key: number) => (
 
 const Service = (): JSX.Element => (
 	<section className="service pt-40 pb-20">
-		<div className="ctn pd-top-40">
-			<div className="f-row-start-center pd-bottom-20">
-				<div className="bg-theme mg-right-15 w-5px h-40px br-5"></div>
+		<div className="ctn pd-t-40">
+			<div className="f-r-st-ce pd-b-20">
+				<div className="bg-theme mg-r-15 w-5px h-40px br-5"></div>
 				<h2 className="fs-250">Nos offres et services</h2>
 			</div>
-			<p className="tx-justify">
+			<p className="tx-j">
 				Suspendisse pellentesque vehicula nulla vel faucibus. Nullam hendrerit
 				augue in dapibus eleifend. Nullam aliquet luctus posuere. Morbi ornare
 				porttitor sodales. In luctus feugiat malesuada. Phasellus consectetur nec
 				ligula vitae commodo. Praesent sodales lacinia facilisis. Quisque id ligula
 				vitae turpis blandit ullamcorper.
 			</p>
-			<div className="service__tab f-row-between-start f-wrap w-100 h-400px mg-top-20">
-				<div className="item slide h-100 bg-white border">
+			<div className="service__tab f-r-be-st f-w w-100 h-400px mg-t-20">
+				<div className="item slide h-100 bg-white b-b">
 					<Slide easing="ease">
 						{ mappedSlide }
 					</Slide>
 				</div>
-				<div className="item h-100 f-col-center-between">
-					<div className="little bg-white border w-100">
+				<div className="item h-100 f-c-ce-be">
+					<div className="little bg-white b-b w-100">
 						<div className="pd-10">
 							<h3>Expertise</h3>
-							<div className="w-50 h-5px bg-theme br-5 mg-top-10 mg-bottom-10"></div>
-							<p className="tx-justify">Proin porta iaculis purus, et congue nibh placerat eu. Nullam aliquet luctus posuere. Morbi ornare porttitor sodales. Mauris interdum lectus aliquet erat tincidunt suscipit ultricies eget purus. Nulla mattis orci eget iaculis pharetra.</p>
+							<div className="w-50 h-5px bg-theme br-5 mg-t-10 mg-b-10"></div>
+							<p className="tx-j">Proin porta iaculis purus, et congue nibh placerat eu. Nullam aliquet luctus posuere. Morbi ornare porttitor sodales. Mauris interdum lectus aliquet erat tincidunt suscipit ultricies eget purus. Nulla mattis orci eget iaculis pharetra.</p>
 						</div>
 					</div>
-					<div className="little bg-white border w-100">
+					<div className="little bg-white b-b w-100">
 						<div className="pd-10">
 							<h3>Professionalisme</h3>
-							<div className="w-50 h-5px bg-theme br-5 mg-top-10 mg-bottom-10"></div>
-							<p className="tx-justify">Suspendisse pellentesque vehicula nulla vel faucibus. Nullam hendrerit augue in dapibus eleifend. Nulla mattis orci eget iaculis pharetra. Nullam aliquet luctus posuere. Morbi ornare porttitor sodales.</p>
+							<div className="w-50 h-5px bg-theme br-5 mg-t-10 mg-b-10"></div>
+							<p className="tx-j">Suspendisse pellentesque vehicula nulla vel faucibus. Nullam hendrerit augue in dapibus eleifend. Nulla mattis orci eget iaculis pharetra. Nullam aliquet luctus posuere. Morbi ornare porttitor sodales.</p>
 						</div>
 					</div>
 				</div>

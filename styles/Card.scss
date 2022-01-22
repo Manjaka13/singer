@@ -5,10 +5,6 @@
 .card-product {
 	width: 300px;
 	height: 450px;
-	overflow: hidden;
-	background: white;
-	box-shadow: 0px 0px 1px black;
-	margin-bottom: 40px;
 
 	@include screen-x(1380px) {
 		width: 370px;
@@ -47,12 +43,6 @@
 	}
 
 	&__representation {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		width: 100%;
-		height: 200px;
-		overflow: hidden;
 		position: relative;
 	}
 
@@ -70,14 +60,9 @@
 		position: absolute;
 		bottom: 20px;
 		right: 20px;
-		padding: 5px 10px;
-		border-radius: 20px;
 		background: rgba(0, 0, 0, 0.6);
-		color: white;
-		font-size: 10pt;
 		border: 3px white solid;
 		box-shadow: 1px 1px 2px black;
-		pointer-events: none;
 		&--green {
 			background: rgba(0, 120, 0, 0.7);
 		}
@@ -89,11 +74,6 @@
 		}
 	}
 
-	&__image {
-		width: auto;
-		height: 100%;
-	}
-
 	&:hover {
 		.card-product__image {
 			height: 120%;
@@ -101,8 +81,7 @@
 	}
 
 	&__title {
-		padding: 20px 20px 10px 20px;
-		color: rgb(80, 80, 80);
+		color: $font-color-normal;
 	}
 
 	&__price {
@@ -118,10 +97,7 @@
 	}
 
 	&__description {
-		padding: 0 20px;
-		color: rgb(80, 80, 80);
-		text-align: justify;
-		overflow: hidden;
+		color: $font-color-normal;
 		text-overflow: ellipsis;
 		display: -webkit-box;
 		-webkit-box-orient: vertical;
@@ -130,20 +106,8 @@
 		min-height: 63px;
 	}
 
-	&__discover-box {
-		display: flex;
-		justify-content: center;
-		align-items: initial;
-		width: 100%;
-		padding-top: 20px;
-	}
-
 	&__discover {
-		padding: 10px 20px;
 		background: $color-theme;
-		color: white;
-		border: none;
-		cursor: pointer;
 		&:hover {
 			background: lighten($color-theme, 15%);
 		}

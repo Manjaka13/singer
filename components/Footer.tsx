@@ -107,15 +107,15 @@ const mappedContacts: Array<JSX.Element> = contacts.map(
 const mappedCalendar: Array<JSX.Element> = calendars.map(
 	(calendar: ICalendarItem) => (
 		<div className="contacts__calendar-col" key={uuidv4()}>
-			<div className="contacts__calendar-row f-row-center-center border pd-top-5 pd-bottom-5">
+			<div className="contacts__calendar-row f-r-ce-ce border pd-top-5 pd-bottom-5">
 				{calendar.day}
 			</div>
 			<div
 				className={
 					(calendar.opened
-						? "contacts__calendar-row green bold"
+						? "contacts__calendar-row green b"
 						: "contacts__calendar-row red") +
-					" f-row-center-center border pd-top-5 pd-bottom-5"
+					" f-r-ce-ce b-b pd-t-5 pd-b-5"
 				}
 			>
 				{calendar.opened && <Icon icon={["fas", "check-circle"]} />}
@@ -127,34 +127,34 @@ const mappedCalendar: Array<JSX.Element> = calendars.map(
 
 const Footer = (): JSX.Element => (
 	<section id="contacts" className="contacts bg-white">
-		<div className="contacts__container ctn f-row-between-start">
-			<div className="contacts__box w-30 pd-bottom-40">
-				<h2 className="contacts__title pd-20 pd-left-0 pd-right-0">
+		<div className="contacts__container ctn f-r-be-st">
+			<div className="contacts__box w-30 pd-b-40">
+				<h2 className="contacts__title pd-20 pd-l-0 pd-r-0">
 					<Icon icon={["fas", "map-marker-alt"]} /> Localisation
 				</h2>
-				<div className="w-40 h-5px bg-theme br-5 mg-bottom-20"></div>
-				<div className="contacts__map-box f-row-center-center w-100 h-200px br-5 o-hidden border">
+				<div className="w-40 h-5px bg-theme br-5 mg-b-20"></div>
+				<div className="contacts__map-box f-r-ce-ce w-100 h-200px br-5 o-h b-b">
 					<SingerMap />
 				</div>
 			</div>
-			<div className="contacts__box w-30 pd-bottom-40">
-				<h2 className="contacts__title pd-20 pd-left-0 pd-right-0">
+			<div className="contacts__box w-30 pd-b-40">
+				<h2 className="contacts__title pd-20 pd-l-0 pd-r-0">
 					<Icon icon={["fas", "envelope"]} /> Nous contacter
 				</h2>
-				<div className="w-40 h-5px bg-theme br-5 mg-bottom-20"></div>
+				<div className="w-40 h-5px bg-theme br-5 mg-b-20"></div>
 				<ul className="contacts__list">{mappedContacts}</ul>
 			</div>
-			<div className="contacts__box w-30 pd-bottom-40">
-				<h2 className="contacts__title pd-20 pd-left-0 pd-right-0">
+			<div className="contacts__box w-30 pd-b-40">
+				<h2 className="contacts__title pd-20 pd-l-0 pd-r-0">
 					<Icon icon={["fas", "calendar-alt"]} /> Ouvertures
 				</h2>
-				<div className="w-40 h-5px bg-theme br-5 mg-bottom-20"></div>
-				<p className="contacts__about mg-bottom-20 tx-justify">
+				<div className="w-40 h-5px bg-theme br-5 mg-b-20"></div>
+				<p className="contacts__about mg-b-20 tx-j">
 					Notre magasin est ouvert en semaine, n&apos;hésitez pas à prendre contact
 					avec nous les offres promotionnelles et venir nous voir directement !
 				</p>
 				<p className="contacts__hours">Horaires: 9h à 11h - 14h à 18h</p>
-				<div className="contacts__calendar f-row-start-start w-100 border mg-top-20 o-hidden br-5">
+				<div className="contacts__calendar f-r-st-st w-100 b-b mg-t-20 o-h br-5">
 					{mappedCalendar}
 				</div>
 			</div>

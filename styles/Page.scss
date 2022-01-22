@@ -1,0 +1,4 @@
+.page {
+	height: calc(100% - #{$navbar-h}px);
+	margin-top: #{$navbar-h}px;
+}

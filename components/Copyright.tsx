@@ -6,15 +6,15 @@ import { faHeart } from "@fortawesome/free-solid-svg-icons";
 library.add(faHeart);
 
 const Copyright = (): JSX.Element => (
-	<div className="copyright bg-theme pd-top-10 pd-bottom-10">
-		<div className="copyright__container ctn f-row-center-start">
+	<div className="copyright bg-theme pd-t-10 pd-b-10">
+		<div className="copyright__container ctn f-r-ce-st">
 			<p className="prg white">
-				Fait avec <Icon className="white" icon={["fas", "heart"]} /> par{" "}
-				<a className="bold copyright__link" href="#0" title="Voir le profil">
+				Fait avec <Icon icon={["fas", "heart"]} /> par{" "}
+				<a className="bold copyright__link gold" href="#0" title="Voir le profil">
 					Hari
 				</a>{" "}
 				et{" "}
-				<a className="bold copyright__link" href="#0" title="Voir le profil">
+				<a className="bold copyright__link gold" href="#0" title="Voir le profil">
 					Tahir
 				</a>
 				.

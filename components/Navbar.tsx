@@ -12,15 +12,15 @@ library.add(faBars);
 
 const Navbar: React.FC<INavbarProps> = ({ atTrigger }): JSX.Element => {
 	return (
-		<nav className="navbar w-100 f-row-center-center">
-			<div className="ctn f-row-between-center">
-				<div className="navbar__logo w-70 f-row-start-center">
-					<img className="h-100 mg-right-10" src="/singer.png" alt="Singer logo" />
+		<nav className="navbar w-100 f-r-ce-ce">
+			<div className="ctn f-r-be-ce">
+				<div className="navbar__logo w-70 f-r-st-ce">
+					<img className="h-100 mg-r-10" src="/singer.png" alt="Singer logo" />
 					<img className="h-100" src="/singer-text.png" alt="Singer text logo" />
 				</div>
-				<div className="w-30 f-row-end-center">
+				<div className="w-30 f-r-en-ce">
 					<div
-						className="navbar__trigger br-round f-row-center-center fs-160 tr-200 pointer white"
+						className="navbar__trigger br f-r-ce-ce fs-160 tr-200 p white"
 						title="Menu"
 						onClick={atTrigger}
 					>

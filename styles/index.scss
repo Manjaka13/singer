@@ -2,16 +2,6 @@
 	Import necessary styles here
 */
 
-#__next,
-main {
-	height: 100%;
-}
-
-.page {
-	height: calc(100% - 76px);
-	margin-top: 76px;
-}
-
 @import "./fastui.css";
 @import "./vars.scss";
 @import "./mixins.scss";
@@ -19,6 +9,7 @@ main {
 @import "./Badge.scss";
 @import "./Loading.scss";
 @import "./Navbar.scss";
+@import "./Page.scss";
 @import "./Menu.scss";
 @import "./Waves.scss";
 @import "./Cover.scss";
@@ -29,10 +20,10 @@ main {
 @import "./ProductList.scss";
 @import "./Service.scss";
 
-.bg-theme {
-	background: $color-theme;
-}
-
 .theme {
 	color: $color-theme;
+}
+
+.bg-theme {
+	background: $color-theme;
 }

@@ -15,10 +15,10 @@ const getMachineName = (type: string): string =>
 		: "Surjeteuse";
 
 const CardProduct: React.FC<ICardProductProps> = ({ product }): JSX.Element => (
-	<article className="card-product">
-		<figure className="card-product__representation">
+	<article className="card-product bg-white o-h b-b mg-b-20">
+		<figure className="card-product__representation f-r-ce-ce w-100 h-200px o-h">
 			<img
-				className="card-product__image tr-500"
+				className="card-product__image h-100 tr-500"
 				src={
 					process.env.NEXT_PUBLIC_MODE === "local"
 						? "/fake-machine.jpg"
@@ -29,7 +29,7 @@ const CardProduct: React.FC<ICardProductProps> = ({ product }): JSX.Element => (
 				alt="Machine"
 			/>
 			<p
-				className={`card-product__badge card-product__badge${
+				className={`card-product__badge br-20 white fs-80 p-n pd-5 pd-l-10 pd-r-10 n-s card-product__badge${
 					product.outstock
 						? "--red"
 						: product.promotion && typeof product.promotion.type == "string"
@@ -44,15 +44,15 @@ const CardProduct: React.FC<ICardProductProps> = ({ product }): JSX.Element => (
 					: ""}
 			</p>
 		</figure>
-		<h3 className="card-product__title">{product.title}</h3>
+		<h3 className="card-product__title pd-20 pd-b-10">{product.title}</h3>
 		<p className="card-product__price">{getMachineName(product.type)}</p>
 		<div className="card-product__separator"></div>
-		<p className="card-product__description">
+		<p className="card-product__description pd-0 pd-l-20 pd-r-20 tx-j o-h">
 			{product.description ? product.description : ""}
 		</p>
-		<div className="card-product__discover-box">
+		<div className="f-r-ce-in w-100 pd-t-20">
 			<a
-				className="card-product__discover tr-200"
+				className="card-product__discover tr-200 pd-10 pd-l-20 pd-r-20 white b-n p"
 				href="#0"
 				title="Découvrir ce produit"
 			>

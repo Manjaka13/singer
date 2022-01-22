@@ -11,7 +11,7 @@ const Button: React.FC<IButtonProps> = ({
 	alt,
 }): JSX.Element => {
 	const defautlCn =
-		"pd-10 pd-left-20 pd-right-20 border-none br-5 pointer tr-200";
+		"pd-10 pd-l-20 pd-r-20 b-n br-5 p tr-200";
 	const colorCn = color
 		? `btn-${alt ? "alt-" : ""}${color}`
 		: `btn${alt ? "-alt" : ""}`;

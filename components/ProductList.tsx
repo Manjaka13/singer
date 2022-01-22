@@ -69,8 +69,8 @@ const Produits = (): JSX.Element => {
 		(filter: IProductFilter, key: number) => (
 			<div
 				className={
-					(currentFilter === key ? "product__filter border" : "product__filter") +
-					" pd-5 pointer o-hidden bg-white br-5 mg-right-10 mg-top-20 tr-200 no-select"
+					(currentFilter === key ? "product__filter b-b" : "product__filter") +
+					" pd-5 p o-h bg-white br-5 mg-r-10 mg-t-20 tr-200 n-s"
 				}
 				key={uuidv4()}
 			>
@@ -81,7 +81,7 @@ const Produits = (): JSX.Element => {
 					onChange={() => chooseFilter(key)}
 					checked={currentFilter === key}
 				/>
-				<label className="pointer" htmlFor={filter.tag}>
+				<label className="p" htmlFor={filter.tag}>
 					{filter.name}
 				</label>
 			</div>
@@ -90,12 +90,12 @@ const Produits = (): JSX.Element => {
 
 	return (
 		<section className="product pt-40 pb-20">
-			<div className="ctn pd-top-40">
-				<div className="f-row-start-center pd-bottom-20">
-					<div className="bg-theme mg-right-15 w-5px h-40px br-5"></div>
+			<div className="ctn pd-t-40">
+				<div className="f-r-st-ce pd-b-20">
+					<div className="bg-theme mg-r-15 w-5px h-40px br-5"></div>
 					<h2 className="fs-250">Nos produits</h2>
 				</div>
-				<p className="tx-justify">
+				<p className="tx-j">
 					Suspendisse pellentesque vehicula nulla vel faucibus. Nullam hendrerit
 					augue in dapibus eleifend. Nullam aliquet luctus posuere. Morbi ornare
 					porttitor sodales. In luctus feugiat malesuada. Phasellus consectetur nec
@@ -104,14 +104,14 @@ const Produits = (): JSX.Element => {
 				</p>
 				{loaded && (
 					<React.Fragment>
-						<div className="f-row-start-center f-wrap">{mappedFilters}</div>
-						<div className="f-row-between-start mg-top-20 f-wrap">
+						<div className="f-r-st-ce f-w">{mappedFilters}</div>
+						<div className="f-r-be-st mg-t-20 f-w">
 							{mappedDisplayedProducts}
 						</div>
 					</React.Fragment>
 				)}
 				{!loaded && (
-					<div className="h-350px border mg-top-20 bg-white f-row-center-center">
+					<div className="h-350px b-b mg-t-20 bg-white f-r-ce-ce">
 						<Loading />
 					</div>
 				)}

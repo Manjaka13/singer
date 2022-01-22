@@ -106,21 +106,22 @@
 
 	&__slide {
 		flex: 1 0 auto;
-		width: calc(100% - 20px);
-		height: 300px;
-		box-shadow: 0px 0px 1px black;
-		border-radius: 10px;
+		width: 100%;
+		// width: calc(100% - 20px);
+		// height: 300px;
+		// box-shadow: 0px 0px 1px black;
+		// border-radius: 10px;
 		background: rgba(0, 0, 0, 0.1);
 		margin: auto;
-		@media only screen and (max-height: 1500px) {
-			height: 200px;
-		}
-		@media only screen and (max-height: 1200px) {
-			height: 180px;
-		}
-		@media only screen and (max-height: 1000px) {
-			height: 160px;
-		}
+		// @media only screen and (max-height: 1500px) {
+		// 	height: 200px;
+		// }
+		// @media only screen and (max-height: 1200px) {
+		// 	height: 180px;
+		// }
+		// @media only screen and (max-height: 1000px) {
+		// 	height: 160px;
+		// }
 		& > div,
 		.slide > div,
 		.react-slideshow-container,

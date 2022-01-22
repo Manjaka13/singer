@@ -59,13 +59,13 @@ const menuList: Array<IMenuItem> = [
 const mappedMenu: Array<JSX.Element> = menuList.map((item: IMenuItem) => (
 	<li className="menu__item" key={uuidv4()}>
 		<a
-			className="menu__link bold pd-10 br-5"
+			className="menu__link b pd-10 br-5"
 			href={item.link}
 			title={item.title}
 		>
 			<Icon icon={item.icon} /> {item.name}
 		</a>
-		<div className="menu__underline tr-200 mg-auto w-0 h-5px"></div>
+		<div className="menu__underline bg-theme tr-200 mg-a w-0 h-5px"></div>
 	</li>
 ));
 
@@ -79,27 +79,27 @@ const Menu: React.FC<IMenuProps> = ({ opened, atClose }): JSX.Element => {
 			className={(opened ? "menu" : "menu menu--hidden") + " w-100 tr-100"}
 			onClick={delayedClose}
 		>
-			<div className="menu__content bg-white pd-top-20 pd-bottom-20">
+			<div className="menu__content bg-white pd-t-20 pd-b-20">
 				<div className="ctn">
-					<div className="w-100 f-row-between-center">
+					<div className="w-100 f-r-be-ce">
 						<div className="menu__title w-40 w-md-30">
 							<h1 className="menu__name">
 								Singer<span className="menu__chantepie"> Chantepie</span>
 							</h1>
 						</div>
-						<div className="menu__login w-60 w-md-70 f-row-end-center">
-							<ul className="f-row-center-center">
+						<div className="menu__login w-60 w-md-70 f-r-en-ce">
+							<ul className="f-r-ce-ce">
 								<li>
 									<a className="theme fs-200" href="#0" title="Visiter notre page Facebook">
 										<Icon icon={["fab", "facebook"]} />
 									</a>
 								</li>
-								<li className="mg-left-20">
+								<li className="mg-l-20">
 									<a className="theme fs-200" href="#0" title="Suivez nous sur insta !">
 										<Icon icon={["fab", "instagram"]} />
 									</a>
 								</li>
-								<li className="mg-left-20">
+								<li className="mg-l-20">
 									<a className="theme fs-200" href="#0" title="Contactez-nous par mail">
 										<Icon icon={["fas", "envelope"]} />
 									</a>
@@ -122,8 +122,8 @@ const Menu: React.FC<IMenuProps> = ({ opened, atClose }): JSX.Element => {
 							</Button>*/}
 						</div>
 					</div>
-					<div className="menu__separator w-100 mg-top-20 mg-bottom-20"></div>
-					<ul className="menu__list f-row-between-center mg-auto w-60">
+					<div className="menu__separator w-100 mg-t-20 mg-b-20"></div>
+					<ul className="menu__list f-r-be-ce mg-a w-60">
 						{mappedMenu}
 					</ul>
 				</div>
