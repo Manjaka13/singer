@@ -1,9 +1,10 @@
 import React from "react";
+import Link from "next/link";
 import { v4 as uuidv4 } from "uuid";
 import { FontAwesomeIcon as Icon } from "@fortawesome/react-fontawesome";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { IMenuProps, IMenuItem } from "helpers/interface";
-// import Button from "components/Button";
+import Button from "components/Button";
 import {
 	faUser,
 	faLock,
@@ -34,37 +35,38 @@ const menuList: Array<IMenuItem> = [
 		name: "Nos promotions",
 		icon: ["fas", "star"],
 		title: "Profitez de nos dernières promotions de Singer",
-		link: "#promotions",
+		link: "/#promotions",
 	},
 	{
 		name: "Offres et services",
 		icon: ["fas", "wrench"],
 		title: "Découvrez les services offerts chez Singer",
-		link: "#services",
+		link: "/#services",
 	},
 	{
 		name: "Nos produits",
 		icon: ["fas", "shopping-cart"],
 		title: "Les articles et produits en vente chez Singer",
-		link: "#produits",
+		link: "/#produits",
 	},
 	{
 		name: "Contacts",
 		icon: ["fas", "envelope"],
 		title: "Nous joindre",
-		link: "#contacts",
+		link: "/#contacts",
 	},
 ];
 
 const mappedMenu: Array<JSX.Element> = menuList.map((item: IMenuItem) => (
 	<li className="menu__item" key={uuidv4()}>
-		<a
-			className="menu__link b pd-10 br-5"
-			href={item.link}
-			title={item.title}
-		>
-			<Icon icon={item.icon} /> {item.name}
-		</a>
+		<Link href={item.link} passHref>
+			<a
+				className="menu__link b pd-10 br-5"
+				title={item.title}
+			>
+				<Icon icon={item.icon} /> {item.name}
+			</a>
+		</Link>
 		<div className="menu__underline bg-theme tr-200 mg-a w-0 h-5px"></div>
 	</li>
 ));
@@ -88,6 +90,15 @@ const Menu: React.FC<IMenuProps> = ({ opened, atClose }): JSX.Element => {
 							</h1>
 						</div>
 						<div className="menu__login w-60 w-md-70 f-r-en-ce">
+							<Button
+								title="Connexion au compte admnistrateur"
+								className="mg-right-20"
+								alt
+							>
+								<React.Fragment>
+									<Icon icon={["fas", "lock"]} /> Se connecter
+								</React.Fragment>
+							</Button>
 							<ul className="f-r-ce-ce">
 								<li>
 									<a className="theme fs-200" href="#0" title="Visiter notre page Facebook">
@@ -105,19 +116,9 @@ const Menu: React.FC<IMenuProps> = ({ opened, atClose }): JSX.Element => {
 									</a>
 								</li>
 							</ul>
-
-							{/*<Button
-								title="Connexion au compte admnistrateur"
-								className="mg-right-20"
-								alt
-							>
+							{/*<Button title="S'inscrire à un compte admnistrateur">
 								<React.Fragment>
-									<Icon icon={["fas", "lock"]} /> Se connecter
-								</React.Fragment>
-							</Button>
-							<Button title="S'inscrire à un compte admnistrateur">
-								<React.Fragment>
-									<Icon icon={["fas", "user"]} /> Inscription
+									<Icon icon={["fas", "user"]} /> Gérer
 								</React.Fragment>
 							</Button>*/}
 						</div>
