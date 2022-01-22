@@ -31,6 +31,8 @@ import {
 config.autoAddCss = false;
 
 library.add(
+	faFacebook,
+	faInstagram,
 	faEnvelope,
 	faHeart,
 	faStar,
