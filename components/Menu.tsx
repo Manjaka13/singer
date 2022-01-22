@@ -2,33 +2,12 @@ import React from "react";
 import Link from "next/link";
 import { v4 as uuidv4 } from "uuid";
 import { FontAwesomeIcon as Icon } from "@fortawesome/react-fontawesome";
-import { library } from "@fortawesome/fontawesome-svg-core";
 import { IMenuProps, IMenuItem } from "helpers/interface";
 import Button from "components/Button";
-import {
-	faUser,
-	faLock,
-	faStar,
-	faWrench,
-	faShoppingCart,
-	faEnvelope,
-} from "@fortawesome/free-solid-svg-icons";
-import { faFacebook, faInstagram } from "@fortawesome/free-brands-svg-icons";
 
 /*
 	Navbar menu
 */
-
-library.add(
-	faUser,
-	faLock,
-	faStar,
-	faWrench,
-	faShoppingCart,
-	faEnvelope,
-	faFacebook,
-	faInstagram
-);
 
 const menuList: Array<IMenuItem> = [
 	{

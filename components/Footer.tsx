@@ -4,29 +4,10 @@ import { IContactItem, ICalendarItem } from "helpers/interface";
 import Copyright from "components/Copyright";
 import SingerMap from "components/SingerMap";
 import { FontAwesomeIcon as Icon } from "@fortawesome/react-fontawesome";
-import { library } from "@fortawesome/fontawesome-svg-core";
-import {
-	faMapMarkerAlt,
-	faEnvelope,
-	faPhone,
-	faCalendar,
-	faTimesCircle,
-	faCheckCircle,
-	faCalendarAlt,
-} from "@fortawesome/free-solid-svg-icons";
-import { faFacebook, faInstagram } from "@fortawesome/free-brands-svg-icons";
 
-library.add(
-	faMapMarkerAlt,
-	faEnvelope,
-	faPhone,
-	faCalendar,
-	faFacebook,
-	faInstagram,
-	faTimesCircle,
-	faCheckCircle,
-	faCalendarAlt
-);
+/*
+	Footer component
+*/
 
 const contacts: Array<IContactItem> = [
 	{

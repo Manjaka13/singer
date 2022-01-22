@@ -1,10 +1,9 @@
 import React from "react";
 import { FontAwesomeIcon as Icon } from "@fortawesome/react-fontawesome";
-import { library } from "@fortawesome/fontawesome-svg-core";
-import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
-import { faFacebook, faInstagram } from "@fortawesome/free-brands-svg-icons";
 
-library.add(faFacebook, faInstagram, faEnvelope);
+/*
+	Wave animation
+*/
 
 const Waves = (): JSX.Element => (
 	<div className="waves">

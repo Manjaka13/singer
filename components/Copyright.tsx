@@ -1,9 +1,9 @@
 import React from "react";
 import { FontAwesomeIcon as Icon } from "@fortawesome/react-fontawesome";
-import { library } from "@fortawesome/fontawesome-svg-core";
-import { faHeart } from "@fortawesome/free-solid-svg-icons";
 
-library.add(faHeart);
+/*
+	Bottom page copyright
+*/
 
 const Copyright = (): JSX.Element => (
 	<div className="copyright bg-theme pd-t-10 pd-b-10">

@@ -4,11 +4,10 @@ import { IPromotionSlide } from "helpers/interface";
 import { Slide } from "react-slideshow-image";
 import { v4 as uuidv4 } from "uuid";
 import { FontAwesomeIcon as Icon } from "@fortawesome/react-fontawesome";
-import { library } from "@fortawesome/fontawesome-svg-core";
-import { faStar, faShoppingCart } from "@fortawesome/free-solid-svg-icons";
 
-
-library.add(faStar, faShoppingCart);
+/*
+	Main page cover
+*/
 
 const months: Array<string> = [
 	"Janvier",

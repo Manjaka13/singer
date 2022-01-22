@@ -1,6 +1,10 @@
 import React from "react";
 import { IButtonProps } from "helpers/interface";
 
+/*
+	Singer button component
+*/
+
 const Button: React.FC<IButtonProps> = ({
 	title,
 	className,

@@ -2,10 +2,10 @@ import React from "react";
 import { ITypeMachineItem } from "helpers/interface";
 import { v4 as uuidv4 } from "uuid";
 import { FontAwesomeIcon as Icon } from "@fortawesome/react-fontawesome";
-import { library } from "@fortawesome/fontawesome-svg-core";
-import { faEye } from "@fortawesome/free-solid-svg-icons";
 
-library.add(faEye);
+/*
+	Machine categories
+*/
 
 const listTypes: Array<ITypeMachineItem> = [
 	{

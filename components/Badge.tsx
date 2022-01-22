@@ -1,6 +1,10 @@
 import React from "react";
 import { IBadgeProps } from "helpers/interface";
 
+/*
+	For displaying badges with number
+*/
+
 const Badge: React.FC<IBadgeProps> = ({ content }): JSX.Element => (
 	<p
 		className={
