@@ -1,7 +1,7 @@
 import React from "react";
 import Page from "components/Page";
 import NavbarAdmin from "components/BackOffice/NavbarAdmin";
-import PageListAccounts from "components/BackOffice/PageListAccounts";
+import PageListContacts from "components/BackOffice/PageListContacts";
 
 /*
 	Admnistration page
@@ -17,7 +17,7 @@ const LoginPage = (): JSX.Element => (
 		<React.Fragment>
 			<div className="w-100 h-100 o-h f-r-st-st">
 				<NavbarAdmin />
-				<PageListAccounts />
+				<PageListContacts />
 			</div>
 		</React.Fragment>
 	</Page>
