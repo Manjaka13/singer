@@ -1,0 +1,28 @@
+/*
+	Page user styles
+*/
+
+.page-user {
+	.avatar {
+		position: relative;
+	}
+
+	.overlay {
+		position: absolute;
+		top: 0;
+		left: 0;
+		background: rgba(0, 0, 0, 0.5);
+		opacity: 0;
+		&:hover {
+			opacity: 1;
+		}
+	}
+
+	.change-avatar {
+		color: white;
+	}
+
+	.light {
+		color: rgb(150, 150, 150);
+	}
+}

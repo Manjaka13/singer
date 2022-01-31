@@ -1,0 +1,26 @@
+/*
+	Accounts list page
+*/
+
+.page-list-accounts {
+	.list {
+		min-height: calc(100% - 169px);
+		max-height: calc(100% - 169px);
+		box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+	}
+
+	.separator {
+		height: 2px;
+		background: rgb(220, 220, 220);
+	}
+
+	.item {
+		&:hover {
+			background: rgb(235, 235, 235);
+		}
+	}
+
+	.avatar {
+		flex: 1;
+	}
+}
