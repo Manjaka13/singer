@@ -18,6 +18,7 @@ const Page: React.FC<IPageProps> = ({
 	image,
 	description,
 	children,
+	admin
 }): JSX.Element => {
 	const [menuOpened, setMenuOpened] = useState(false);
 	const toggleMenu = () => setMenuOpened(!menuOpened);
@@ -28,9 +29,13 @@ const Page: React.FC<IPageProps> = ({
 				{description}
 			</Heading>
 			<main className="h-100 o-h">
-				<Navbar atTrigger={toggleMenu} />
-				<Menu opened={menuOpened} atClose={toggleMenu} />
-				<div className="page w-100 o-a">{children}</div>
+				{!admin && (
+					<React.Fragment>
+						<Navbar atTrigger={toggleMenu} />
+						<Menu opened={menuOpened} atClose={toggleMenu} />
+					</React.Fragment>
+				)}
+				<div className={(admin ? 'page--admin' : 'page' ) + " w-100 o-a"}>{children}</div>
 			</main>
 		</React.Fragment>
 	);
