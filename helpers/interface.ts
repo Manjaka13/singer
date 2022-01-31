@@ -15,7 +15,7 @@ export interface IPageProps {
 	image?: string;
 	description?: string;
 	children?: JSX.Element;
-	active?: number;
+	admin?: boolean;
 }
 
 export interface IHeadingProps {
@@ -117,4 +117,22 @@ export interface IServiceItem {
 export interface IPromotionSlide {
 	name: string;
 	type: string;
+}
+
+export interface INavbarAdminItem {
+	id: number;
+	icon: IconProp;
+	content?: string;
+}
+
+export interface INavbarAdminItemProps {
+	id: number;
+	item: INavbarAdminItem;
+	atClick: (id: number) => void;
+	active?: boolean;
+}
+
+export interface IPageAdminProps {
+	className?: string;
+	children: JSX.Element;
 }
