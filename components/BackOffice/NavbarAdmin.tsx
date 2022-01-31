@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { v4 as uuidv4 } from "uuid";
 import { INavbarAdminItem } from "helpers/interface";
 import NavbarAdminItem from "components/BackOffice/NavbarAdminItem";
+import { FontAwesomeIcon as Icon } from "@fortawesome/react-fontawesome";
+import Button from "components/Button";
 
 const sections: Array<INavbarAdminItem> = [
 	{
@@ -55,6 +57,13 @@ const NavbarAdmin = (): JSX.Element => {
 				<ul className="pd-t-20 pd-b-20">
 					{mappedSection}
 				</ul>
+				<p className="tx-c">
+					<Button className="navbar-admin__logout fs-100" title="Se déconnecter">
+						<React.Fragment>
+							<Icon icon={["fas", "lock"]} /> Déconnexion
+						</React.Fragment>
+					</Button>
+				</p>
 			</div>
 		</div>
 	);
