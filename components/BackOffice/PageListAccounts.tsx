@@ -46,6 +46,7 @@ const mappedUsers = users.map((user) => (
 
 const PageListAccounts = () => (
 	<PageAdmin className="page-list-accounts">
+		<React.Fragment>
 			<h1 className="pd-20 fs-300">Comptes admnistrateurs</h1>
 			<div className="mg-20 mg-t-0">
 				<div className="w-30 h-5px bg-theme br-5"></div>
@@ -69,6 +70,7 @@ const PageListAccounts = () => (
 					</Button>
 				</div>
 			</div>
+		</React.Fragment>
 	</PageAdmin>
 );
 

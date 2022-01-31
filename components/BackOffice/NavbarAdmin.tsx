@@ -1,41 +1,15 @@
 import React, { useState } from "react";
 import { v4 as uuidv4 } from "uuid";
-import { INavbarAdminItem } from "helpers/interface";
+import { INavbarAdminItem, INavbarAdminProps } from "helpers/interface";
 import NavbarAdminItem from "components/BackOffice/NavbarAdminItem";
 import { FontAwesomeIcon as Icon } from "@fortawesome/react-fontawesome";
 import Button from "components/Button";
 
-const sections: Array<INavbarAdminItem> = [
-	{
-		icon: ['fas', 'user'],
-		content: "Manjaka"
-	},
-	{
-		icon: ['fas', 'key'],
-		content: "Comptes admnistrateurs"
-	},
-	{
-		icon: ['fas', 'pencil-alt'],
-		content: "Rédiger newsletter"
-	},
-	{
-		icon: ['fas', 'envelope'],
-		content: "Liste des contacts"
-	},
-	{
-		icon: ['fas', 'shopping-cart'],
-		content: "Gestion des produits"
-	},
-	{
-		icon: ['fas', 'wrench'],
-		content: "Autres paramètres"
-	},
-];
-
-const NavbarAdmin = (): JSX.Element => {
-	const [selectedSection, setSelectedSection] = useState<number>(0);
-	const selectSection = (id: number) => selectedSection != id && setSelectedSection(id);
-
+const NavbarAdmin: React.FC<INavbarAdminProps> = ({
+	sections,
+	selectedSection,
+	selectSection
+}): JSX.Element => {
 	const mappedSection: Array<JSX.Element> = sections.map((item: INavbarAdminItem, key: number) => (
 		<NavbarAdminItem
 			id={key}

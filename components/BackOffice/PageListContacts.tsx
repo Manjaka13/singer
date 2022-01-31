@@ -37,6 +37,7 @@ const mappedContacts = contacts.map((contact) => (
 
 const PageListContacts = () => (
 	<PageAdmin className="page-list-contacts">
+		<React.Fragment>
 			<h1 className="pd-20 fs-300">Liste des contacts</h1>
 			<div className="mg-20 mg-t-0">
 				<div className="w-30 h-5px bg-theme br-5"></div>
@@ -58,6 +59,7 @@ const PageListContacts = () => (
 					</Button>
 				</div>
 			</div>
+		</React.Fragment>
 	</PageAdmin>
 );
 

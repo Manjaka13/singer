@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import { IPageAdmiProps } from "helpers/interface";
+import { IPageAdminProps } from "helpers/interface";
 
-const PageAdmin: React.FC<IPageAdmiProps> = ({
+const PageAdmin: React.FC<IPageAdminProps> = ({
 	className,
 	children
 }): JSX.Element => (

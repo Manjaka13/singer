@@ -120,14 +120,14 @@ export interface IPromotionSlide {
 }
 
 export interface INavbarAdminItem {
-	id: number;
+	id?: number;
 	icon: IconProp;
 	content?: string;
 }
 
 export interface INavbarAdminItemProps {
 	id: number;
-	item: INavbarAdminItem;
+	section: INavbarAdminItem;
 	atClick: (id: number) => void;
 	active?: boolean;
 }
@@ -135,4 +135,10 @@ export interface INavbarAdminItemProps {
 export interface IPageAdminProps {
 	className?: string;
 	children: JSX.Element;
+}
+
+export interface INavbarAdminProps {
+	sections: Array<INavbarAdminItem>;
+	selectedSection: number;
+	selectSection: (id: number) => void;
 }
