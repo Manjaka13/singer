@@ -60,6 +60,14 @@ const PageListAccounts = () => (
 				</div>
 				<div className="separator mg-l-20 mg-r-20"></div>
 				{mappedUsers}
+				<div className="separator mg-l-20 mg-r-20"></div>
+				<div className="f-r-ce-st pd-t-20">
+					<Button className="fs-80" title="Créer nouvel utilisateur">
+						<React.Fragment>
+							<Icon icon={["fas", "user-plus"]} /> Nouveau
+						</React.Fragment>
+					</Button>
+				</div>
 			</div>
 	</PageAdmin>
 );
