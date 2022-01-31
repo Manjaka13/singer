@@ -128,7 +128,7 @@ export interface INavbarAdminItem {
 export interface INavbarAdminItemProps {
 	id: number;
 	section: INavbarAdminItem;
-	atClick: (id: number) => void;
+	atClick?: (id: number) => void;
 	active?: boolean;
 }
 
@@ -141,4 +141,12 @@ export interface INavbarAdminProps {
 	sections: Array<INavbarAdminItem>;
 	selectedSection: number;
 	selectSection: (id: number) => void;
+}
+
+export interface IAdminModalProps {
+	icon?: IconProp;
+	title?: string;
+	children: JSX.Element;
+	canClose?: boolean;
+	atClose?: () => void;
 }
