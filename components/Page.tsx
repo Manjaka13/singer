@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Heading from "components/Heading";
 import Navbar from "components/Navbar";
 import Menu from "components/Menu";
 import { IPageProps } from "helpers/interface";
+import { AuthContext } from "context/";
 
 /*
 	Page component
@@ -20,11 +21,16 @@ const Page: React.FC<IPageProps> = ({
 	children,
 	admin
 }): JSX.Element => {
-	const [menuOpened, setMenuOpened] = useState(false);
-	const toggleMenu = () => setMenuOpened(!menuOpened);
+	const [user, setUser] = useState("Loading...");
+	const [menuOpened, setMenuOpened] = useState<boolean>(false);
+	const toggleMenu = (): void => setMenuOpened(!menuOpened);
+
+	useEffect(() => {
+		setUser(window.sessionStorage.getItem("user"));
+	}, []);
 
 	return (
-		<React.Fragment>
+		<AuthContext.Provider value={user}>
 			<Heading title={title} image={image}>
 				{description}
 			</Heading>
@@ -37,7 +43,7 @@ const Page: React.FC<IPageProps> = ({
 				)}
 				<div className={(admin ? 'page--admin' : 'page' ) + " w-100 o-a"}>{children}</div>
 			</main>
-		</React.Fragment>
+		</AuthContext.Provider>
 	);
 };
 
