@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Router from "next/router";
+import Link from "next/link";
 import { v4 as uuidv4 } from "uuid";
 import { INavbarAdminItem, INavbarAdminProps } from "helpers/interface";
 import NavbarAdminItem from "components/BackOffice/NavbarAdminItem";
@@ -7,6 +8,7 @@ import { FontAwesomeIcon as Icon } from "@fortawesome/react-fontawesome";
 import Button from "components/Button";
 import AdminModal from "components/BackOffice/AdminModal";
 import Loading from "components/Loading";
+import Session from "helpers/session";
 
 const NavbarAdmin: React.FC<INavbarAdminProps> = ({
 	sections,
@@ -25,16 +27,19 @@ const NavbarAdmin: React.FC<INavbarAdminProps> = ({
 	));
 	const logout = (): void => {
 		setLoggingOut(true);
+		Session.remove("user");
 		Router.push("/");
 	};
 
 	return (
 		<div className="navbar-admin h-100 f-c-ce-ce bg-theme">
 			<div className="navbar-admin__container h-100 mg-20">
-				<div className="w-100 f-r-st-ce">
-					<img className="h-40px mg-r-10" src="/singer.png" alt="Singer logo" />
-					<img className="h-40px" src="/singer-text.png" alt="Singer text logo" />
-				</div>
+				<Link href="/" passHref>
+					<a title="Aller au site" className="w-100 f-r-st-ce">
+						<img className="h-40px mg-r-10" src="/singer.png" alt="Singer logo" />
+						<img className="h-40px" src="/singer-text.png" alt="Singer text logo" />
+					</a>
+				</Link>
 				<div className="navbar-admin__separator w-100 bg-white mg-t-20 br-5"></div>
 				<ul className="pd-t-20 pd-b-20">
 					{mappedSection}
