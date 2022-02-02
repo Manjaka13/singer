@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
+import Router from "next/router";
 import Link from "next/link";
 import { v4 as uuidv4 } from "uuid";
 import { FontAwesomeIcon as Icon } from "@fortawesome/react-fontawesome";
 import { IMenuProps, IMenuItem } from "helpers/interface";
 import Button from "components/Button";
+import { AuthContext } from "context/";
 
 /*
 	Navbar menu
@@ -51,6 +53,9 @@ const mappedMenu: Array<JSX.Element> = menuList.map((item: IMenuItem) => (
 ));
 
 const Menu: React.FC<IMenuProps> = ({ opened, atClose }): JSX.Element => {
+	const user = useContext(AuthContext);
+	console.log(user);
+
 	const delayedClose = () => {
 		if (typeof atClose === "function") setTimeout(() => atClose(), 100);
 	};
@@ -69,15 +74,30 @@ const Menu: React.FC<IMenuProps> = ({ opened, atClose }): JSX.Element => {
 							</h1>
 						</div>
 						<div className="menu__login w-60 w-md-70 f-r-en-ce">
-							<Button
-								title="Connexion au compte admnistrateur"
-								className="mg-right-20"
-								alt
-							>
-								<React.Fragment>
-									<Icon icon={["fas", "lock"]} /> Se connecter
-								</React.Fragment>
-							</Button>
+							{user && (
+								<Button
+									title="Aller dans le Back Office"
+									className="mg-right-20"
+									alt
+									atClick={() => Router.push("/admin")}
+								>
+									<React.Fragment>
+										<Icon icon={["fas", "wrench"]} /> Admnistration
+									</React.Fragment>
+								</Button>
+							)}
+							{!user && (
+								<Button
+									title="Connexion au compte admnistrateur"
+									className="mg-right-20"
+									alt
+									atClick={() => Router.push("/login")}
+								>
+									<React.Fragment>
+										<Icon icon={["fas", "lock"]} /> Se connecter
+									</React.Fragment>
+								</Button>
+							)}
 							<ul className="f-r-ce-ce">
 								<li>
 									<a className="theme fs-200" href="#0" title="Visiter notre page Facebook">

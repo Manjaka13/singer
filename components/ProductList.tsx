@@ -3,7 +3,7 @@ import { v4 as uuidv4 } from "uuid";
 import Loading from "components/Loading";
 import Card from "components/Card";
 import { IProductFilter, IProduct } from "helpers/interface";
-import { useProduct } from "hooks/";
+// import { useProduct } from "hooks/";
 
 const filters: Array<IProductFilter> = [
 	{ name: "Tous les produits", tag: "all" },
@@ -15,7 +15,7 @@ const filters: Array<IProductFilter> = [
 ];
 
 const Produits = (): JSX.Element => {
-	const [electronique, mecanique, brodeuse, surjeteuse] = useProduct();
+	const [electronique, mecanique, brodeuse, surjeteuse] = [[], [], [], []];
 	const loaded: boolean =
 		electronique.length > 0 &&
 		mecanique.length > 0 &&

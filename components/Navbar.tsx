@@ -1,16 +1,12 @@
 import React, { useContext } from "react";
 import { INavbarProps } from "helpers/interface";
-import { FontAwesomeIcon as Icon } from "@fortawesome/react-fontawesome";
-import { AuthContext } from "context/";
+import { FontAwesomeIcon as Icon } from "@fortawesome/react-fontawesome"
 
 /*
 	Navigation component
 */
 
 const Navbar: React.FC<INavbarProps> = ({ atTrigger }): JSX.Element => {
-	const user = useContext(AuthContext);
-	console.log(user);
-
 	return (
 		<nav className="navbar w-100 f-r-ce-ce">
 			<div className="ctn f-r-be-ce">

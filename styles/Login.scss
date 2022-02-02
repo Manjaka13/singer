@@ -23,4 +23,9 @@
 			font-size: 18pt;
 		}
 	}
+
+	&__input {
+		width: calc(100% - 40px);
+		border: none;
+	}
 }

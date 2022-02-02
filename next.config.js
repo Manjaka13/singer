@@ -7,7 +7,7 @@ module.exports = {
 		return [
 			{
 				source: "/api/:slug*",
-				destination: "https://run.mocky.io/v3/:slug*",
+				destination: "https://back.chantepie.heroku.app/:slug*",
 			},
 		];
 	},

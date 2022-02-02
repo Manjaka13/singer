@@ -4,6 +4,7 @@ import Navbar from "components/Navbar";
 import Menu from "components/Menu";
 import { IPageProps } from "helpers/interface";
 import { AuthContext } from "context/";
+import Session from "helpers/session";
 
 /*
 	Page component
@@ -26,7 +27,9 @@ const Page: React.FC<IPageProps> = ({
 	const toggleMenu = (): void => setMenuOpened(!menuOpened);
 
 	useEffect(() => {
-		setUser(window.sessionStorage.getItem("user"));
+		const sessionUser = Session.get("user");
+		if(user)
+			setUser(sessionUser);
 	}, []);
 
 	return (
