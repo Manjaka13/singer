@@ -54,7 +54,6 @@ const mappedMenu: Array<JSX.Element> = menuList.map((item: IMenuItem) => (
 
 const Menu: React.FC<IMenuProps> = ({ opened, atClose }): JSX.Element => {
 	const user = useContext(AuthContext);
-	console.log(user);
 
 	const delayedClose = () => {
 		if (typeof atClose === "function") setTimeout(() => atClose(), 100);
