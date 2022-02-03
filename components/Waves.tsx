@@ -33,7 +33,11 @@ const Waves = (): JSX.Element => (
 		<div className="box w-100 h-100 f-r-ce-ce">
 			<ul className="social f-r-ce-ce">
 				<li className="social__item">
-					<a className="link" href="#0" title="Visiter notre page Facebook">
+					<a
+						className="link"
+						href="https://www.facebook.com/SingerChantepie35"
+						title="Visiter notre page Facebook"
+					>
 						<Icon icon={["fab", "facebook"]} />
 					</a>
 				</li>

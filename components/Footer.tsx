@@ -2,12 +2,15 @@ import React from "react";
 import { v4 as uuidv4 } from "uuid";
 import { IContactItem, ICalendarItem } from "helpers/interface";
 import Copyright from "components/Copyright";
-import SingerMap from "components/SingerMap";
+//import SingerMap from "components/SingerMap";
 import { FontAwesomeIcon as Icon } from "@fortawesome/react-fontawesome";
+import dynamic from "next/dynamic";
 
 /*
 	Footer component
 */
+
+const SingerMap = dynamic(() => import("components/SingerMap"), { ssr: false });
 
 const contacts: Array<IContactItem> = [
 	{
@@ -21,7 +24,7 @@ const contacts: Array<IContactItem> = [
 	{
 		icon: ["fab", "facebook"],
 		content: "Notre page Facebook",
-		link: "https://facebook.com",
+		link: "https://www.facebook.com/SingerChantepie35",
 	},
 	{
 		icon: ["fab", "instagram"],
@@ -33,33 +36,33 @@ const contacts: Array<IContactItem> = [
 const calendars: Array<ICalendarItem> = [
 	{
 		day: "L",
-		opening: "Matin fermé - 14h à 18h",
+		opening: "Etablissement fermé.",
+		opened: false,
+	},
+	{
+		day: "M",
+		opening: "9h30 à 13h - 14h30 à 18h30",
 		opened: true,
 	},
 	{
 		day: "M",
-		opening: "9h à 11h - 14h à 18h",
-		opened: true,
-	},
-	{
-		day: "M",
-		opening: "9h à 11h - Fermé après-midi",
+		opening: "9h30 à 13h - 14h30 à 18h30",
 		opened: true,
 	},
 	{
 		day: "J",
-		opening: "9h à 11h - 14h à 18h",
+		opening: "9h30 à 13h - 14h30 à 18h30",
 		opened: true,
 	},
 	{
 		day: "V",
-		opening: "9h à 11h - 14h à 18h",
+		opening: "9h30 à 13h - 14h30 à 18h30",
 		opened: true,
 	},
 	{
 		day: "S",
-		opening: "Etablissement fermé.",
-		opened: false,
+		opening: "10h à 13h30.",
+		opened: true,
 	},
 	{
 		day: "D",
@@ -95,8 +98,7 @@ const mappedCalendar: Array<JSX.Element> = calendars.map(
 				className={
 					(calendar.opened
 						? "contacts__calendar-row green b"
-						: "contacts__calendar-row red") +
-					" f-r-ce-ce b-b pd-t-5 pd-b-5"
+						: "contacts__calendar-row red") + " f-r-ce-ce b-b pd-t-5 pd-b-5"
 				}
 			>
 				{calendar.opened && <Icon icon={["fas", "check-circle"]} />}
@@ -134,7 +136,10 @@ const Footer = (): JSX.Element => (
 					Notre magasin est ouvert en semaine, n&apos;hésitez pas à prendre contact
 					avec nous les offres promotionnelles et venir nous voir directement !
 				</p>
-				<p className="contacts__hours">Horaires: 9h à 11h - 14h à 18h</p>
+				<p className="contacts__hours">
+					Horaires: 9h30 à 13h - 14h30 à 18h30 du mardi au vendredi,
+				</p>
+				<p className="contacts__hours">Horaires: 10h à 13h30 le samedi</p>
 				<div className="contacts__calendar f-r-st-st w-100 b-b mg-t-20 o-h br-5">
 					{mappedCalendar}
 				</div>
