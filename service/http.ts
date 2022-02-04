@@ -1,4 +1,4 @@
-import axios, { AxiosRequestConfig } from "axios";
+import axios from "axios";
 import ws from "service/ws";
 import { PROXY, MODE, ENDPOINT } from "helpers/const";
 import Session from "helpers/session";
@@ -24,7 +24,7 @@ const post = (endpoint: string, params) => {
 	const baseUrl = MODE === "local" ? ENDPOINT : PROXY;
 	const url = `${baseUrl}/${ws(endpoint)}`;
 	const user: IUser | null = Session.get("user");
-	let headers = {
+	const headers = {
 		"Accept": "application/json",
 		"Content-Type": "application/json",
 	};
