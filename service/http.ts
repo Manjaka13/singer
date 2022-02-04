@@ -1,13 +1,8 @@
-import axios from "axios";
+import axios, { AxiosRequestConfig } from "axios";
 import ws from "service/ws";
-import { PROXY } from "helpers/const";
-import { IProduct } from "helpers/interface";
-
-// Default headers
-const headers = {
-	Accept: "application/json",
-	"Content-Type": "application/json",
-};
+import { PROXY, MODE, ENDPOINT } from "helpers/const";
+import Session from "helpers/session";
+import { IUser } from "helpers/interface";
 
 // Gets
 // const get = (endpoint: string): Promise<Array<IProduct>> => {
@@ -15,7 +10,7 @@ const headers = {
 // 		axios
 // 			.get(
 // 				`${
-// 					process.env && process.env.NEXT_PUBLIC_MODE === "local" ? "" : PROXY
+// 					process.env && MODE === "local" ? "" : PROXY
 // 				}/${ws(endpoint)}`,
 // 				{headers, params}
 // 			)
@@ -26,11 +21,18 @@ const headers = {
 
 // Post
 const post = (endpoint: string, params) => {
-	let baseUrl = process.env.NEXT_PUBLIC_MODE === "local" ? process.env.NEXT_PUBLIC_ENDPOINT : process.env.NEXT_PUBLIC_PROXY;
-	const url = `${baseUrl}/${ws(endpoint)}`
+	const baseUrl = MODE === "local" ? ENDPOINT : PROXY;
+	const url = `${baseUrl}/${ws(endpoint)}`;
+	const user: IUser | null = Session.get("user");
+	let headers = {
+		"Accept": "application/json",
+		"Content-Type": "application/json",
+	};
+	if(user)
+		headers["Authorization"] = `Bearer ${user.token}`;
 	return (
 		axios
-			.post(url, params, headers)
+			.post(url, params, {headers})
 			.then(({data}) => data)
 	);
 };

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { IPageAdminProps } from "helpers/interface";
 
 const PageAdmin: React.FC<IPageAdminProps> = ({

@@ -48,7 +48,7 @@ const NavbarAdmin: React.FC<INavbarAdminProps> = ({
 					<Button
 						className="navbar-admin__logout fs-100"
 						title="Se déconnecter"
-						atClick={logout}
+						atClick={() => logout}
 					>
 						<React.Fragment>
 							<Icon icon={["fas", "lock"]} /> Déconnexion

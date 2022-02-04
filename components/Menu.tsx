@@ -55,14 +55,20 @@ const mappedMenu: Array<JSX.Element> = menuList.map((item: IMenuItem) => (
 const Menu: React.FC<IMenuProps> = ({ opened, atClose }): JSX.Element => {
 	const user = useContext(AuthContext);
 
-	const delayedClose = () => {
-		if (typeof atClose === "function") setTimeout(() => atClose(), 100);
+	const menuClose = (e): void => {
+		const id = (e.target as Element).classList[0];
+		if(id === "menu__button1")
+			Router.push("/admin");
+		else if(id === "menu__button2")
+			Router.push("/login");
+		else if(typeof atClose === "function")
+			atClose();
 	};
 
 	return (
 		<div
 			className={(opened ? "menu" : "menu menu--hidden") + " w-100 tr-100"}
-			onClick={delayedClose}
+			onClick={menuClose}
 		>
 			<div className="menu__content bg-white pd-t-20 pd-b-20">
 				<div className="ctn">
@@ -76,9 +82,8 @@ const Menu: React.FC<IMenuProps> = ({ opened, atClose }): JSX.Element => {
 							{user && (
 								<Button
 									title="Aller dans le Back Office"
-									className="mg-right-20"
+									className="menu__button1 mg-right-20"
 									alt
-									atClick={() => Router.push("/admin")}
 								>
 									<React.Fragment>
 										<Icon icon={["fas", "wrench"]} /> Admnistration
@@ -88,9 +93,8 @@ const Menu: React.FC<IMenuProps> = ({ opened, atClose }): JSX.Element => {
 							{!user && (
 								<Button
 									title="Connexion au compte admnistrateur"
-									className="mg-right-20"
+									className="menu__button2 mg-right-20"
 									alt
-									atClick={() => Router.push("/login")}
 								>
 									<React.Fragment>
 										<Icon icon={["fas", "lock"]} /> Se connecter
@@ -114,11 +118,6 @@ const Menu: React.FC<IMenuProps> = ({ opened, atClose }): JSX.Element => {
 									</a>
 								</li>
 							</ul>
-							{/*<Button title="S'inscrire à un compte admnistrateur">
-								<React.Fragment>
-									<Icon icon={["fas", "user"]} /> Gérer
-								</React.Fragment>
-							</Button>*/}
 						</div>
 					</div>
 					<div className="menu__separator w-100 mg-t-20 mg-b-20"></div>

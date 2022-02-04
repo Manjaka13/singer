@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React from "react";
 import { INavbarProps } from "helpers/interface";
 import { FontAwesomeIcon as Icon } from "@fortawesome/react-fontawesome"
 

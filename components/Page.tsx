@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Heading from "components/Heading";
 import Navbar from "components/Navbar";
 import Menu from "components/Menu";
-import { IPageProps } from "helpers/interface";
+import { IPageProps, IUser } from "helpers/interface";
 import { AuthContext } from "context/";
-import Session from "helpers/session";
+import { useUser } from "hooks/";
 
 /*
 	Page component
@@ -13,6 +13,7 @@ import Session from "helpers/session";
 	@image: page representation
 	@description: page description
 	@children: page content
+	@admin: if admin page
 */
 
 const Page: React.FC<IPageProps> = ({
@@ -22,15 +23,9 @@ const Page: React.FC<IPageProps> = ({
 	children,
 	admin
 }): JSX.Element => {
-	const [user, setUser] = useState("Loading...");
+	const user: IUser | null = useUser();
 	const [menuOpened, setMenuOpened] = useState<boolean>(false);
 	const toggleMenu = (): void => setMenuOpened(!menuOpened);
-
-	useEffect(() => {
-		const sessionUser = Session.get("user");
-		if(user)
-			setUser(sessionUser);
-	}, []);
 
 	return (
 		<AuthContext.Provider value={user}>

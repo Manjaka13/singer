@@ -21,7 +21,7 @@ const PageUser = (): JSX.Element => {
 								alt
 							>
 								<React.Fragment>
-									<Icon icon={["fas", "image"]} /> Changer d'avatar
+									<Icon icon={["fas", "image"]} /> Changer d&apos;avatar
 								</React.Fragment>
 							</Button>
 						</div>

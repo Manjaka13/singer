@@ -10,7 +10,7 @@ const NavbarAdminItem: React.FC<INavbarAdminItemProps> = ({
 }): JSX.Element => (
 	<li
 		className={(active ? 'navbar-admin-item navbar-admin-item--active' : 'navbar-admin-item') + " pd-10 p br-5 white tr-200 f-r-be-ce"}
-		onClick={() => atClick(id)}
+		onClick={() => typeof atClick === "function" ? atClick(id) : null}
 	>
 		<div>
 			<Icon icon={section.icon} /> {section.content}

@@ -57,7 +57,7 @@ const LoginPage = (): JSX.Element => {
 			setPageLoaded(true);
 	}, []);
 
-	return !pageLoaded ? null : (
+	return !pageLoaded ? <React.Fragment></React.Fragment> : (
 		<Page
 			title="Admnistration Singer"
 			description="Admnistrez vos contacts et contenus avec le backoffice de Singer."

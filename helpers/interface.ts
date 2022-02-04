@@ -34,7 +34,7 @@ export interface IButtonProps {
 	title?: string;
 	className?: string;
 	children?: JSX.Element | string;
-	atClick?: () => null;
+	atClick?: () => void;
 	color?: string;
 	disabled?: boolean;
 	alt?: boolean;
@@ -146,7 +146,22 @@ export interface INavbarAdminProps {
 export interface IAdminModalProps {
 	icon?: IconProp;
 	title?: string;
-	children: JSX.Element;
+	children: JSX.Element | string;
 	canClose?: boolean;
 	atClose?: () => void;
+}
+
+export interface ILoadingProps {
+	className?: string;
+}
+
+export interface IUser {
+	email: string;
+	password?: string;
+	name: string;
+	level: number;
+	verified?: boolean;
+	_id?: string;
+	avatar?: string;
+	token?: string;
 }

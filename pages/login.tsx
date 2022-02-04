@@ -16,36 +16,38 @@ const LoginPage = (): JSX.Element => {
 	const [caption, setCaption] = useState<string>("");
 	const [status, setStatus] = useState<number>(0);
 	const [loading, setLoading] = useState<boolean>(false);
-	const refEmail = useRef(null);
-	const refPassword = useRef(null);
-	const handleSubmit = (e): void => {
+	const refEmail = useRef<HTMLInputElement>(null);
+	const refPassword = useRef<HTMLInputElement>(null);
+	const handleSubmit = (e: React.FormEvent<HTMLFormElement>): void => {
 		e.preventDefault();
-		const user = {
-			email: refEmail.current.value,
-			password: refPassword.current.value,
-		};
-		setLoading(true);
-		userSignin(user)
-			.then(data => {
-				if(data.status != status)
-					setStatus(data.status);
-				if(data.status === 0) {
-					setCaption(data.caption);
+		if(refEmail && refEmail.current && refPassword && refPassword.current) {
+			const user = {
+				email: refEmail.current.value,
+				password: refPassword.current.value,
+			};
+			setLoading(true);
+			userSignin(user)
+				.then(data => {
+					if(data.status != status)
+						setStatus(data.status);
+					if(data.status === 0) {
+						setCaption(data.caption);
+						setLoading(false);
+					}
+					else {
+						setCaption("Connecté avec succès, vous allez être redirigé...");
+						data.payload.token = data.caption;
+						Session.set("user", data.payload);
+						Router.push("/admin");
+					}
+					// console.log(data.payload);
+				})
+				.catch(e => {
+					setCaption(e);
 					setLoading(false);
-				}
-				else {
-					setCaption("Connecté avec succès, vous allez être redirigé...");
-					data.payload.token = data.caption;
-					Session.set("user", data.payload);
-					Router.push("/admin");
-				}
-				// console.log(data.payload);
-			})
-			.catch(e => {
-				setCaption(e);
-				setLoading(false);
-			});
-		refPassword.current.value = "";
+				});
+			refPassword.current.value = "";
+		}
 	};
 
 	useEffect(() => {
@@ -55,7 +57,7 @@ const LoginPage = (): JSX.Element => {
 			setPageLoaded(true);
 	}, []);
 
-	return !pageLoaded ? null : (
+	return !pageLoaded ? <React.Fragment></React.Fragment> : (
 		<Page
 			title="Connexion Singer"
 			description="Connectez-vous à votre compte admnistrateur."
