@@ -28,7 +28,7 @@ const Button: React.FC<IButtonProps> = ({
 		<button
 			className={cn}
 			title={title || ""}
-			onClick={() => typeof atClick === 'function' && atClick()}
+			onClick={() => (typeof atClick === 'function' && atClick())}
 		>
 			{children}
 		</button>

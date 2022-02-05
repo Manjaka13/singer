@@ -43,10 +43,26 @@ const post = (endpoint: string, params?: any) => {
 	);
 };
 
+// Delete request
+const remove = (endpoint: string, params?: any) => {
+	const url = `${baseUrl}/${ws(endpoint)}`;
+	// Attach token
+	const token: string | null = sessionStorage.getItem("token");
+	if(token)
+		headers["Authorization"] = `Bearer ${token}`;
+	// Request
+	return (
+		axios
+			.delete(url, {headers, params})
+			.then(({data}) => data)
+	);
+};
+
 // The http service for API calls
 const http = {
 	post,
-	get
+	get,
+	delete: remove
 };
 
 export default http;

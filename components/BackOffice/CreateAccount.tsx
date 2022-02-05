@@ -3,10 +3,11 @@ import { FontAwesomeIcon as Icon } from "@fortawesome/react-fontawesome";
 import Button from "components/Button";
 import Loading from "components/Loading";
 import { userCreate } from "service";
+import { IUser } from "helpers/interface";
 
 const CreateAccount = ({getUserList}: {getUserList: () => void}): JSX.Element => {
-	const refName = useRef(null);
-	const refEmail = useRef(null);
+	const refName = useRef<HTMLInputElement>(null);
+	const refEmail = useRef<HTMLInputElement>(null);
 	const [loading, setLoading] = useState<boolean>(false);
 	const [caption, setCaption] = useState<string>("");
 	const [status, setStatus] = useState<number>(-1);
@@ -15,17 +16,16 @@ const CreateAccount = ({getUserList}: {getUserList: () => void}): JSX.Element =>
 		e.preventDefault();
 		if(!loading) {
 			const formData = new FormData(e.currentTarget);
-			const user: IUser = {
+			let level: number = 0;
+			const formDataLevel: string | null = formData.get("level") as string;
+			if(formDataLevel)
+				level = parseInt(formDataLevel);
+			setLoading(true);
+			userCreate({
 				name: formData.get("name") as string,
 				email: formData.get("email") as string,
-				level: parseInt(formData.get("level")) as number
-			};
-			if(refName)
-				refName.current.value = "";
-			if(refEmail)
-				refEmail.current.value = "";
-			setLoading(true);
-			userCreate(user)
+				level
+			})
 				.then(({caption, status}) => {
 					setStatus(status);
 					setCaption(caption);
@@ -37,6 +37,10 @@ const CreateAccount = ({getUserList}: {getUserList: () => void}): JSX.Element =>
 					setCaption("Une erreur est survenue.");
 				})
 				.finally(() => setLoading(false));
+			if(refName && refName.current)
+				refName.current.value = "";
+			if(refEmail && refEmail.current)
+				refEmail.current.value = "";
 		}
 	};
 

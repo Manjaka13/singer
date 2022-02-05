@@ -17,6 +17,9 @@ const ws = (endpoint: string): string => {
 		case "create":
 			url = "user/new";
 			break;
+		case "remove":
+			url = "user/delete";
+			break;
 	}
 	return url;
 };
