@@ -104,7 +104,7 @@ const PageListAccounts = (): JSX.Element => {
 							</div>
 						</React.Fragment>
 					)}
-					{error && <p className="p-n n-s pd-t-20 tx-c red">{error}</p>}
+					{error && <p className="p-n n-s pd-t-20 tx-c theme">{error}</p>}
 				</div>
 			</React.Fragment>
 		</PageAdmin>

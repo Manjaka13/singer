@@ -79,7 +79,7 @@ const CreateAccount = ({getUserList}: {getUserList: () => void}): JSX.Element =>
 							</Button>
 						)}
 					</div>
-					<p className={`${status === 1 ? 'green' : 'red'} tx-c`}>{caption}</p>
+					<p className={`${status === 1 ? 'green' : 'theme'} tx-c`}>{caption}</p>
 				</form>
 			</div>
 		</div>

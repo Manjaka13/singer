@@ -15,7 +15,7 @@ import { useAuth } from "hooks/";
 const sections: Array<INavbarAdminItem> = [
 	{
 		icon: ['fas', 'user'],
-		content: "Manjaka"
+		content: "Admnistrateur"
 	},
 	{
 		icon: ['fas', 'key'],
@@ -44,6 +44,8 @@ const BackOffice = (): JSX.Element => {
 	let displayedPage = (<PageUser />);
 	const [selectedSection, setSelectedSection] = useState<number>(0);
 	const selectSection = (id: number) => selectedSection != id && setSelectedSection(id);
+
+	sections[0].content = user.name;
 	
 	// Select B.O page to display
 	if(selectedSection === 1)
