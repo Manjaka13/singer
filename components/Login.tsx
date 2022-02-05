@@ -20,7 +20,7 @@ const Login = (): JSX.Element => {
 		}
 	};
 
-	return (
+	return user ? <React.Fragment></React.Fragment> : (
 		<div className="login w-100 h-100 f-c-ce-ce">
 			<div className="login__window w-600px bg-white b-b pd-20 o-h">
 				<h1 className="login__title">

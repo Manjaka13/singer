@@ -55,7 +55,7 @@ const BackOffice = (): JSX.Element => {
 	if(!user)
 		Router.push("/login");
 
-	return (
+	return !user ? <React.Fragment></React.Fragment> : (
 		<div className="w-100 h-100 o-h f-r-st-st">
 			<NavbarAdmin
 				sections={sections}

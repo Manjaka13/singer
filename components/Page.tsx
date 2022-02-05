@@ -1,9 +1,9 @@
 import React, { useState } from "react";
+import Router from "next/router";
 import Heading from "components/Heading";
 import Navbar from "components/Navbar";
 import Menu from "components/Menu";
 import { IPageProps, IUser } from "helpers/interface";
-
 
 /*
 	Page component
