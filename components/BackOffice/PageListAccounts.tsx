@@ -5,7 +5,7 @@ import PageAdmin from "components/BackOffice/PageAdmin";
 import CreateAccount from "components/BackOffice/CreateAccount";
 import Button from "components/Button";
 import Loading from "components/Loading";
-import { userList } from "service/";
+import { userList, userRemove } from "service/";
 import { IUser } from "helpers/interface";
 
 const tabSizes: Array<number> = [
@@ -20,6 +20,7 @@ const PageListAccounts = (): JSX.Element => {
 	const [loading, setLoading] = useState<boolean>(false);
 	const [error, setError] = useState<string>("");
 
+	// Get list of accounts
 	const getUserList = (): void => {
 		setLoading(true);
 		setUsers([]);
@@ -32,6 +33,20 @@ const PageListAccounts = (): JSX.Element => {
 			})
 			.catch(e => setError("Une erreur est survenue."))
 			.finally(() => setLoading(false));
+	};
+
+	// Removes account
+	const removeUser = (email: string): void => {
+		setLoading(true);
+		userRemove({email})
+			.then(({caption, status}) => {
+				if(status === 0)
+					setError(caption);
+				else
+					setUsers((prevState) => prevState.filter(user => user.email != email));
+			})
+			.catch(e => setError("Une erreur est survenue."))
+			.finally(() => setLoading(false))
 	};
 
 	useEffect(() => {
@@ -51,7 +66,11 @@ const PageListAccounts = (): JSX.Element => {
 			<p className={`w-${tabSizes[1]} fs-80`}>{user.email}</p>
 			<p className={`w-${tabSizes[2]} fs-80`}>Niv. {user.level}</p>
 			<p className={`w-${tabSizes[3]} fs-80`}>
-				<Button className="fs-80" title="Supprimer cet utilisateur">
+				<Button
+					className="fs-80"
+					title="Supprimer cet utilisateur"
+					atClick={() => removeUser(user.email)}
+				>
 					<React.Fragment>
 						<Icon icon={["fas", "trash"]} /> Supprimer
 					</React.Fragment>
@@ -85,7 +104,7 @@ const PageListAccounts = (): JSX.Element => {
 							</div>
 						</React.Fragment>
 					)}
-					{error && <p className="p-n n-s pd-t-20">{error}</p>}
+					{error && <p className="p-n n-s pd-t-20 tx-c red">{error}</p>}
 				</div>
 			</React.Fragment>
 		</PageAdmin>
