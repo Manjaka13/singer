@@ -27,6 +27,7 @@
 @import "./PageListAccounts.scss";
 @import "./PageListContacts.scss";
 @import "./AdminModal.scss";
+@import "./CreateAccount.scss";
 
 .theme {
 	color: $color-theme;
@@ -34,4 +35,8 @@
 
 .bg-theme {
 	background: $color-theme;
+}
+
+select {
+	margin: 0;
 }

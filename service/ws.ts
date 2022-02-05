@@ -14,6 +14,9 @@ const ws = (endpoint: string): string => {
 		case "verify":
 			url = "user/verify";
 			break;
+		case "create":
+			url = "user/new";
+			break;
 	}
 	return url;
 };

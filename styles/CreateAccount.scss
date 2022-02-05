@@ -1,0 +1,22 @@
+/*
+	Create account styles
+*/
+
+.create-account {
+	width: calc(100% - 42px);
+	margin-top: 20px;
+	border: 2px $color-theme solid;
+	
+	.box {
+		width: 500px;
+	}
+
+	.input {
+		width: calc(100% - 20px);
+		border: none;
+	}
+
+	.select {
+		width: 100%;
+	}
+}

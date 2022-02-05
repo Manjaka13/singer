@@ -28,7 +28,6 @@ const AuthProvider = (
 
 	// Get user indentity
 	useEffect(() => {
-		console.log("Token " + sessionStorage.getItem("token"));
 		userVerify()
 			.then(({payload, status}: {payload: IUser | null, status: number}) => {
 				if(status === 1)
