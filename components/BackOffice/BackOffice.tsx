@@ -43,19 +43,20 @@ const BackOffice = (): JSX.Element => {
 	const {user} = useAuth();
 	let displayedPage = (<PageUser />);
 	const [selectedSection, setSelectedSection] = useState<number>(0);
-	const selectSection = (id: number) => selectedSection != id && setSelectedSection(id);
-
-	sections[0].content = user.name;
+	const selectSection = (id: number) => selectedSection != id && setSelectedSection(id);		
 	
-	// Select B.O page to display
-	if(selectedSection === 1)
-		displayedPage = (<PageListAccounts />);
-	else if(selectedSection === 3)
-		displayedPage = (<PageListContacts />);
-
 	// If not logged in
 	if(!user)
 		Router.push("/login");
+	// If logged in
+	else {
+		sections[0].content = user.name;
+		// Select B.O page to display
+		if(selectedSection === 1)
+			displayedPage = (<PageListAccounts />);
+		else if(selectedSection === 3)
+			displayedPage = (<PageListContacts />);
+	}
 
 	return !user ? <React.Fragment></React.Fragment> : (
 		<div className="w-100 h-100 o-h f-r-st-st">

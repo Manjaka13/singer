@@ -1,4 +1,3 @@
-import useUserList from "hooks/useUserList";
 import { useAuth, AuthProvider } from "hooks/useAuth";
 
 /*
@@ -6,7 +5,6 @@ import { useAuth, AuthProvider } from "hooks/useAuth";
 */
 
 export {
-	useUserList,
 	useAuth,
 	AuthProvider
 };

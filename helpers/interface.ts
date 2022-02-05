@@ -173,3 +173,8 @@ export interface IAuthContext {
 	login: (email: string, password: string) => void;
 	logout: () => void;
 }
+
+export interface IContact {
+	date: string;
+	email: string;
+}
