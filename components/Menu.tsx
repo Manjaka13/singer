@@ -5,7 +5,7 @@ import { v4 as uuidv4 } from "uuid";
 import { FontAwesomeIcon as Icon } from "@fortawesome/react-fontawesome";
 import { IMenuProps, IMenuItem } from "helpers/interface";
 import Button from "components/Button";
-import { AuthContext } from "context/";
+import { useAuth } from "hooks/";
 
 /*
 	Navbar menu
@@ -53,7 +53,7 @@ const mappedMenu: Array<JSX.Element> = menuList.map((item: IMenuItem) => (
 ));
 
 const Menu: React.FC<IMenuProps> = ({ opened, atClose }): JSX.Element => {
-	const user = useContext(AuthContext);
+	const {user} = useAuth();
 
 	const menuClose = (e): void => {
 		const id = (e.target as Element).classList[0];

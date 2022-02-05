@@ -1,9 +1,12 @@
-import useUser from "hooks/useUser";
+import useUserList from "hooks/useUserList";
+import { useAuth, AuthProvider } from "hooks/useAuth";
 
 /*
 	Export all hooks
 */
 
 export {
-	useUser
+	useUserList,
+	useAuth,
+	AuthProvider
 };

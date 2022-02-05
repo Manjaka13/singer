@@ -25,7 +25,11 @@ const Button: React.FC<IButtonProps> = ({
 	} ${colorCn} ${disabledCn} ${defautlCn}`;
 
 	return (
-		<button className={cn} title={title || ""} onClick={() => atClick}>
+		<button
+			className={cn}
+			title={title || ""}
+			onClick={() => typeof atClick === 'function' && atClick()}
+		>
 			{children}
 		</button>
 	);

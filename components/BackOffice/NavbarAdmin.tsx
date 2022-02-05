@@ -8,14 +8,14 @@ import { FontAwesomeIcon as Icon } from "@fortawesome/react-fontawesome";
 import Button from "components/Button";
 import AdminModal from "components/BackOffice/AdminModal";
 import Loading from "components/Loading";
-import Session from "helpers/session";
+import { useAuth } from "hooks/";
 
 const NavbarAdmin: React.FC<INavbarAdminProps> = ({
 	sections,
 	selectedSection,
 	selectSection
 }): JSX.Element => {
-	const [logginOut, setLoggingOut] = useState<boolean>(false);
+	const {user, logout} = useAuth();
 	const mappedSection: Array<JSX.Element> = sections.map((item: INavbarAdminItem, key: number) => (
 		<NavbarAdminItem
 			id={key}
@@ -25,11 +25,6 @@ const NavbarAdmin: React.FC<INavbarAdminProps> = ({
 			active={key === selectedSection}
 		/>
 	));
-	const logout = (): void => {
-		setLoggingOut(true);
-		Session.remove("user");
-		Router.push("/");
-	};
 
 	return (
 		<div className="navbar-admin h-100 f-c-ce-ce bg-theme">
@@ -48,7 +43,7 @@ const NavbarAdmin: React.FC<INavbarAdminProps> = ({
 					<Button
 						className="navbar-admin__logout fs-100"
 						title="Se déconnecter"
-						atClick={() => logout}
+						atClick={logout}
 					>
 						<React.Fragment>
 							<Icon icon={["fas", "lock"]} /> Déconnexion
@@ -56,10 +51,10 @@ const NavbarAdmin: React.FC<INavbarAdminProps> = ({
 					</Button>
 				</p>
 			</div>
-			{logginOut && (
+			{!user && (
 				<AdminModal
 					icon={['fas', 'lock']}
-					title="Déconnexion..."
+					title="Session terminée..."
 				>
 					<Loading />
 				</AdminModal>

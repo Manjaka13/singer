@@ -3,8 +3,7 @@ import Heading from "components/Heading";
 import Navbar from "components/Navbar";
 import Menu from "components/Menu";
 import { IPageProps, IUser } from "helpers/interface";
-import { AuthContext } from "context/";
-import { useUser } from "hooks/";
+
 
 /*
 	Page component
@@ -23,12 +22,11 @@ const Page: React.FC<IPageProps> = ({
 	children,
 	admin
 }): JSX.Element => {
-	const user: IUser | null = useUser();
 	const [menuOpened, setMenuOpened] = useState<boolean>(false);
 	const toggleMenu = (): void => setMenuOpened(!menuOpened);
 
 	return (
-		<AuthContext.Provider value={user}>
+		<React.Fragment>
 			<Heading title={title} image={image}>
 				{description}
 			</Heading>
@@ -41,7 +39,7 @@ const Page: React.FC<IPageProps> = ({
 				)}
 				<div className={(admin ? 'page--admin' : 'page' ) + " w-100 o-a"}>{children}</div>
 			</main>
-		</AuthContext.Provider>
+		</React.Fragment>
 	);
 };
 

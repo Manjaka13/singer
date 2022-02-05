@@ -165,3 +165,11 @@ export interface IUser {
 	avatar?: string;
 	token?: string;
 }
+
+export interface IAuthContext {
+	user: IUser | null;
+	loading: boolean;
+	error?: string | null;
+	login: (email: string, password: string) => void;
+	logout: () => void;
+}
