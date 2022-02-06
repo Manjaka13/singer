@@ -1,5 +1,4 @@
-import React, { useState } from "react";
-import Router from "next/router";
+import React from "react";
 import Link from "next/link";
 import { v4 as uuidv4 } from "uuid";
 import { INavbarAdminItem, INavbarAdminProps } from "helpers/interface";

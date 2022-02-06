@@ -17,12 +17,10 @@ const tabSizes: Array<number> = [
 
 const PageListAccounts = (): JSX.Element => {
 	const [users, setUsers] = useState<Array<IUser>>([]);
-	const [loading, setLoading] = useState<boolean>(false);
 	const [error, setError] = useState<string>("");
 
 	// Get list of accounts
 	const getUserList = (): void => {
-		setLoading(true);
 		setUsers([]);
 		userList()
 			.then(({payload, caption, status}) => {
@@ -31,13 +29,11 @@ const PageListAccounts = (): JSX.Element => {
 				else
 					setError(caption);
 			})
-			.catch(e => setError("Une erreur est survenue."))
-			.finally(() => setLoading(false));
+			.catch(() => setError("Une erreur est survenue."));
 	};
 
 	// Removes account
 	const removeUser = (email: string): void => {
-		setLoading(true);
 		userRemove({email})
 			.then(({caption, status}) => {
 				if(status === 0)
@@ -45,8 +41,7 @@ const PageListAccounts = (): JSX.Element => {
 				else
 					setUsers((prevState) => prevState.filter(user => user.email != email));
 			})
-			.catch(e => setError("Une erreur est survenue."))
-			.finally(() => setLoading(false))
+			.catch(() => setError("Une erreur est survenue."));
 	};
 
 	useEffect(() => {

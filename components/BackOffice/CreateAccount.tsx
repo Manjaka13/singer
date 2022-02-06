@@ -3,7 +3,6 @@ import { FontAwesomeIcon as Icon } from "@fortawesome/react-fontawesome";
 import Button from "components/Button";
 import Loading from "components/Loading";
 import { userCreate } from "service";
-import { IUser } from "helpers/interface";
 
 const CreateAccount = ({getUserList}: {getUserList: () => void}): JSX.Element => {
 	const refName = useRef<HTMLInputElement>(null);
@@ -16,7 +15,7 @@ const CreateAccount = ({getUserList}: {getUserList: () => void}): JSX.Element =>
 		e.preventDefault();
 		if(!loading) {
 			const formData = new FormData(e.currentTarget);
-			let level: number = 0;
+			let level = 0;
 			const formDataLevel: string | null = formData.get("level") as string;
 			if(formDataLevel)
 				level = parseInt(formDataLevel);
@@ -32,7 +31,7 @@ const CreateAccount = ({getUserList}: {getUserList: () => void}): JSX.Element =>
 					if(status === 1)
 						getUserList();
 				})
-				.catch(e => {
+				.catch(() => {
 					setStatus(0);
 					setCaption("Une erreur est survenue.");
 				})

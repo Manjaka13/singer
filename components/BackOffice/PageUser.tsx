@@ -24,13 +24,13 @@ const PageUser = (): JSX.Element => {
 	return (
 		<PageAdmin className="page-user">
 			<React.Fragment>
-				<h1 className="pd-20 fs-300">Bienvenue {user.name || "Admnistrateur"},</h1>
+				<h1 className="pd-20 fs-300">Bienvenue {user ? user.name : "Admnistrateur"},</h1>
 				<div className="mg-20 mg-t-0">
 					<div className="w-30 h-5px bg-theme br-5"></div>
 				</div>
 				<div className="w-100 f-r-st-ce mg-t-40">
 					<figure className="avatar w-300px h-300px br b-b mg-l-20 o-hidden f-r-ce-ce bg-white">
-						<img className="w-100 h-100" src={user.avatar || "/avatar.png"} alt="Avatar" />
+						<img className="w-100 h-100" src={user && user.avatar ? user.avatar : "http://localhost:3001/test.jpg"} alt="Avatar" />
 						<div className="overlay w-100 h-100 tr-200 f-c-ce-ce">
 							<Button
 								className="change-avatar"
@@ -90,4 +90,4 @@ const PageUser = (): JSX.Element => {
 	);
 };
 
-export default PageUser
+export default PageUser;

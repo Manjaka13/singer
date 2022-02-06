@@ -172,7 +172,7 @@ const Footer = (): JSX.Element => {
 							<input
 								className="input pd-10"
 								name="email"
-								placeHolder="Adresse e-mail"
+								placeholder="Adresse e-mail"
 
 							/>
 							<Button className="button" title="Souscrire">

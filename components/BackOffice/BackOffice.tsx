@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Router from "next/router";
 import NavbarAdmin from "components/BackOffice/NavbarAdmin";
 import { INavbarAdminItem } from "helpers/interface";

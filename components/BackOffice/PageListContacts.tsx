@@ -5,7 +5,7 @@ import PageAdmin from "components/BackOffice/PageAdmin";
 import Button from "components/Button";
 import Loading from "components/Loading";
 import { contactList, contactRemove } from "service/";
-import { IContact } from "helpers/service";
+import { IContact } from "helpers/interface";
 
 const tabSizes = [
 	30,
@@ -53,7 +53,7 @@ const PageListContacts = (): JSX.Element => {
 		getContactList();
 	}, []);
 
-	const mappedContacts: JSX.Element = contacts.map((contact: IContact) => (
+	const mappedContacts: Array<JSX.Element> = contacts.map((contact: IContact) => (
 		<div className="item mg-20 mg-t-10 mg-b-10 br-50 f-r-be-ce tr-200" key={uuidv4()}>
 			<p className={`w-${tabSizes[0]} fs-80`}>{contact.date}</p>
 			<p className={`w-${tabSizes[1]} fs-80`}>{contact.email}</p>

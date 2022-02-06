@@ -1,13 +1,12 @@
 import axios from "axios";
 import ws from "service/ws";
 import { PROXY, MODE, ENDPOINT } from "helpers/const";
-import { IUser } from "helpers/interface";
 
 /*
 	For doing API calls
 */
 
-let headers = {
+const headers = {
 	"Accept": "application/json",
 	"Content-Type": "application/json",
 };
