@@ -27,6 +27,9 @@ const ws = (endpoint: string): string => {
 		case "contact_remove":
 			url = "contacts/delete";
 			break;
+		case "contact_add":
+			url = "contacts/new";
+			break;
 	}
 	return url;
 };

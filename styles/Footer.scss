@@ -56,6 +56,16 @@
 			flex: 1;
 		}
 	}
+
+	.input {
+		flex: 1;
+		border: none;
+		border-radius: 10px 0 0 10px;
+	}
+
+	.button {
+		border-radius: 0 10px 10px 0;
+	}
 }
 
 @media only screen and (max-width: 900px) {

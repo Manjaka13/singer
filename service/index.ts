@@ -13,3 +13,4 @@ export const userRemove = (email: {email: string}) => http.post("user_remove", e
 
 export const contactList = () => http.get("contact_list");
 export const contactRemove = (email: {email: string}) => http.post("contact_remove", email);
+export const contactAdd = (email: {email: string}) => http.post("contact_add", email);
