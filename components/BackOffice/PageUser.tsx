@@ -8,16 +8,16 @@ import { useAuth } from "hooks/";
 const PageUser = (): JSX.Element => {
 	const {user} = useAuth();
 	const [loading, setLoading] = useState<boolean>(false);
-	const [caption, setCaption] = useState<string | null>(null);
-	const [status, setStatus] = useState<number>(-1);
+	// const [caption, setCaption] = useState<string | null>(null);
+	// const [status, setStatus] = useState<number>(-1);
 
 	// Submits form
 	const handleSubmit = (e: React.FormEvent<HTMLFormElement>): void => {
 		e.preventDefault();
-		const formData = new FormData(e.currentTarget);
-		const password: string = formData.get("level") as string;
-		const newPassword1: string = formData.get("newPassword1") as string;
-		const newPassword2: string = formData.get("newPassword1") as string;
+		// const formData = new FormData(e.currentTarget);
+		// const password: string = formData.get("level") as string;
+		// const newPassword1: string = formData.get("newPassword1") as string;
+		// const newPassword2: string = formData.get("newPassword1") as string;
 		setLoading(true);
 	};
 

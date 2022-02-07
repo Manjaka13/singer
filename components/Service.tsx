@@ -70,13 +70,7 @@ const Service = (): JSX.Element => (
 							<h3>Expertise</h3>
 							<div className="w-50 h-5px bg-theme br-5 mg-t-10 mg-b-10"></div>
 							<p className="tx-j">
-								Les machines à coudre n’ayant pas toutes la même puissance moteur, les
-								mêmes programmes, les mêmes possibilités, nous vous aiderons dans le
-								choix de la machine à coudre adaptée à vos besoins. Pour cela, nous
-								prendrons le temps de voir avec vous, tous ce que vous envisagez de
-								faire à court terme et à long terme avec votre machine. Afin de vous
-								proposer la machine à coudre qui deviendra votre meilleur amie pour
-								toute vos envies couture !
+								Les machines à coudre n&apos;ayant pas toutes la même puissance moteur, les mêmes programmes, les mêmes possibilités, nous vous aiderons dans le choix de la machine à coudre adaptée à vos besoins. Pour cela, nous prendrons le temps de voir avec vous, tous ce que vous envisagez de faire à court terme et à long terme avec votre machine. Afin de vous proposer la machine à coudre qui deviendra votre meilleur amie pour toute vos envies couture !
 							</p>
 						</div>
 					</div>

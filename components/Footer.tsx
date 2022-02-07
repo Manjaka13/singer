@@ -127,7 +127,7 @@ const Footer = (): JSX.Element => {
 					setCaption(caption);
 					setStatus(status);
 				})
-				.catch(e => {
+				.catch(() => {
 					setCaption("Une erreur est survenue.");
 					setStatus(0);
 				})

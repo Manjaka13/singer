@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from "react";
-import Router from "next/router";
 import Heading from "components/Heading";
 import Navbar from "components/Navbar";
 import Menu from "components/Menu";
-import { IPageProps, IUser } from "helpers/interface";
+import { IPageProps } from "helpers/interface";
 import { ENDPOINT } from "helpers/const";
 
 /*

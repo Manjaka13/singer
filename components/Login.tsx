@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { FontAwesomeIcon as Icon } from "@fortawesome/react-fontawesome";
 import Router from "next/router";
 import Button from "components/Button";

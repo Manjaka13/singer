@@ -29,7 +29,7 @@ const PageListContacts = (): JSX.Element => {
 					setContacts(payload);
 				else setError(caption);
 			})
-			.catch(e => setError("Une erreur est survenue."))
+			.catch(() => setError("Une erreur est survenue."))
 			.finally(() => setLoading(false));
 	};
 
@@ -45,7 +45,7 @@ const PageListContacts = (): JSX.Element => {
 					});
 				else setError(caption);
 			})
-			.catch(e => setError("Une erreur est survenue."))
+			.catch(() => setError("Une erreur est survenue."))
 			.finally(() => setLoading(false));
 	};
 
