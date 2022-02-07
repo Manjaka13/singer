@@ -26,43 +26,44 @@ const months: Array<string> = [
 const machines: Array<IPromotionSlide> = [
 	{
 		name: "SUPERA 5523",
-		type: "Machine à coudre mécanique"
+		type: "Machine à coudre mécanique",
 	},
 	{
 		name: "M2105",
-		type: "Machine à coudre mécanique"
+		type: "Machine à coudre mécanique",
 	},
 	{
 		name: "S0705",
-		type: "Surjeteuse"
-	}
+		type: "Surjeteuse",
+	},
 ];
 
-const mappedSlide: Array<JSX.Element> = machines.map((item: IPromotionSlide) => (
-	<div className="each-slide" key={ uuidv4() }>
-		<div
-			className="f-c-st-st n-s"
-			style={{
-				"background": `url(fake-machine.jpg) center center no-repeat`, "backgroundSize": "cover"
-			}}
-		>
-			<div className="w-70 machine-info pd-10 br-5 f-r-be-ce">
-				<div className="info">
-					<h3 className="white fs-100 mg-b-5">
-						{ item.name }
-					</h3>
-					<p className="white fs-80">{ item.type }</p>
-				</div>
-				<div
-					className="details w-30px h-30px bg-theme mg-r-10 br f-r-ce-ce p tr-200"
-					title="Détails"
-				>
-					<Icon className="white" icon={ ['fas', 'shopping-cart'] } />
+const mappedSlide: Array<JSX.Element> = machines.map(
+	(item: IPromotionSlide) => (
+		<div className="each-slide" key={uuidv4()}>
+			<div
+				className="f-c-st-st n-s"
+				style={{
+					background: `url(fake-machine.jpg) center center no-repeat`,
+					backgroundSize: "cover",
+				}}
+			>
+				<div className="w-70 machine-info pd-10 br-5 f-r-be-ce">
+					<div className="info">
+						<h3 className="white fs-100 mg-b-5">{item.name}</h3>
+						<p className="white fs-80">{item.type}</p>
+					</div>
+					<div
+						className="details w-30px h-30px bg-theme mg-r-10 br f-r-ce-ce p tr-200"
+						title="Détails"
+					>
+						<Icon className="white" icon={["fas", "shopping-cart"]} />
+					</div>
 				</div>
 			</div>
 		</div>
-	</div>
-));
+	)
+);
 
 const Cover = (): JSX.Element => {
 	const [currentService, setCurrentService] = useState<number>(0);
@@ -128,9 +129,7 @@ const Cover = (): JSX.Element => {
 								venenatis convallis mollis eu nisi !
 							</p>
 							<div className="cover__slide o-h">
-								<Slide easing="ease">
-									{ mappedSlide }
-								</Slide>
+								<Slide easing="ease">{mappedSlide}</Slide>
 							</div>
 						</div>
 					</div>

@@ -30,7 +30,7 @@ const PageUser = (): JSX.Element => {
 				</div>
 				<div className="w-100 f-r-st-ce mg-t-40">
 					<figure className="avatar w-300px h-300px br b-b mg-l-20 o-hidden f-r-ce-ce bg-white">
-						<img className="w-100 h-100" src={user && user.avatar ? user.avatar : "http://localhost:3001/test.jpg"} alt="Avatar" />
+						<img className="w-100 h-100" src={user && user.avatar ? user.avatar : "/avatar.png"} alt="Avatar" />
 						<div className="overlay w-100 h-100 tr-200 f-c-ce-ce">
 							<Button
 								className="change-avatar"

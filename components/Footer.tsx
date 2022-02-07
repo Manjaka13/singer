@@ -7,10 +7,13 @@ import Button from "components/Button";
 import Loading from "components/Loading";
 import { FontAwesomeIcon as Icon } from "@fortawesome/react-fontawesome";
 import { contactAdd } from "service/";
+import dynamic from "next/dynamic";
 
 /*
 	Footer component
 */
+
+const SingerMap = dynamic(() => import("components/SingerMap"), { ssr: false });
 
 const contacts: Array<IContactItem> = [
 	{
@@ -24,7 +27,7 @@ const contacts: Array<IContactItem> = [
 	{
 		icon: ["fab", "facebook"],
 		content: "Notre page Facebook",
-		link: "https://facebook.com",
+		link: "https://www.facebook.com/SingerChantepie35",
 	},
 	{
 		icon: ["fab", "instagram"],
@@ -36,33 +39,33 @@ const contacts: Array<IContactItem> = [
 const calendars: Array<ICalendarItem> = [
 	{
 		day: "L",
-		opening: "Matin fermé - 14h à 18h",
+		opening: "Etablissement fermé.",
+		opened: false,
+	},
+	{
+		day: "M",
+		opening: "9h30 à 13h - 14h30 à 18h30",
 		opened: true,
 	},
 	{
 		day: "M",
-		opening: "9h à 11h - 14h à 18h",
-		opened: true,
-	},
-	{
-		day: "M",
-		opening: "9h à 11h - Fermé après-midi",
+		opening: "9h30 à 13h - 14h30 à 18h30",
 		opened: true,
 	},
 	{
 		day: "J",
-		opening: "9h à 11h - 14h à 18h",
+		opening: "9h30 à 13h - 14h30 à 18h30",
 		opened: true,
 	},
 	{
 		day: "V",
-		opening: "9h à 11h - 14h à 18h",
+		opening: "9h30 à 13h - 14h30 à 18h30",
 		opened: true,
 	},
 	{
 		day: "S",
-		opening: "Etablissement fermé.",
-		opened: false,
+		opening: "10h à 13h30.",
+		opened: true,
 	},
 	{
 		day: "D",
@@ -98,8 +101,7 @@ const mappedCalendar: Array<JSX.Element> = calendars.map(
 				className={
 					(calendar.opened
 						? "contacts__calendar-row green b"
-						: "contacts__calendar-row red") +
-					" f-r-ce-ce b-b pd-t-5 pd-b-5"
+						: "contacts__calendar-row red") + " f-r-ce-ce b-b pd-t-5 pd-b-5"
 				}
 			>
 				{calendar.opened && <Icon icon={["fas", "check-circle"]} />}
