@@ -1,9 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Router from "next/router";
 import Heading from "components/Heading";
 import Navbar from "components/Navbar";
 import Menu from "components/Menu";
 import { IPageProps, IUser } from "helpers/interface";
+import { ENDPOINT } from "helpers/const";
 
 /*
 	Page component
@@ -24,6 +25,8 @@ const Page: React.FC<IPageProps> = ({
 }): JSX.Element => {
 	const [menuOpened, setMenuOpened] = useState<boolean>(false);
 	const toggleMenu = (): void => setMenuOpened(!menuOpened);
+
+	useEffect(() => console.log("Current endpoint: " + ENDPOINT), []);
 
 	return (
 		<React.Fragment>
