@@ -8,8 +8,8 @@ import { useAuth } from "hooks/";
 const PageUser = (): JSX.Element => {
 	const {user} = useAuth();
 	const [loading, setLoading] = useState<boolean>(false);
-	// const [caption, setCaption] = useState<string | null>(null);
-	// const [status, setStatus] = useState<number>(-1);
+	const [caption] = useState<string | null>(null);
+	const [status] = useState<number>(-1);
 
 	// Submits form
 	const handleSubmit = (e: React.FormEvent<HTMLFormElement>): void => {
