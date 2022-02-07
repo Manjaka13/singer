@@ -1,6 +1,6 @@
 import axios from "axios";
 import ws from "service/ws";
-import { PROXY, MODE, ENDPOINT } from "helpers/const";
+import { BASE_URL } from "helpers/const";
 
 /*
 	For doing API calls
@@ -10,11 +10,10 @@ const headers = {
 	"Accept": "application/json",
 	"Content-Type": "application/json",
 };
-const baseUrl = MODE === "local" ? ENDPOINT : PROXY;
 
 // Get request
 const get = (endpoint: string, params?: any) => {
-	const url = `${baseUrl}/${ws(endpoint)}`;
+	const url = `${BASE_URL}/${ws(endpoint)}`;
 	// Attach token
 	const token: string | null = sessionStorage.getItem("token");
 	if(token)
@@ -29,7 +28,7 @@ const get = (endpoint: string, params?: any) => {
 
 // Post request
 const post = (endpoint: string, params?: any) => {
-	const url = `${baseUrl}/${ws(endpoint)}`;
+	const url = `${BASE_URL}/${ws(endpoint)}`;
 	// Attach token
 	const token: string | null = sessionStorage.getItem("token");
 	if(token)
@@ -44,7 +43,7 @@ const post = (endpoint: string, params?: any) => {
 
 // Delete request
 const remove = (endpoint: string, params?: any) => {
-	const url = `${baseUrl}/${ws(endpoint)}`;
+	const url = `${BASE_URL}/${ws(endpoint)}`;
 	// Attach token
 	const token: string | null = sessionStorage.getItem("token");
 	if(token)

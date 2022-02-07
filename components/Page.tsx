@@ -3,7 +3,7 @@ import Heading from "components/Heading";
 import Navbar from "components/Navbar";
 import Menu from "components/Menu";
 import { IPageProps } from "helpers/interface";
-import { ENDPOINT } from "helpers/const";
+import { BASE_URL } from "helpers/const";
 
 /*
 	Page component
@@ -25,7 +25,7 @@ const Page: React.FC<IPageProps> = ({
 	const [menuOpened, setMenuOpened] = useState<boolean>(false);
 	const toggleMenu = (): void => setMenuOpened(!menuOpened);
 
-	useEffect(() => console.log("Current endpoint: " + ENDPOINT), []);
+	useEffect(() => console.log("Current endpoint: " + BASE_URL), []);
 
 	return (
 		<React.Fragment>

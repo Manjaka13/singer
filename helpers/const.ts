@@ -1,8 +1,6 @@
 import { ISocial } from "helpers/interface";
 
-const PROXY: string | undefined = process.env.NEXT_PUBLIC_PROXY;
-const ENDPOINT: string | undefined = process.env.NEXT_PUBLIC_ENDPOINT;
-const MODE: string | undefined = process.env.NEXT_PUBLIC_MODE;
+const BASE_URL: string | undefined = process.env.NEXT_PUBLIC_BASEURL;
 const SOCIAL: Array<ISocial> = [
 	{
 		icon: "facebook",
@@ -21,4 +19,4 @@ const SOCIAL: Array<ISocial> = [
 	},
 ];
 
-export { PROXY, ENDPOINT, MODE, SOCIAL };
+export { BASE_URL, SOCIAL };
