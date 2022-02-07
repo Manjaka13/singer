@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { v4 as uuidv4 } from "uuid";
 import { IContactItem, ICalendarItem } from "helpers/interface";
 import Copyright from "components/Copyright";
-import SingerMap from "components/SingerMap";
 import Button from "components/Button";
 import Loading from "components/Loading";
 import { FontAwesomeIcon as Icon } from "@fortawesome/react-fontawesome";
