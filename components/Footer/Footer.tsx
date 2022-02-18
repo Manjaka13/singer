@@ -3,6 +3,7 @@ import { v4 as uuidv4 } from "uuid";
 import { FontAwesomeIcon as Icon } from "@fortawesome/react-fontawesome";
 import Copyright from "components/Footer/Copyright";
 import FooterTitle from "components/Footer/FooterTitle";
+import SingerMap from "components/Footer/SingerMap";
 import { IContact, ICalendar } from "helpers/interface";
 import { CONTACT, CALENDAR } from "helpers/const";
 
@@ -51,7 +52,9 @@ const Footer = (): JSX.Element => (
 							title="Localisation"
 							icon={ ["fas", "map-marker-alt"] }
 						/>
-						<div className="footer__box map br-5 o-h w-100"></div>
+						<div className="footer__box map br-5 o-h w-100">
+							<SingerMap />
+						</div>
 					</div>
 					{ /* Contacts */ }
 					<div className="footer__item">
