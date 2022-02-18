@@ -17,7 +17,8 @@ import {
 	faMapMarkerAlt,
 	faPhone,
 	faCheckCircle,
-	faTimesCircle
+	faTimesCircle,
+	faCogs
 } from "@fortawesome/free-solid-svg-icons";
 
 /*
@@ -43,5 +44,6 @@ library.add(
 	faMapMarkerAlt,
 	faPhone,
 	faCheckCircle,
-	faTimesCircle
+	faTimesCircle,
+	faCogs
 );

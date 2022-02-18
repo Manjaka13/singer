@@ -61,3 +61,9 @@ export interface ITypeMachine {
 	description: string;
 	image: string;
 }
+
+export interface IMercerie {
+	name: string;
+	description: string;
+	image: string;
+}

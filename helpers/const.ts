@@ -5,7 +5,8 @@ import {
 	IContact,
 	ICalendar,
 	IService,
-	ITypeMachine
+	ITypeMachine,
+	IMercerie
 } from "helpers/interface";
 
 const BASE_URL: string | undefined = process.env.NEXT_PUBLIC_BASEURL;
@@ -167,6 +168,19 @@ const TYPE_MACHINE: Array<ITypeMachine> = [
 	},
 ];
 
+const SLIDE_MERCERIE: Array<IMercerie> = [
+	{
+		name: "Accessoire",
+		description: "Proin porta iaculis purus, et congue nibh placerat eu. Mauris interdum lectus aliquet erat tincidunt suscipit ultricies eget purus. Nulla mattis orci eget iaculis pharetra. Vestibulum mattis magna non volutpat malesuada",
+		image: "/assets/cover-slide/slide1.jpg"
+	},
+	{
+		name: "Pièces détachées",
+		description: "Suspendisse pellentesque vehicula nulla vel faucibus. Nullam hendrerit augue in dapibus eleifend. Nullam aliquet luctus posuere. Morbi ornare porttitor sodales. In luctus feugiat malesuada. Phasellus consectetur nec.",
+		image: "/assets/cover-slide/slide2.jpg"
+	}
+];
+
 export {
 	BASE_URL,
 	SOCIAL,
@@ -177,5 +191,6 @@ export {
 	CALENDAR,
 	SLIDE_SERVICE,
 	SERVICE,
-	TYPE_MACHINE
+	TYPE_MACHINE,
+	SLIDE_MERCERIE
 };
