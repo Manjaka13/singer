@@ -1,7 +1,9 @@
 import {
 	ISocial,
 	ISection,
-	IProfile
+	IProfile,
+	IContact,
+	ICalendar
 } from "helpers/interface";
 
 const BASE_URL: string | undefined = process.env.NEXT_PUBLIC_BASEURL;
@@ -56,11 +58,71 @@ const HARI: Array<IProfile> = {
 	name: "Tahir",
 	link: "#0"
 };
+const CONTACT: Array<IContact> = [
+	{
+		icon: ["fas", "phone"],
+		content: "+33 67 127 891 12"
+	},
+	{
+		icon: ["fas", "envelope"],
+		content: "chantepie@singer.fr"
+	},
+	{
+		icon: ["fab", "facebook"],
+		content: "Notre page Facebook",
+		link: "#0"
+	},
+	{
+		icon: ["fab", "instagram"],
+		content: "Nous sommes sur insta !",
+		link: "#0"
+	},
+];
+
+const CALENDAR: Array<ICalendar> = [
+	{
+		day: "L",
+		opening: "Etablissement fermé.",
+		opened: false,
+	},
+	{
+		day: "M",
+		opening: "9h30 à 13h - 14h30 à 18h30",
+		opened: true,
+	},
+	{
+		day: "M",
+		opening: "9h30 à 13h - 14h30 à 18h30",
+		opened: true,
+	},
+	{
+		day: "J",
+		opening: "9h30 à 13h - 14h30 à 18h30",
+		opened: true,
+	},
+	{
+		day: "V",
+		opening: "9h30 à 13h - 14h30 à 18h30",
+		opened: true,
+	},
+	{
+		day: "S",
+		opening: "10h à 13h30.",
+		opened: true,
+	},
+	{
+		day: "D",
+		opening: "Etablissement fermé.",
+		opened: false,
+	},
+];
 
 export {
 	BASE_URL,
 	SOCIAL,
 	SECTION,
 	TAHIR,
-	HARI
+	HARI,
+	CONTACT,
+	CALENDAR
 };

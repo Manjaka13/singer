@@ -36,3 +36,15 @@ export interface IProfile {
 	name: string;
 	link: string;
 }
+
+export interface IContact {
+	icon: IconProp;
+	content: string;
+	link?: string;
+}
+
+export interface ICalendar {
+	day: string;
+	opening: string;
+	opened: boolean;
+}

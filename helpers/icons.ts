@@ -3,7 +3,7 @@ import { library } from "@fortawesome/fontawesome-svg-core";
 import { config } from "@fortawesome/fontawesome-svg-core";
 import {
 	faFacebook,
-	faInstagram
+	faInstagram,
 } from "@fortawesome/free-brands-svg-icons";
 import {
 	faEnvelope,
@@ -12,7 +12,12 @@ import {
 	faStar,
 	faWrench,
 	faLock,
-	faHeart
+	faHeart,
+	faCalendarAlt,
+	faMapMarkerAlt,
+	faPhone,
+	faCheckCircle,
+	faTimesCircle
 } from "@fortawesome/free-solid-svg-icons";
 
 /*
@@ -33,5 +38,10 @@ library.add(
 	faStar,
 	faWrench,
 	faLock,
-	faHeart
+	faHeart,
+	faCalendarAlt,
+	faMapMarkerAlt,
+	faPhone,
+	faCheckCircle,
+	faTimesCircle
 );
