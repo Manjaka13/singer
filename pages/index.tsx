@@ -3,6 +3,7 @@ import Heading from "components/Heading";
 import Navigation from "components/Navigation/Navigation";
 import Cover from "components/Cover/Cover";
 import Footer from "components/Footer/Footer";
+import Services from "components/Services";
 
 /*
 	Home page
@@ -18,6 +19,7 @@ const HomePage = (): JSX.Element => (
 		<main className="w-100">
 			<Navigation />
 			<Cover />
+			<Services />
 			<h2 className="pd-t-100">Welcome to NextJS</h2>
 			<h2 className="pd-t-100">Welcome to NextJS</h2>
 			<h2 className="pd-t-100">Welcome to NextJS</h2>

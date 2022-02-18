@@ -48,3 +48,10 @@ export interface ICalendar {
 	opening: string;
 	opened: boolean;
 }
+
+export interface IService {
+	name: string;
+	icon: IconProp;
+	title: string;
+	link: string;
+}

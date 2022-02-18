@@ -3,7 +3,8 @@ import {
 	ISection,
 	IProfile,
 	IContact,
-	ICalendar
+	ICalendar,
+	IService
 } from "helpers/interface";
 
 const BASE_URL: string | undefined = process.env.NEXT_PUBLIC_BASEURL;
@@ -116,6 +117,28 @@ const CALENDAR: Array<ICalendar> = [
 		opened: false,
 	},
 ];
+const SLIDE_SERVICE: Array<string> = [
+	"/assets/cover-slide/slide1.jpg",
+	"/assets/cover-slide/slide2.jpg",
+	"/assets/cover-slide/slide3.jpg",
+];
+const SERVICE: Array<IService> = [
+	{
+		title: "Réparation de machines à coudres",
+		content:
+			"Proin porta iaculis purus, et congue nibh placerat eu. Mauris interdum lectus aliquet erat tincidunt suscipit ultricies eget purus. Nulla mattis orci eget iaculis pharetra.",
+	},
+	{
+		title: "Reprise de vielles modèles",
+		content:
+			"Donec faucibus euismod quam. Curabitur eros enim, venenatis eget mi at, elementum commodo urna. Etiam non facilisis erat. Quisque quis finibus nisi, eget vehicula ipsum.",
+	},
+	{
+		title: "Achat de pièces détachées",
+		content:
+			"Nulla ut turpis et tellus vehicula pellentesque vitae eget turpis. Vivamus auctor mi sit amet ex lobortis, eu euismod arcu consequat. Nulla eget est eget turpis bibendum viverra",
+	},
+];
 
 export {
 	BASE_URL,
@@ -124,5 +147,7 @@ export {
 	TAHIR,
 	HARI,
 	CONTACT,
-	CALENDAR
+	CALENDAR,
+	SLIDE_SERVICE,
+	SERVICE
 };
