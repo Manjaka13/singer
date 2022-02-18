@@ -43,7 +43,7 @@ const mappedCalendar = CALENDAR.map((calendar: ICalendar) => (
 
 const Footer = (): JSX.Element => (
 	<Fragment>
-		<div className="footer bg-white mg-t-50">
+		<div className="footer bg-white mg-t-20">
 			<div className="container">
 				<div className="footer__content w-100 h-320px pd-b-20">
 					{ /* Map */ }
@@ -52,12 +52,12 @@ const Footer = (): JSX.Element => (
 							title="Localisation"
 							icon={ ["fas", "map-marker-alt"] }
 						/>
-						<div className="footer__box map br-5 o-h w-100">
+						<div className="footer__box map br-5 o-h w-100 b-b">
 							<SingerMap />
 						</div>
 					</div>
 					{ /* Contacts */ }
-					<div className="footer__item">
+					<div id="contacts" className="footer__item">
 						<FooterTitle
 							title="Nous contacter"
 							icon={ ["fas", "envelope"] }

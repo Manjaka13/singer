@@ -31,25 +31,25 @@ const SECTION: Array<ISection> = [
 		name: "Services offert",
 		icon: ["fas", "star"],
 		title: "Divers services offert chez Singer Chantepie.",
-		link: "#0"
+		link: "#services"
 	},
 	{
 		name: "Nos produits",
 		icon: ["fas", "shopping-cart"],
 		title: "Les produits en vente chez Singer.",
-		link: "#0"
+		link: "#categories"
 	},
 	{
 		name: "Mercerie et accessoires",
 		icon: ["fas", "wrench"],
 		title: "Découvrez les merceries et accessoires.",
-		link: "#0"
+		link: "#mercerie"
 	},
 	{
 		name: "Contacts",
 		icon: ["fas", "envelope"],
 		title: "Contactez-nous !",
-		link: "#0"
+		link: "#contacts"
 	}
 ];
 const TAHIR: Array<IProfile> = {
@@ -57,8 +57,8 @@ const TAHIR: Array<IProfile> = {
 	link: "#0"
 };
 const HARI: Array<IProfile> = {
-	name: "Tahir",
-	link: "#0"
+	name: "Hari",
+	link: "https://linkedin.com/in/harijaona-rajaonson"
 };
 const CONTACT: Array<IContact> = [
 	{
