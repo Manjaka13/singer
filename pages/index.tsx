@@ -1,29 +1,23 @@
-import React from "react";
-import Page from "components/Page";
-import Cover from "components/Cover";
-import TypeMachine from "components/TypeMachine";
-import Footer from "components/Footer";
-import ProductList from "components/ProductList";
-import Service from "components/Service";
+import React, { Fragment } from "react";
+import Heading from "components/Heading";
+import Navbar from "components/Navigation/Navbar";
 
 /*
 	Home page
 */
 
 const HomePage = (): JSX.Element => (
-	<Page
-		title="Acheter une machine à coudre Singer France"
-		description="Achetez des produits Singer France ou profitez de divers services."
-		image="cover.jpg"
-	>
-		<React.Fragment>
-			<Cover />
-			<Service />
-			<TypeMachine />
-			<ProductList />
-			<Footer />
-		</React.Fragment>
-	</Page>
+	<Fragment>
+		<Heading
+			title="Acheter une machine à coudre Singer France"
+			description="Achetez des produits Singer France ou profitez de divers services."
+			image="cover.jpg"
+		/>
+		<main className="w-100">
+			<Navbar />
+			<h2>Welcome to NextJS</h2>
+		</main>
+	</Fragment>
 );
 
 export default HomePage;

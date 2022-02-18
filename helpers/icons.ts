@@ -1,8 +1,14 @@
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { config } from "@fortawesome/fontawesome-svg-core";
-import { fas } from "@fortawesome/free-solid-svg-icons";
-import { fab } from "@fortawesome/free-brands-svg-icons";
+import {
+	faEnvelope,
+	faBars
+} from "@fortawesome/free-solid-svg-icons";
+import {
+	faFacebook,
+	faInstagram
+} from "@fortawesome/free-brands-svg-icons";
 
 /*
 	Import all icons here
@@ -11,4 +17,11 @@ import { fab } from "@fortawesome/free-brands-svg-icons";
 // Manually add fontawesome styles
 config.autoAddCss = false;
 
-library.add(fas, fab);
+library.add(
+	// Brands
+	faFacebook,
+	faInstagram,
+	// Standard icons
+	faEnvelope,
+	faBars
+);

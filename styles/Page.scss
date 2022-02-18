@@ -1,8 +1,0 @@
-.page {
-	height: calc(100% - #{$navbar-h}px);
-	margin-top: #{$navbar-h}px;
-	&--admin {
-		height: 100%;
-		margin: 0;
-	}
-}

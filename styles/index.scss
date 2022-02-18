@@ -1,42 +1,45 @@
 /*
-	Import necessary styles here
+	Import styles here
 */
 
 @import "./fastui.css";
 @import "./vars.scss";
 @import "./mixins.scss";
-@import "./Button.scss";
-@import "./Badge.scss";
-@import "./Loading.scss";
-@import "./Navbar.scss";
-@import "./Page.scss";
-@import "./Menu.scss";
-@import "./Waves.scss";
-@import "./Cover.scss";
-@import "./TypeMachine.scss";
-@import "./Copyright.scss";
-@import "./Footer.scss";
-@import "./Card.scss";
-@import "./ProductList.scss";
-@import "./Service.scss";
-@import "./Login.scss";
-@import "./NavbarAdminItem.scss";
-@import "./NavbarAdmin.scss";
-@import "./PageAdmin.scss";
-@import "./PageUser.scss";
-@import "./PageListAccounts.scss";
-@import "./PageListContacts.scss";
-@import "./AdminModal.scss";
-@import "./CreateAccount.scss";
 
+.t,
 .theme {
-	color: $color-theme;
+    color: $color-theme;
 }
 
+.bg-t,
 .bg-theme {
-	background: $color-theme;
+    background: $color-theme;
 }
 
-select {
-	margin: 0;
+.white {
+    color: white;
 }
+
+.bg-white {
+    background: white;
+}
+
+.container {
+    @include flex-row(initial, flex-start);
+    width: 1400px;
+    margin: auto;
+    
+    @include screen-x(1700px) {
+        width: 1000px;
+    }
+
+    @include screen-x(1400px) {
+        width: 90%;
+    }
+
+    @include screen-x(900px) {
+        width: calc(100% - 20px);
+    }
+}
+
+@import "./Navigation/Navbar.scss";

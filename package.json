@@ -1,17 +1,13 @@
 {
-	"name": "singer-chantepie",
-	"version": "0.1.0",
-	"private": true,
+	"name": "singer",
+	"version": "0.2.0",
+	"private": false,
 	"scripts": {
 		"dev": "next dev",
 		"build": "next build",
 		"start": "next start",
 		"format": "prettier --write .",
 		"check": "tsc --noEmit && eslint --fix ."
-	},
-	"engines": {
-		"npm": ">= 6.14.4",
-		"yarn": "please-use-npm"
 	},
 	"dependencies": {
 		"@fortawesome/fontawesome-svg-core": "^1.2.36",
