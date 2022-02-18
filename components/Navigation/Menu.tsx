@@ -49,9 +49,14 @@ const Menu = ({
 					<div className="w-100 f-c-st-st">
 						<div className="w-100 f-r-be-ce pd-t-20 pd-b-20">
 							<h1 className="fs-200">Singer Chantepie</h1>
-							<ul className="f-r-st-ce">
-								{ mappedSocial }
-							</ul>
+							<div className="f-r-st-ce">
+								<button className="button-alt" title="Accéder à l'admnistration">
+									<Icon icon={ ["fas", "lock"] } /> Se connecter
+								</button>
+								<ul className="f-r-st-ce">
+									{ mappedSocial }
+								</ul>
+							</div>
 						</div>
 						<div className="menu__separator w-100 mg-b-10"></div>
 						<ul className="w-70 f-r-be-ce mg-a pd-b-10">

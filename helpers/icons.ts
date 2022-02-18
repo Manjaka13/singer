@@ -10,7 +10,8 @@ import {
 	faBars,
 	faShoppingCart,
 	faStar,
-	faWrench
+	faWrench,
+	faLock
 } from "@fortawesome/free-solid-svg-icons";
 
 /*
@@ -29,5 +30,6 @@ library.add(
 	faBars,
 	faShoppingCart,
 	faStar,
-	faWrench
+	faWrench,
+	faLock
 );
