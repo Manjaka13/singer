@@ -31,3 +31,8 @@ export interface ISection {
 	title: string;
 	link: string;
 }
+
+export interface IProfile {
+	name: string;
+	link: string;
+}

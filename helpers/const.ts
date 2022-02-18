@@ -1,4 +1,8 @@
-import { ISocial, ISection } from "helpers/interface";
+import {
+	ISocial,
+	ISection,
+	IProfile
+} from "helpers/interface";
 
 const BASE_URL: string | undefined = process.env.NEXT_PUBLIC_BASEURL;
 const SOCIAL: Array<ISocial> = [
@@ -44,5 +48,19 @@ const SECTION: Array<ISection> = [
 		link: "#0"
 	}
 ];
+const TAHIR: Array<IProfile> = {
+	name: "Tahir",
+	link: "#0"
+};
+const HARI: Array<IProfile> = {
+	name: "Tahir",
+	link: "#0"
+};
 
-export { BASE_URL, SOCIAL, SECTION };
+export {
+	BASE_URL,
+	SOCIAL,
+	SECTION,
+	TAHIR,
+	HARI
+};

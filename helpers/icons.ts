@@ -11,7 +11,8 @@ import {
 	faShoppingCart,
 	faStar,
 	faWrench,
-	faLock
+	faLock,
+	faHeart
 } from "@fortawesome/free-solid-svg-icons";
 
 /*
@@ -31,5 +32,6 @@ library.add(
 	faShoppingCart,
 	faStar,
 	faWrench,
-	faLock
+	faLock,
+	faHeart
 );

@@ -1,6 +1,7 @@
 import React, { Fragment } from "react";
 import Heading from "components/Heading";
 import Navigation from "components/Navigation/Navigation";
+import Footer from "components/Footer/Footer";
 
 /*
 	Home page
@@ -29,6 +30,7 @@ const HomePage = (): JSX.Element => (
 			<h2 className="pd-t-100">Welcome to NextJS</h2>
 			<h2 className="pd-t-100">Welcome to NextJS</h2>
 			<h2 className="pd-t-100">Welcome to NextJS LAST</h2>
+			<Footer />
 		</main>
 	</Fragment>
 );
