@@ -1,6 +1,6 @@
 import React, { Fragment } from "react";
 import Heading from "components/Heading";
-import Navbar from "components/Navigation/Navbar";
+import Navigation from "components/Navigation/Navigation";
 
 /*
 	Home page
@@ -14,8 +14,21 @@ const HomePage = (): JSX.Element => (
 			image="cover.jpg"
 		/>
 		<main className="w-100">
-			<Navbar />
-			<h2>Welcome to NextJS</h2>
+			<Navigation />
+			<h2 className="pd-t-100">Welcome to NextJS</h2>
+			<h2 className="pd-t-100">Welcome to NextJS</h2>
+			<h2 className="pd-t-100">Welcome to NextJS</h2>
+			<h2 className="pd-t-100">Welcome to NextJS</h2>
+			<h2 className="pd-t-100">Welcome to NextJS</h2>
+			<h2 className="pd-t-100">Welcome to NextJS</h2>
+			<h2 className="pd-t-100">Welcome to NextJS</h2>
+			<h2 className="pd-t-100">Welcome to NextJS</h2>
+			<h2 className="pd-t-100">Welcome to NextJS</h2>
+			<h2 className="pd-t-100">Welcome to NextJS</h2>
+			<h2 className="pd-t-100">Welcome to NextJS</h2>
+			<h2 className="pd-t-100">Welcome to NextJS</h2>
+			<h2 className="pd-t-100">Welcome to NextJS</h2>
+			<h2 className="pd-t-100">Welcome to NextJS LAST</h2>
 		</main>
 	</Fragment>
 );

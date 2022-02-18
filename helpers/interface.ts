@@ -20,7 +20,14 @@ export interface IHeadingProps {
 }
 
 export interface ISocial {
-	icon: IconName;
+	icon: IconProp;
+	title: string;
+	link: string;
+}
+
+export interface ISection {
+	name: string;
+	icon: IconProp;
 	title: string;
 	link: string;
 }

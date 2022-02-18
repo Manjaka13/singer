@@ -2,13 +2,16 @@ import "@fortawesome/fontawesome-svg-core/styles.css";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { config } from "@fortawesome/fontawesome-svg-core";
 import {
-	faEnvelope,
-	faBars
-} from "@fortawesome/free-solid-svg-icons";
-import {
 	faFacebook,
 	faInstagram
 } from "@fortawesome/free-brands-svg-icons";
+import {
+	faEnvelope,
+	faBars,
+	faShoppingCart,
+	faStar,
+	faWrench
+} from "@fortawesome/free-solid-svg-icons";
 
 /*
 	Import all icons here
@@ -23,5 +26,8 @@ library.add(
 	faInstagram,
 	// Standard icons
 	faEnvelope,
-	faBars
+	faBars,
+	faShoppingCart,
+	faStar,
+	faWrench
 );
