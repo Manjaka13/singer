@@ -29,12 +29,6 @@ const SOCIAL: Array<ISocial> = [
 ];
 const SECTION: Array<ISection> = [
 	{
-		name: "Services offert",
-		icon: ["fas", "star"],
-		title: "Divers services offert chez Singer Chantepie.",
-		link: "#services"
-	},
-	{
 		name: "Nos produits",
 		icon: ["fas", "shopping-cart"],
 		title: "Les produits en vente chez Singer.",
@@ -45,6 +39,12 @@ const SECTION: Array<ISection> = [
 		icon: ["fas", "wrench"],
 		title: "Découvrez les merceries et accessoires.",
 		link: "#mercerie"
+	},
+	{
+		name: "Services offert",
+		icon: ["fas", "star"],
+		title: "Divers services offert chez Singer Chantepie.",
+		link: "#services"
 	},
 	{
 		name: "Contacts",
