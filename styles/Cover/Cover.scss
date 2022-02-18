@@ -1,0 +1,15 @@
+.cover {
+	height: calc(100% - $navbar-height);
+	margin-top: $navbar-height;
+	background: rgba(80, 80, 80);
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.7);
+
+	&__bg {
+		background: url(/assets/cover.jpg) center center no-repeat;
+		background-size: cover
+	}
+
+	&__overlay {
+		background: rgba(0, 0, 0, 0.5);
+	}
+}

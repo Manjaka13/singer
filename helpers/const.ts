@@ -11,7 +11,7 @@ const SOCIAL: Array<ISocial> = [
 	{
 		icon: ["fab", "facebook"],
 		title: "Visiter notre page Facebook",
-		link: "#0",
+		link: "https://www.facebook.com/SingerChantepie35",
 	},
 	{
 		icon: ["fab", "instagram"],

@@ -1,0 +1,27 @@
+.cover-title {
+	.title {
+		text-shadow: 1px 1px 3px black;
+	}
+
+	.separator {
+		box-shadow: 1px 1px 3px black;
+	}
+
+	.about {
+		background: rgba(0, 0, 0, 0.6);
+	}
+
+	.text {
+		position: relative;
+		width: 370px;
+	}
+
+	.item {
+		position: absolute;
+		top: 100%;
+		&--selected {
+			position: absolute;
+			top: 0;
+		}
+	}
+}
