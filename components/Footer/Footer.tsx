@@ -42,7 +42,7 @@ const mappedCalendar = CALENDAR.map((calendar: ICalendar) => (
 
 const Footer = (): JSX.Element => (
 	<Fragment>
-		<div className="footer bg-white">
+		<div className="footer bg-white mg-t-50">
 			<div className="container">
 				<div className="footer__content w-100 h-320px pd-b-20">
 					{ /* Map */ }

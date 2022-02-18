@@ -55,3 +55,9 @@ export interface IService {
 	title: string;
 	link: string;
 }
+
+export interface ITypeMachine {
+	name: string;
+	description: string;
+	image: string;
+}

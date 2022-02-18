@@ -1,0 +1,54 @@
+.categories {
+	.item {
+		height: 400px;
+		position: relative;
+		:hover {
+			box-shadow: 0px 0px 10px #646464;
+		}
+		@include screen-x(1700px) {
+			width: 24%;
+		}
+		@include screen-x(1000px) {
+			height: 300px;
+		}
+		@include screen-x(800px) {
+			width: 49%;
+			height: 400px;
+			margin-bottom: 2%;
+		}
+		@include screen-x(600px) {
+			width: 70%;
+			margin: auto;
+			margin-bottom: 20px;
+		}
+		@include screen-x(500px) {
+			width: 100%;
+			height: 500px;
+		}
+		@include screen-x(340px) {
+			height: 400px;
+		}
+		// &:last-child {
+		// 	margin: auto;
+		// }
+	}
+
+	.name {
+		position: absolute;
+		bottom: -100%;
+		width: 100%;
+		height: 100%;
+		background: rgba(0, 0, 0, 0);
+		opacity: 0;
+	}
+
+	.item:hover .name {
+		background: rgba(0, 0, 0, 0.4);
+		bottom: 0;
+		opacity: 1;
+	}
+
+	.content {
+		box-shadow: 0px 0px 2px black;
+	}
+}

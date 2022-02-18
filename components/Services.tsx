@@ -28,7 +28,7 @@ const mappedSlide = SLIDE_SERVICE.map((slide: string, key: number) => (
 ));
 
 const Services = (): JSX.Element => (
-	<div className="services">
+	<div id="services" className="services">
 		<div className="container">
 			<div className="w-100">
 				<SectionTitle icon={ ["fas", "star"] } title="Nos offres et services"/>

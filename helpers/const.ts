@@ -4,7 +4,8 @@ import {
 	IProfile,
 	IContact,
 	ICalendar,
-	IService
+	IService,
+	ITypeMachine
 } from "helpers/interface";
 
 const BASE_URL: string | undefined = process.env.NEXT_PUBLIC_BASEURL;
@@ -139,6 +140,32 @@ const SERVICE: Array<IService> = [
 			"Nulla ut turpis et tellus vehicula pellentesque vitae eget turpis. Vivamus auctor mi sit amet ex lobortis, eu euismod arcu consequat. Nulla eget est eget turpis bibendum viverra",
 	},
 ];
+const TYPE_MACHINE: Array<ITypeMachine> = [
+	{
+		name: "Machine à coudre mécanique",
+		description:
+			"Parcourir notre large catalogue de marques de machines à coudre totalement mécanique.",
+		image: "/assets/type-machines/mecanique.jpg"
+	},
+	{
+		name: "Machine à coudre éléctronique",
+		description:
+			"Nous avons plusieurs marques de machines à coudres qui eux sont éléctroniques.",
+		image: "/assets/type-machines/electronique.jpg"
+	},
+	{
+		name: "Brodeuse",
+		description:
+			"Chez Singer, vous pouvez choisir parmi une large liste dans notre catalogue pour les brodeuses.",
+		image: "/assets/type-machines/brodeuse.jpg"
+	},
+	{
+		name: "Surjeteuse",
+		description:
+			"Avec une grande collection de marques de surjeteuses vous trouverez à coup sûr votre bonheur.",
+		image: "/assets/type-machines/surjeteuse.jpg"
+	},
+];
 
 export {
 	BASE_URL,
@@ -149,5 +176,6 @@ export {
 	CONTACT,
 	CALENDAR,
 	SLIDE_SERVICE,
-	SERVICE
+	SERVICE,
+	TYPE_MACHINE
 };

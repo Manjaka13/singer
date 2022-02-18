@@ -4,6 +4,7 @@ import Navigation from "components/Navigation/Navigation";
 import Cover from "components/Cover/Cover";
 import Footer from "components/Footer/Footer";
 import Services from "components/Services";
+import Categories from "components/Categories";
 
 /*
 	Home page
@@ -20,20 +21,7 @@ const HomePage = (): JSX.Element => (
 			<Navigation />
 			<Cover />
 			<Services />
-			<h2 className="pd-t-100">Welcome to NextJS</h2>
-			<h2 className="pd-t-100">Welcome to NextJS</h2>
-			<h2 className="pd-t-100">Welcome to NextJS</h2>
-			<h2 className="pd-t-100">Welcome to NextJS</h2>
-			<h2 className="pd-t-100">Welcome to NextJS</h2>
-			<h2 className="pd-t-100">Welcome to NextJS</h2>
-			<h2 className="pd-t-100">Welcome to NextJS</h2>
-			<h2 className="pd-t-100">Welcome to NextJS</h2>
-			<h2 className="pd-t-100">Welcome to NextJS</h2>
-			<h2 className="pd-t-100">Welcome to NextJS</h2>
-			<h2 className="pd-t-100">Welcome to NextJS</h2>
-			<h2 className="pd-t-100">Welcome to NextJS</h2>
-			<h2 className="pd-t-100">Welcome to NextJS</h2>
-			<h2 className="pd-t-100">Welcome to NextJS LAST</h2>
+			<Categories />
 			<Footer />
 		</main>
 	</Fragment>
