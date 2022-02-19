@@ -2,6 +2,7 @@ import React, { Fragment, useEffect } from "react";
 import Router from "next/router";
 import Link from "next/link";
 import Heading from "components/Heading";
+import Loading from "components/Loading";
 import { useAuth } from "hooks/";
 
 /*
@@ -16,7 +17,7 @@ const AdminPage = (): JSX.Element => {
 			Router.push("/login");
 	}, []);
 
-	return !user ? <Fragment></Fragment> : (
+	return !user ? <Loading /> : (
 		<Fragment>
 			<Heading
 				title="Connexion Singer"

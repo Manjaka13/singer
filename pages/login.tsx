@@ -4,6 +4,7 @@ import { FontAwesomeIcon as Icon } from "@fortawesome/react-fontawesome";
 import Heading from "components/Heading";
 import Navigation from "components/Navigation/Navigation";
 import Spinner from "components/Spinner";
+import Loading from "components/Loading";
 import { useAuth } from "hooks/";
 import { ILogin } from "helpers/interface";
 
@@ -29,7 +30,7 @@ const LoginPage = (): JSX.Element => {
 			Router.push("/admin");
 	}, []);
 
-	return user ? <Fragment></Fragment> : (
+	return user ? <Loading /> : (
 		<Fragment>
 			<Heading
 				title="Connexion Singer"
