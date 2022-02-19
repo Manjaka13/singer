@@ -73,3 +73,22 @@ export interface IAPIFail {
 	caption?: string;
 	status?: number;
 }
+
+export interface IUser {
+	email: string;
+	password?: string;
+	name: string;
+	level: number;
+	verified?: boolean;
+	_id?: string;
+	avatar?: string;
+	token?: string;
+}
+
+export interface IAuthContext {
+	user: IUser | null;
+	loading: boolean;
+	error?: string | null;
+	login: (user: ILogin) => void;
+	logout: () => void;
+}
