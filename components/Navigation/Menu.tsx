@@ -4,6 +4,7 @@ import { v4 as uuidv4 } from "uuid";
 import { FontAwesomeIcon as Icon } from "@fortawesome/react-fontawesome";
 import { ISocial, ISection } from "helpers/interface";
 import { SOCIAL, SECTION } from "helpers/const";
+import { useAuth } from "hooks/";
 
 /*
 	Menu
@@ -18,6 +19,7 @@ const Menu = ({
 	close?: () => void;
 	notHome?: boolean;
 }): JSX.Element => {
+	const { user }  = useAuth();
 
 	const mappedSocial = SOCIAL.map((social: ISocial) => (
 		<li className="mg-l-20" key={ uuidv4() }>
@@ -63,11 +65,20 @@ const Menu = ({
 										</a>
 									</Link>
 								)}
-								<Link href="/login" passHref>
-									<a className="button-alt" title="Connexion">
-										<Icon icon={ ["fas", "lock"] } /> Se connecter
-									</a>
-								</Link>
+								{user && (
+									<Link href="/admin" passHref>
+										<a className="button" title="Page d'administration">
+											<Icon icon={ ["fas", "user"] } /> Admin
+										</a>
+									</Link>
+								)}
+								{!user && (
+									<Link href="/login" passHref>
+										<a className="button-alt" title="Connexion">
+											<Icon icon={ ["fas", "lock"] } /> Se connecter
+										</a>
+									</Link>
+								)}
 								<ul className="f-r-st-ce">
 									{ mappedSocial }
 								</ul>
