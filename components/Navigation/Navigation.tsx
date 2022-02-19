@@ -8,16 +8,18 @@ import Menu from "components/Navigation/Menu";
 
 const Navigation = ({
 	notHome = false
+}: {
+	notHome?: boolean;
 }): JSX.Element => {
 	const [opened, setOpened] = useState<boolean>(false);
 
-	const toggle = () => setOpened(prevState => !prevState);
-	const close = () => setOpened(false);
+	const toggle = (): void => setOpened(prevState => !prevState);
+	const close = (): void => setOpened(false);
 
 	return (
 		<Fragment>
-			<Navbar atClick={ toggle } />
-			<Menu opened={ opened } close={ close } notHome={ notHome } />
+			<Navbar atClick={ () => toggle() } />
+			<Menu opened={ opened } close={ () => close() } notHome={ notHome } />
 		</Fragment>
 	);
 }

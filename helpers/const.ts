@@ -53,11 +53,11 @@ const SECTION: Array<ISection> = [
 		link: "#contacts"
 	}
 ];
-const TAHIR: Array<IProfile> = {
+const TAHIR: IProfile = {
 	name: "Tahir",
 	link: "#0"
 };
-const HARI: Array<IProfile> = {
+const HARI: IProfile = {
 	name: "Hari",
 	link: "https://linkedin.com/in/harijaona-rajaonson"
 };

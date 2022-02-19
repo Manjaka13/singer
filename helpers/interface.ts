@@ -3,10 +3,7 @@
 */
 
 import { IconProp } from "@fortawesome/fontawesome-svg-core";
-import { IconName } from "@fortawesome/fontawesome-svg-core";
-
-export IconProp;
-export IconName;
+// import { IconName } from "@fortawesome/fontawesome-svg-core";
 
 export interface ISingerProps {
 	Component: React.ComponentClass;
@@ -50,10 +47,8 @@ export interface ICalendar {
 }
 
 export interface IService {
-	name: string;
-	icon: IconProp;
 	title: string;
-	link: string;
+	content: string;
 }
 
 export interface ITypeMachine {
@@ -66,4 +61,15 @@ export interface IMercerie {
 	name: string;
 	description: string;
 	image: string;
+}
+
+export interface ILogin {
+	email: string;
+	password: string;
+}
+
+export interface IAPIFail {
+	payload?: null;
+	caption?: string;
+	status?: number;
 }

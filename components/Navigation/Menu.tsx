@@ -11,8 +11,12 @@ import { SOCIAL, SECTION } from "helpers/const";
 
 const Menu = ({
 	opened = false,
-	close = null,
+	close = () => console.log("Close menu"),
 	notHome = false
+}: {
+	opened?: boolean;
+	close?: () => void;
+	notHome?: boolean;
 }): JSX.Element => {
 
 	const mappedSocial = SOCIAL.map((social: ISocial) => (
@@ -43,7 +47,7 @@ const Menu = ({
 	return (
 		<div
 			className={ `menu ${opened ? "menu--opened" : ""} tr-200` }
-			onClick={ () => typeof close === "function" ? close() : null }
+			onClick={ () => close() }
 		>
 			<div className="menu__overlay w-100 h-100 tr-200"></div>
 			<div className="menu__content w-100 tr-200 bg-white">

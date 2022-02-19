@@ -3,12 +3,13 @@ import { v4 as uuidv4 } from "uuid";
 import { FontAwesomeIcon as Icon } from "@fortawesome/react-fontawesome";
 import { Slide } from "react-slideshow-image";
 import { SLIDE_MERCERIE } from "helpers/const";
+import { IMercerie } from "helpers/interface";
 
 /*
 	Mercerie et Accessoires section
 */
 
-const mappedSlide = SLIDE_MERCERIE.map((slide: string, key: number) => (
+const mappedSlide = SLIDE_MERCERIE.map((slide: IMercerie) => (
 	<div className="each-slide" key={ uuidv4() }>
 		<div className="w-100 h-100 p-n n-s">
 			<div

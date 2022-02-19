@@ -8,7 +8,7 @@ import { TYPE_MACHINE } from "helpers/const";
 	Categories Machine section
 */
 
-const mappedCategorie: Array<JSX.Element> = TYPE_MACHINE.map((machine: ITypeMachineItem) => (
+const mappedCategorie: Array<JSX.Element> = TYPE_MACHINE.map((machine: ITypeMachine) => (
 	<li
 		className="item o-h tr-200 b-b f-r-ce-st p"
 		key={ uuidv4() }

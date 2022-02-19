@@ -6,7 +6,9 @@ import { FontAwesomeIcon as Icon } from "@fortawesome/react-fontawesome";
 */
 
 const Navbar = ({
-	atClick = null,
+	atClick = () => console.log("Trigger clicked"),
+}: {
+	atClick?: () => void;
 }): JSX.Element => (
 	<nav className="navbar bg-t w-100">
 		<div className="container h-100">
@@ -18,7 +20,7 @@ const Navbar = ({
 				<div
 					className="navbar__trigger w-50px h-50px white br-r f-c-ce-ce fs-150 p tr-200"
 					title="Ouvrir le menu."
-					onClick={ () => typeof atClick === "function" ? atClick() : null }
+					onClick={ () => atClick() }
 				>
 					<Icon icon={ ["fas", "bars"] } />
 				</div>
