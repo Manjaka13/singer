@@ -19,7 +19,9 @@ import {
 	faCheckCircle,
 	faTimesCircle,
 	faCogs,
-	faHome
+	faHome,
+	faUser,
+	faKey
 } from "@fortawesome/free-solid-svg-icons";
 
 /*
@@ -47,5 +49,7 @@ library.add(
 	faCheckCircle,
 	faTimesCircle,
 	faCogs,
-	faHome
+	faHome,
+	faUser,
+	faKey
 );

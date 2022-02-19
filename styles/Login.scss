@@ -1,0 +1,33 @@
+.login {
+	margin-top: $navbar-height;
+	height: calc(100% - $navbar-height);
+
+	&__window {
+		max-width: 600px;
+		max-height: 380px;
+		box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+	}
+
+	&__separator {
+		width: calc(100% - 40px);
+	}
+	
+	&__form {
+		flex-grow: 1;
+		.input {
+			// width: calc(100% - 80px);
+			width: 100%;
+			border-radius: 0 5px 5px 0;
+		}
+		.icon {
+			flex: 1;
+			min-width: 60px;
+			height: 41px;
+			border-radius: 5px 0 0 5px;
+		}
+	}
+
+	&__item {
+		width: calc(100% - 40px);
+	}
+}
