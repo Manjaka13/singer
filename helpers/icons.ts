@@ -18,7 +18,8 @@ import {
 	faPhone,
 	faCheckCircle,
 	faTimesCircle,
-	faCogs
+	faCogs,
+	faHome
 } from "@fortawesome/free-solid-svg-icons";
 
 /*
@@ -45,5 +46,6 @@ library.add(
 	faPhone,
 	faCheckCircle,
 	faTimesCircle,
-	faCogs
+	faCogs,
+	faHome
 );
