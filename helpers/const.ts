@@ -122,22 +122,17 @@ const CALENDAR: Array<ICalendar> = [
 ];
 const SLIDE_SERVICE: Array<string> = [
 	"https://i.pinimg.com/originals/c8/17/bc/c817bca5fb0f41d6ac98444840b7aa8d.jpg",
-	/* "/assets/cover-slide/slide2.jpg", */
 	"https://i.pinimg.com/originals/b2/11/7c/b2117c3d1cd0cc1a621d8c9bd74702d7.jpg",
 ];
 const SERVICE: Array<IService> = [
 	{
 		title: "Réparation de machines à coudres",
 		content:
-			"Réparation et entretien sur place des machines à coudre toutes marques.",
+			"Aventure couture répare et entretien sur place,  les machines à coudre toutes marques. La vérification et le devis sont gratuit !",
 	},
-	/* {
-		title: "Vente de machines à coudres",
-		content:
-			"Donec faucibus euismod quam. Curabitur eros enim, venenatis eget mi at, elementum commodo urna. Etiam non facilisis erat. Quisque quis finibus nisi, eget vehicula ipsum.",
-	}, */
+
 	{
-		title: "Achat de pièces détachées",
+		title: "Vente d'accessoires et merceries",
 		content:
 			"Aiguilles, canettes, semelle surjet, semelle pose biais et d'autre.",
 	},
