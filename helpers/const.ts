@@ -24,7 +24,7 @@ const SOCIAL: Array<ISocial> = [
 	{
 		icon: ["fas", "envelope"],
 		title: "Nos contacts",
-		link: "#0",
+		link: "#contacts",
 	},
 ];
 const SECTION: Array<ISection> = [

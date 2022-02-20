@@ -28,15 +28,15 @@ const Categories = () => (
 		<div className="container">
 			<div className="w-100">
 				<SectionTitle icon={["fas", "shopping-cart"]} title="Nos produits" />
-				{/* <p className="tx-j">
-					Proin porta iaculis purus, et congue nibh placerat eu. Mauris interdum
-					lectus aliquet erat tincidunt suscipit ultricies eget purus. Nulla mattis
-					orci eget iaculis pharetra. Vestibulum mattis magna non volutpat malesuada.
-					Duis egestas nec sapien quis interdum. Duis placerat finibus vulputate. Nam
-					hendrerit erat turpis, ac condimentum massa commodo vitae. Lorem ipsum
-					dolor sit amet, consectetur adipiscing elit. Cras vel nibh quam.
-				</p> */}
-				<ul className="f-r-be-st f-w pd-t-20">{mappedCategorie}</ul>
+				<p className="tx-j">
+					Dans notre atelier, découvrez différentes machines à coudre de marque
+					reconnue; adaptée selon vos besoins tels que Madam 2 qui va vous
+					accompagner dans vos créativités avec sa ligne moderne et généreuse et ses
+					capacités de Couture très variée! Stylist 4085 dotés de technologies
+					modernes ou encore la brodeuse SE300 qui elle est complète et élégante!
+				</p>
+				{/* f-r-be-st f-w pd-t-20 */}
+				<ul className="categories__list  pd-t-20 ">{mappedCategorie}</ul>
 			</div>
 		</div>
 	</div>

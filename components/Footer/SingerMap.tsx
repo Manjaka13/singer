@@ -6,7 +6,7 @@ import "leaflet/dist/images/marker-shadow.png";
 	Singer location in leaflet map
 */
 
-const zoom = 16;
+const zoom = 15;
 const position: [number, number] = [48.08930332178957, -1.6213132083998467];
 
 const SingerMap = (): JSX.Element => (

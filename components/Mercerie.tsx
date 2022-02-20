@@ -53,13 +53,13 @@ const Mercerie = (): JSX.Element => (
 										</div>
 										<p className="white b">Accessoires</p>
 									</li>
-									{/* <li className="f-c-ce-st">
+									<li className="f-c-ce-st">
 										<div className="about w-80px h-80px br-r o-h tr-200 p f-c-ce-ce white fs-200">
 											<Icon icon={["fas", "cogs"]} />
 										</div>
 										<p className="white b">Autres</p>
 									</li>
-									<li className="f-c-ce-st">
+									{/* <li className="f-c-ce-st">
 										<div className="about w-80px h-80px br-r o-h tr-200 p f-c-ce-ce white fs-200">
 											<Icon icon={["fas", "envelope"]} />
 										</div>
