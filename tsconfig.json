@@ -17,7 +17,7 @@
 		"baseUrl": ".",
 		"noImplicitAny": false
 	},
-	"include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+	"include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "helpers/icons.js", "service/index.js"],
 	"exclude": [
 		"**/node_modules",
 		"**/build",
