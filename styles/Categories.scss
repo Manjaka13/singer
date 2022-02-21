@@ -2,6 +2,9 @@
     &__list {
         @include flex-row(center, center);
         column-gap: 20px;
+        @include screen-x($screen-md) {
+            @include flex-col(center, center);
+        }
     }
     .item {
         height: 400px;

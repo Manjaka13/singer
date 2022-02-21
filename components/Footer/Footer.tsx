@@ -47,19 +47,16 @@ const Footer = (): JSX.Element => (
 		<div className="footer bg-white mg-t-20">
 			<div className="container">
 				<div className="footer__content w-100 h-320px pd-b-20">
-					{/* Map */}
 					<div className="footer__item">
 						<FooterTitle title="Localisation" icon={["fas", "map-marker-alt"]} />
 						<div className="footer__box map br-5 o-h w-100 b-b">
 							<SingerMap />
 						</div>
 					</div>
-					{/* Contacts */}
 					<div id="contacts" className="footer__item">
 						<FooterTitle title="Nous contacter" icon={["fas", "envelope"]} />
 						<ul className="footer__box f-c-st-be">{mappedContacts}</ul>
 					</div>
-					{/* Heure d'ouverture */}
 					<div className="footer__item">
 						<FooterTitle title="Ouvertures" icon={["fas", "calendar-alt"]} />
 						<p className="pd-b-20">

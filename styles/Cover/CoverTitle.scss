@@ -1,27 +1,35 @@
 .cover-title {
-	.title {
-		text-shadow: 1px 1px 3px black;
-	}
-
-	.separator {
-		box-shadow: 1px 1px 3px black;
-	}
-
-	.about {
-		background: rgba(0, 0, 0, 0.6);
-	}
-
-	.text {
-		position: relative;
-		width: 370px;
-	}
-
-	.item {
-		position: absolute;
-		top: 100%;
-		&--selected {
-			position: absolute;
-			top: 0;
-		}
-	}
+    .title {
+        text-shadow: 1px 1px 3px black;
+        @include screen-x($screen-md) {
+            font-size: 15pt
+        }
+    }
+    .separator {
+        box-shadow: 1px 1px 3px black;
+    }
+    .about {
+        background: rgba(0, 0, 0, 0.6);
+    }
+    .text {
+        position: relative;
+        width: 370px;
+        @include screen-x($screen-md) {
+            width: 200px;
+            height: 50px
+        }
+    }
+    .text-list {
+        @include screen-x($screen-md) {
+            font-size: 20pt;
+        }
+    }
+    .item {
+        position: absolute;
+        top: 100%;
+        &--selected {
+            position: absolute;
+            top: 0;
+        }
+    }
 }

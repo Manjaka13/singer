@@ -1,25 +1,23 @@
 .services {
-	&__content {
-		height: 450px;
-		.item {
-			width: calc(50% - 10px);
-		}
-		.item-little {
-			height: calc(50% - 10px);
-		}
-	}
-
-	.slide > div,
-	.react-slideshow-container,
-	.react-slideshow-wrapper,
-	.each-slide,
-	.each-slide > div {
-		height: 100%;
-	}
-
-	.slide {
-		.slide__item {
-			background: rgba(0, 0, 0, 0.7);
-		}
-	}
+    &__content {
+        height: 450px;
+        .item {
+            width: calc(50% - 10px);
+        }
+        .item-little {
+            height: calc(50% - 10px);
+        }
+    }
+    .slide>div,
+    .react-slideshow-container,
+    .react-slideshow-wrapper,
+    .each-slide,
+    .each-slide>div {
+        height: 100%;
+    }
+    .slide {
+        .slide__item {
+            background: rgba(0, 0, 0, 0.7);
+        }
+    }
 }

@@ -18,12 +18,7 @@ const mappedSlide = SLIDE_MERCERIE.map((slide: IMercerie) => (
 					background: `url(${slide.image}) center center no-repeat`,
 					backgroundSize: "cover",
 				}}
-			>
-				{/* 				<p className="slide-title pd-5 br-5 white fs-170">{slide.name}</p>
-				 */}{" "}
-			</div>
-			{/* 			<p className="white pd-10 tx-j">{slide.description}</p>
-			 */}{" "}
+			></div>
 		</div>
 	</div>
 ));
@@ -34,7 +29,7 @@ const Mercerie = (): JSX.Element => (
 			<div className="mercerie__overlay w-100 h-100">
 				<div className="container h-100">
 					<div className="w-100 h-100 f-c-st-st">
-						<h2 className="mercerie__title tx-c white pd-20 fs-300 w-100">
+						<h2 className="mercerie__title tx-c white pd-t-20 pd-b-20 fs-300 w-100">
 							<Icon icon={["fas", "wrench"]} /> Mercerie et Accessoires
 						</h2>
 						<div className="mercerie__separator w-60 h-5px br-5 bg-t mg-a"></div>
@@ -59,24 +54,12 @@ const Mercerie = (): JSX.Element => (
 										</div>
 										<p className="white b">Autres</p>
 									</li>
-									{/* <li className="f-c-ce-st">
-										<div className="about w-80px h-80px br-r o-h tr-200 p f-c-ce-ce white fs-200">
-											<Icon icon={["fas", "envelope"]} />
-										</div>
-										<p className="white b">Contacter</p>
-									</li> */}
 								</ul>
 								<p className="text pd-20 br-5 white">
 									Vous trouverez toute la mercerie se rapportant à la machine à coudre :
 									aiguilles, canettes…. Ainsi que tous les accessoires : semelle surjet,
 									semelle pose biais,…
 								</p>
-
-								{/*<p className="tx-c">
-									<button className="button">
-										<Icon icon={ ["fas", "envelope"] } /> Nous contacter
-									</button>
-								</p>*/}
 							</div>
 							<div className="slide o-h h-100 br-5">
 								<Slide easing="ease">{mappedSlide}</Slide>

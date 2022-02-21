@@ -5,6 +5,10 @@
         grid-template-columns: repeat(3, 1fr);
         grid-auto-rows: auto;
         grid-gap: 20px;
+        @include screen-x($screen-md) {
+            height: auto;
+            @include flex-col(flex-start, flex-start);
+        }
     }
     &__item {
         @include flex-col(initial, initial);
@@ -31,9 +35,23 @@
             border-radius: 5px 0 0 5px;
             background: rgba(240, 240, 240);
         }
+        @include screen-x($screen-md) {
+            padding: 10px 0;
+        }
     }
     &__box {
         flex-grow: 1;
+    }
+    &__title {
+        @include screen-x($screen-md) {
+            font-size: 12pt;
+        }
+    }
+}
+
+.copyright {
+    @include screen-x($screen-md) {
+        @include flex-col(center, center)
     }
 }
 

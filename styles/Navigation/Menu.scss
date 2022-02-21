@@ -1,53 +1,59 @@
 .menu {
-	pointer-events: none;
-
-	&__overlay {
-		position: fixed;
-		top: 0;
-		z-index: 11;
-		background: transparent;
-	}
-
-	&__content {
-		position: fixed;
-		top: -100%;
-		z-index: 12;
-		box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.7);
-	}
-
-	&--opened {
-		pointer-events: auto;
-		.menu__overlay {
-			background: rgba(255, 255, 255, 0.7);
-		}
-		.menu__content {
-			top: $navbar-height;
-		}
-	}
-
-	&__separator {
-		height: 1px;
-		background: rgb(200, 200, 200);
-	}
-
-	&__underline {
-		width: 0;
-		height: 3px;
-		box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
-	}
-
-	&__item {
-		&:hover {
-			.menu__underline {
-				width: 100%;
-			}
-		}
-	}
-
-	&__link {
-		display: block;
-		&:hover {
-			color: $color-theme;
-		}
-	}
+    pointer-events: none;
+    &__overlay {
+        position: fixed;
+        top: 0;
+        z-index: 11;
+        background: transparent;
+    }
+    &__content {
+        position: fixed;
+        top: -100%;
+        z-index: 12;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.7);
+    }
+    &--opened {
+        pointer-events: auto;
+        .menu__overlay {
+            background: rgba(255, 255, 255, 0.7);
+        }
+        .menu__content {
+            top: $navbar-height;
+        }
+    }
+    &__separator {
+        height: 1px;
+        background: rgb(200, 200, 200);
+    }
+    &__underline {
+        width: 0;
+        height: 3px;
+        box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+    }
+    &__item {
+        &:hover {
+            .menu__underline {
+                width: 100%;
+            }
+        }
+        @include screen-x($screen-md) {}
+    }
+    &__link {
+        display: block;
+        &:hover {
+            color: $color-theme;
+        }
+        @include screen-x($screen-md) {
+            @include flex-col(center, center);
+            row-gap: 5px;
+            font-size: 10pt;
+            padding: 0 8px 0 8px;
+            text-align: center;
+        }
+    }
+    &__title {
+        @include screen-x($screen-md) {
+            font-size: 13pt
+        }
+    }
 }

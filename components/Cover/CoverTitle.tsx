@@ -25,7 +25,7 @@ const CoverTitle = (): JSX.Element => {
 			} w-100 h-100 f-r-ce-ce tr-200`}
 			key={key}
 		>
-			<h2 className="white fs-400">{text}</h2>
+			<h2 className="text-list white fs-400">{text}</h2>
 		</div>
 	));
 
