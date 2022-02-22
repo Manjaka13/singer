@@ -106,7 +106,7 @@ const Footer = (): JSX.Element => {
 											required
 										/>
 										<button className="button" type="submit">
-											<Icon icon={ ["fas", "envelope"] } /> Souscrire
+											<Icon className="icon" icon={ ["fas", "envelope"] } /> Souscrire
 										</button>
 									</form>
 								)}
