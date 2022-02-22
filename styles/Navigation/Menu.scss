@@ -8,7 +8,9 @@
 	}
 
 	&__head {
-		width: 100%;
+		@include screen-x(500px) {
+			width: 100%;
+		}
 	}
 
 	&__social {
@@ -75,7 +77,9 @@
 	}
 
 	&__list {
-		width: 100%;
+		@include screen-x(900px) {
+			width: 100%;
+		}
 		@include screen-x(700px) {
 			flex-direction: column;
 			justify-content: initial;

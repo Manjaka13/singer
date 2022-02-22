@@ -9,8 +9,11 @@
 		@include screen-x(1700px) {
 			font-size: 4em;
 		}
-		@include screen-x(600px) {
+		@include screen-x(700px) {
 			font-size: 3em;
+		}
+		@include screen-x(400px) {
+			font-size: 2em;
 		}
 	}
 
@@ -28,8 +31,12 @@
 		@include screen-x(1700px) {
 			width: 370px;
 		}
-		@include screen-x(600px) {
+		@include screen-x(700px) {
 			width: 300px;
+		}
+		@include screen-x(400px) {
+			width: 220px;
+			height: 40px;
 		}
 	}
 
