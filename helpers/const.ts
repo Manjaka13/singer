@@ -9,7 +9,6 @@ import {
 	IMercerie
 } from "helpers/interface";
 
-const BASE_URL: string | undefined = process.env.NEXT_PUBLIC_BASEURL;
 const SOCIAL: Array<ISocial> = [
 	{
 		icon: ["fab", "facebook"],
@@ -182,7 +181,6 @@ const SLIDE_MERCERIE: Array<IMercerie> = [
 ];
 
 export {
-	BASE_URL,
 	SOCIAL,
 	SECTION,
 	TAHIR,

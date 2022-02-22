@@ -14,4 +14,10 @@
 			}
 		}
 	}
+
+	.title {
+		@include screen-x(600px) {
+			font-size: 2em;
+		}
+	}
 }

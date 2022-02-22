@@ -25,13 +25,13 @@ const CoverTitle = (): JSX.Element => {
 			className={ `${key === currentText ? "item--selected" : "item"} w-100 h-100 f-r-ce-ce tr-200` }
 			key={ key }
 		>
-			<h2 className="white fs-400">{ text }</h2>
+			<h2 className="mini-title white fs-500">{ text }</h2>
 		</div>
 	));
 
 	return (
 		<div className="cover-title f-c-st-ce w-60 h-100">
-			<h1 className="title white fs-400">Chez Singer, profitez de divers:</h1>
+			<h1 className="title white fs-500">Chez Singer, profitez de divers:</h1>
 			<div className="text h-80px o-h br-10 bg-t">
 				{ mappedText }
 			</div>

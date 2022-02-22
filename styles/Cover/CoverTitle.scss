@@ -1,6 +1,17 @@
 .cover-title {
-	.title {
+	@include screen-x(1030px) {
+		width: 100%;
+	}
+
+	.title,
+	.mini-title {
 		text-shadow: 1px 1px 3px black;
+		@include screen-x(1700px) {
+			font-size: 4em;
+		}
+		@include screen-x(600px) {
+			font-size: 3em;
+		}
 	}
 
 	.separator {
@@ -13,7 +24,13 @@
 
 	.text {
 		position: relative;
-		width: 370px;
+		width: 420px;
+		@include screen-x(1700px) {
+			width: 370px;
+		}
+		@include screen-x(600px) {
+			width: 300px;
+		}
 	}
 
 	.item {

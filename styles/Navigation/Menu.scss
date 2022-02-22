@@ -1,6 +1,29 @@
 .menu {
 	pointer-events: none;
 
+	&__title {
+		@include screen-x(500px) {
+			display: none;
+		}
+	}
+
+	&__head {
+		width: 100%;
+	}
+
+	&__social {
+		@include screen-x(500px) {
+			margin: auto;
+		}
+	}
+
+	&__social-item {
+		@include screen-x(500px) {
+			margin-left: 10px;
+			margin-right: 10px;
+		}
+	}
+
 	&__overlay {
 		position: fixed;
 		top: 0;
@@ -48,6 +71,15 @@
 		display: block;
 		&:hover {
 			color: $color-theme;
+		}
+	}
+
+	&__list {
+		width: 100%;
+		@include screen-x(700px) {
+			flex-direction: column;
+			justify-content: initial;
+			align-items: center;
 		}
 	}
 }
