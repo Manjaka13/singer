@@ -5,9 +5,25 @@
         grid-template-columns: repeat(3, 1fr);
         grid-auto-rows: auto;
         grid-gap: 20px;
+        @include screen-x(1050px) {
+            grid-template-columns: repeat(2, 1fr);
+            height: auto;
+        }
+        @include screen-x(700px) {
+            grid-template-columns: repeat(1, 1fr);
+            height: auto;
+        }
     }
     &__item {
         @include flex-col(initial, initial);
+        @include screen-x(1050px) {
+            height: 320px;
+        }
+        &:last-child {
+            @include screen-x(1050px) {
+                width: 100%;
+            }
+        }
         .map {
             background: rgb(220, 220, 220);
             &>div {
@@ -25,6 +41,9 @@
         }
         .button {
             border-radius: 0 5px 5px 0;
+            width: 124px;
+            padding-left: 0;
+            padding-right: 0;
         }
         .input {
             flex: 1;
