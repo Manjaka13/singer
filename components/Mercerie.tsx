@@ -35,7 +35,7 @@ const Mercerie = (): JSX.Element => (
 						<div className="mercerie__separator w-60 h-5px br-5 bg-t mg-a"></div>
 						<div className="mercerie__content f-r-be-ce mg-t-20 mg-b-20">
 							<div className="mercerie__item o-h h-100">
-								<ul className="f-r-be-ce pd-t-20 pd-b-20 w-70 mg-a">
+								<ul className="list f-r-be-ce pd-t-20 pd-b-20 w-70 mg-a">
 									<li className="f-c-ce-st">
 										<div className="about w-80px h-80px br-r o-h tr-200 p f-c-ce-ce white fs-200">
 											<Icon icon={["fas", "wrench"]} />

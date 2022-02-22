@@ -25,14 +25,20 @@ const CoverTitle = (): JSX.Element => {
 			} w-100 h-100 f-r-ce-ce tr-200`}
 			key={key}
 		>
-			<h2 className="text-list white fs-400">{text}</h2>
+			<h2 className="mini-title white fs-500">{text}</h2>
 		</div>
 	));
 
 	return (
 		<div className="cover-title f-c-st-ce w-60 h-100">
-			<h1 className="title white fs-400">Chez Singer, profitez de divers:</h1>
-			<div className="text h-80px o-h br-10 bg-t">{mappedText}</div>
+			<h1 className="title white fs-500">Chez Singer, profitez de divers:</h1>
+			<div className="text h-80px o-h br-10 bg-t mg-t-10">{mappedText}</div>
+			<div className="separator w-100 h-5px br-5 bg-theme mg-t-20 mg-b-20"></div>
+			<p className="about pd-10 br-5 white tx-j">
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam magna dui,
+				blandit eget malesuada sit amet, dapibus bibendum nibh. Vestibulum ante
+				ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae.
+			</p>
 		</div>
 	);
 };

@@ -1,8 +1,18 @@
 .cover-title {
-    .title {
+    @include screen-x(1030px) {
+        width: 100%;
+    }
+    .title,
+    .mini-title {
         text-shadow: 1px 1px 3px black;
-        @include screen-x($screen-md) {
-            font-size: 15pt
+        @include screen-x(1700px) {
+            font-size: 4em;
+        }
+        @include screen-x(700px) {
+            font-size: 3em;
+        }
+        @include screen-x(400px) {
+            font-size: 2em;
         }
     }
     .separator {
@@ -13,15 +23,16 @@
     }
     .text {
         position: relative;
-        width: 370px;
-        @include screen-x($screen-md) {
-            width: 200px;
-            height: 50px
+        width: 420px;
+        @include screen-x(1700px) {
+            width: 370px;
         }
-    }
-    .text-list {
-        @include screen-x($screen-md) {
-            font-size: 20pt;
+        @include screen-x(700px) {
+            width: 300px;
+        }
+        @include screen-x(400px) {
+            width: 220px;
+            height: 40px;
         }
     }
     .item {

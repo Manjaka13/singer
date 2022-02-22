@@ -62,33 +62,3 @@ export interface IMercerie {
 	description: string;
 	image: string;
 }
-
-export interface ILogin {
-	email: string;
-	password: string;
-}
-
-export interface IAPIFail {
-	payload?: null;
-	caption?: string;
-	status?: number;
-}
-
-export interface IUser {
-	email: string;
-	password?: string;
-	name: string;
-	level: number;
-	verified?: boolean;
-	_id?: string;
-	avatar?: string;
-	token?: string;
-}
-
-export interface IAuthContext {
-	user: IUser | null;
-	loading: boolean;
-	error?: string | null;
-	login: (user: ILogin) => void;
-	logout: () => void;
-}

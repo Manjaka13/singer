@@ -9,7 +9,6 @@ import {
 	IMercerie,
 } from "helpers/interface";
 
-const BASE_URL: string | undefined = process.env.NEXT_PUBLIC_BASEURL;
 const SOCIAL: Array<ISocial> = [
 	{
 		icon: ["fab", "facebook"],
@@ -121,8 +120,8 @@ const CALENDAR: Array<ICalendar> = [
 	},
 ];
 const SLIDE_SERVICE: Array<string> = [
-	"https://i.pinimg.com/originals/c8/17/bc/c817bca5fb0f41d6ac98444840b7aa8d.jpg",
-	"https://i.pinimg.com/originals/b2/11/7c/b2117c3d1cd0cc1a621d8c9bd74702d7.jpg",
+	"/assets/service/slide0.jpg",
+	"/assets/service/slide1.jpg",
 ];
 const SERVICE: Array<IService> = [
 	{
@@ -143,21 +142,21 @@ const TYPE_MACHINE: Array<ITypeMachine> = [
 		description:
 			"Facile d’utilisation, vous retrouvez les points principaux d'une machine : le droit, le zigzag, la boutonnière, idéal pour la couture de base, type ourlet, réparation d'accros…",
 		image:
-			"https://i.pinimg.com/originals/76/52/c4/7652c47865a9866b0903671c1f230012.jpg",
+			"/assets/type-machine/0.jpg",
 	},
 	{
 		name: "Machine à coudre éléctronique",
 		description:
 			"D’une grande simplicité et très ludique, vous l'utiliserez pour la couture de base, mais surtout pour tous les loisirs créatifs, sacs, trousses, personnalisation grâce aux lettrages, et aux points fantaisies ,customisation de vos vêtements, confection……. Ainsi qu’une multitude de réglage facilitant la couture !",
 		image:
-			"https://i.pinimg.com/originals/70/3b/aa/703baae69605241553e9adc77f4281af.jpg",
+			"/assets/type-machine/1.jpg",
 	},
 	{
 		name: "Brodeuse",
 		description:
 			"La brodeuse sera votre meilleur copine pour vos activités créatives de broderies et lettrages. Vous pourrez personnaliser vos vêtements, linges de maisons,… la seule limite votre imagination !!!",
 		image:
-			"https://i.pinimg.com/originals/5d/69/ea/5d69ea0314b73f9422e664d2530c1ebd.jpg",
+			"/assets/type-machine/2.jpg",
 	},
 ];
 
@@ -167,7 +166,7 @@ const SLIDE_MERCERIE: Array<IMercerie> = [
 		description:
 			"Proin porta iaculis purus, et congue nibh placerat eu. Mauris interdum lectus aliquet erat tincidunt suscipit ultricies eget purus. Nulla mattis orci eget iaculis pharetra. Vestibulum mattis magna non volutpat malesuada",
 		image:
-			"https://i.pinimg.com/originals/b2/11/7c/b2117c3d1cd0cc1a621d8c9bd74702d7.jpg",
+			"/assets/mercerie/0.jpg",
 	},
 	/* {
 		name: "Pièces détachées",
@@ -178,7 +177,6 @@ const SLIDE_MERCERIE: Array<IMercerie> = [
 ];
 
 export {
-	BASE_URL,
 	SOCIAL,
 	SECTION,
 	TAHIR,

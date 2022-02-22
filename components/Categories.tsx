@@ -11,7 +11,7 @@ import { TYPE_MACHINE } from "helpers/const";
 const mappedCategorie: Array<JSX.Element> = TYPE_MACHINE.map(
 	(machine: ITypeMachine) => (
 		<li className="item o-h tr-200 b-b f-r-ce-st p" key={uuidv4()}>
-			<img className="w-100 h-100" src={machine.image} alt={machine.name} />
+			<img className="mg-a h-100" src={machine.image} alt={machine.name} />
 			<div className="name f-c-ce-en tr-300 ">
 				<div className="content bg-theme p-n">
 					<h3 className="fs-90 pd-10 tx-c white">{machine.name}</h3>
@@ -36,7 +36,7 @@ const Categories = () => (
 					modernes ou encore la brodeuse SE300 qui elle est complète et élégante!
 				</p>
 				{/* f-r-be-st f-w pd-t-20 */}
-				<ul className="categories__list  pd-t-20 ">{mappedCategorie}</ul>
+				<ul className="categories__list pd-t-20 ">{mappedCategorie}</ul>
 			</div>
 		</div>
 	</div>
