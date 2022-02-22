@@ -58,7 +58,6 @@ const Menu = ({
 										</a>
 									</Link>
 								)}
-
 								<ul className="menu__social f-r-st-ce">{mappedSocial}</ul>
 							</div>
 						</div>

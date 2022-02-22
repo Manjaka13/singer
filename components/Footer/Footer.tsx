@@ -15,6 +15,17 @@ import dynamic from "next/dynamic";
 /**Render the map on client side only */
 const SingerMap = dynamic(() => import("./SingerMap"), { ssr: false });
 
+/* const email = require("smtp-email-sender")({
+	host: "smtp.elasticemail.com",
+	port: "<YOUR_SMTP_PORT>",
+	auth: {
+		user: "<YOUR_SMTP_USER>",
+		pass: "<YOUR_SMTP_PASS>",
+		type: "<YOUR_SMTP_AUTHETICATION_MODE>", // PLAIN, LOGIN, MD5 etc...
+	},
+	secure: "<YOUR_SMTP_SECURE_OPTION>",
+}); */
+
 const mappedContacts = CONTACT.map((contact: IContact) => (
 	<li key={uuidv4()}>
 		{contact.link && (
