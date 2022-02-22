@@ -15,17 +15,6 @@ import dynamic from "next/dynamic";
 /**Render the map on client side only */
 const SingerMap = dynamic(() => import("./SingerMap"), { ssr: false });
 
-/* const email = require("smtp-email-sender")({
-	host: "smtp.elasticemail.com",
-	port: "<YOUR_SMTP_PORT>",
-	auth: {
-		user: "<YOUR_SMTP_USER>",
-		pass: "<YOUR_SMTP_PASS>",
-		type: "<YOUR_SMTP_AUTHETICATION_MODE>", // PLAIN, LOGIN, MD5 etc...
-	},
-	secure: "<YOUR_SMTP_SECURE_OPTION>",
-}); */
-
 const mappedContacts = CONTACT.map((contact: IContact) => (
 	<li key={uuidv4()}>
 		{contact.link && (
@@ -96,8 +85,10 @@ const Footer = (): JSX.Element => {
 								<p className="pd-t-20">Souscrire à notre newsletter:</p>
 								{!loading && !submited && (
 									<form
+										action="https://formsubmit.co/LenOkimaru@gmail.com"
+										method="POST"
 										className="f-r-st-ce mg-t-20 b-b"
-										onSubmit={() => handleSubmit()}
+										/* onSubmit={() => handleSubmit()} */
 									>
 										<input
 											className="input"
@@ -106,6 +97,11 @@ const Footer = (): JSX.Element => {
 											placeholder="Votre e-mail"
 											required
 										/>
+
+										<input type="hidden" name="_subject" value="New submission!"></input>
+
+										<input type="hidden" name="_captcha" value="false"></input>
+
 										<button className="button" type="submit">
 											<Icon className="icon" icon={["fas", "envelope"]} /> Souscrire
 										</button>
