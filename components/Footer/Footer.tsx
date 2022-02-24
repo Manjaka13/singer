@@ -85,7 +85,7 @@ const Footer = (): JSX.Element => {
 								<p className="pd-t-20">Souscrire à notre newsletter:</p>
 								{!loading && !submited && (
 									<form
-										action="https://formsubmit.co/UltimateQulbutoke@gmail.com
+										action="https://formsubmit.co/aventure.couture.newsletter@gmail.com
 "
 										method="POST"
 										className="f-r-st-ce mg-t-20 b-b"
