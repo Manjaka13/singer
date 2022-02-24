@@ -85,7 +85,8 @@ const Footer = (): JSX.Element => {
 								<p className="pd-t-20">Souscrire à notre newsletter:</p>
 								{!loading && !submited && (
 									<form
-										action="https://formsubmit.co/LenOkimaru@gmail.com"
+										action="https://formsubmit.co/UltimateQulbutoke@gmail.com
+"
 										method="POST"
 										className="f-r-st-ce mg-t-20 b-b"
 										/* onSubmit={() => handleSubmit()} */
@@ -98,11 +99,25 @@ const Footer = (): JSX.Element => {
 											required
 										/>
 
-										<input type="hidden" name="_subject" value="New submission!"></input>
+										<input
+											type="hidden"
+											name="_subject"
+											value="Nouveau abonné, l'e-mail y sera attaché!"
+										></input>
 
 										<input type="hidden" name="_captcha" value="false"></input>
+										<input type="text" name="_honey" style={{ display: "none" }}></input>
+										<input
+											type="hidden"
+											name="message"
+											value="Un nouveau abonné a souscrit à votre newsLetter!"
+										></input>
 
-										<button className="button" type="submit">
+										<button
+											className="button"
+											type="submit"
+											onSubmit={() => handleSubmit()}
+										>
 											<Icon className="icon" icon={["fas", "envelope"]} /> Souscrire
 										</button>
 									</form>
