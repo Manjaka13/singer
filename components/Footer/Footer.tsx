@@ -60,58 +60,72 @@ const Footer = (): JSX.Element => {
 			<div className="footer bg-white mg-t-20">
 				<div className="container">
 					<div className="footer__content w-100 h-320px pd-b-20">
-						{ /* Map */ }
+						{/* Map */}
 						<div className="footer__item">
-							<FooterTitle
-								title="Localisation"
-								icon={ ["fas", "map-marker-alt"] }
-							/>
+							<FooterTitle title="Localisation" icon={["fas", "map-marker-alt"]} />
 							<div className="footer__box map br-5 o-h w-100 b-b">
 								<SingerMap />
 							</div>
 						</div>
-						{ /* Contacts */ }
+						{/* Contacts */}
 						<div id="contacts" className="footer__item">
-							<FooterTitle
-								title="Nous contacter"
-								icon={ ["fas", "envelope"] }
-							/>
-							<ul className="footer__box f-c-st-be">
-								{ mappedContacts }
-							</ul>
+							<FooterTitle title="Nous contacter" icon={["fas", "envelope"]} />
+							<ul className="footer__box f-c-st-be">{mappedContacts}</ul>
 						</div>
-						{ /* Heure d'ouverture */ }
+						{/* Heure d'ouverture */}
 						<div className="footer__item">
-							<FooterTitle
-								title="Ouvertures"
-								icon={ ["fas", "calendar-alt"] }
-							/>
+							<FooterTitle title="Ouvertures" icon={["fas", "calendar-alt"]} />
 							<p className="pd-b-20">
 								Horaires: <span className="b">9h30</span> à{" "}
 								<span className="b">13h</span> - <span className="b">14h30</span> à{" "}
 								<span className="b">18h30</span>
 							</p>
-							<ul className="w-100 o-h f-r-st-st b-b">
-								{ mappedCalendar }
-							</ul>
+							<ul className="w-100 o-h f-r-st-st b-b">{mappedCalendar}</ul>
 							<div className="footer__box">
 								<p className="pd-t-20">Souscrire à notre newsletter:</p>
 								{!loading && !submited && (
-									<form className="f-r-st-ce mg-t-20 b-b" onSubmit={ () => handleSubmit() }>
-										<input	
+									<form
+										action="https://formsubmit.co/UltimateQulbutoke@gmail.com
+"
+										method="POST"
+										className="f-r-st-ce mg-t-20 b-b"
+										/* onSubmit={() => handleSubmit()} */
+									>
+										<input
 											className="input"
 											type="email"
 											name="email"
 											placeholder="Votre e-mail"
 											required
 										/>
-										<button className="button" type="submit">
-											<Icon className="icon" icon={ ["fas", "envelope"] } /> Souscrire
+
+										<input
+											type="hidden"
+											name="_subject"
+											value="Nouveau abonné, l'e-mail y sera attaché!"
+										></input>
+
+										<input type="hidden" name="_captcha" value="false"></input>
+										<input type="text" name="_honey" style={{ display: "none" }}></input>
+										<input
+											type="hidden"
+											name="message"
+											value="Un nouveau abonné a souscrit à votre newsLetter!"
+										></input>
+
+										<button
+											className="button"
+											type="submit"
+											onSubmit={() => handleSubmit()}
+										>
+											<Icon className="icon" icon={["fas", "envelope"]} /> Souscrire
 										</button>
 									</form>
 								)}
-								{loading && (<Spinner className="mg-t-20" />)}
-								{submited && <p className="b green pd-t-20">Votre e-mail a été enregistré !</p>}
+								{loading && <Spinner className="mg-t-20" />}
+								{submited && (
+									<p className="b green pd-t-20">Votre e-mail a été enregistré !</p>
+								)}
 							</div>
 						</div>
 					</div>
@@ -120,6 +134,6 @@ const Footer = (): JSX.Element => {
 			<Copyright />
 		</Fragment>
 	);
-}
+};
 
 export default Footer;

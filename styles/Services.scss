@@ -1,42 +1,40 @@
 .services {
-	&__content {
-		height: 450px;
-		@include screen-x(800px) {
-			height: auto;
-			flex-direction: column;
-			justify-content: initial;
-			align-items: center;
-		}
-		.item {
-			width: calc(50% - 10px);
-			&--right,
-			&--left {
-				@include screen-x(800px) {
-					width: 100%;
-				}
-			}
-			&--right {
-				@include screen-x(800px) {
-					height: 450px;
-				}	
-			}
-		}
-		.item-little {
-			height: calc(50% - 10px);
-		}
-	}
-
-	.slide > div,
-	.react-slideshow-container,
-	.react-slideshow-wrapper,
-	.each-slide,
-	.each-slide > div {
-		height: 100%;
-	}
-
-	.slide {
-		.slide__item {
-			background: rgba(0, 0, 0, 0.7);
-		}
-	}
+    &__content {
+        height: 450px;
+        @include screen-x(800px) {
+            height: auto;
+            flex-direction: column;
+            justify-content: initial;
+            align-items: center;
+        }
+        .item {
+            width: calc(50% - 10px);
+            &--right,
+            &--left {
+                @include screen-x(800px) {
+                    width: 100%;
+                }
+            }
+            &--right {
+                @include screen-x(800px) {
+                    height: 450px;
+                }
+            }
+        }
+        .item-little {
+            height: calc(50% - 10px);
+        }
+    }
+    .slide>div,
+    .react-slideshow-container,
+    .react-slideshow-wrapper,
+    .each-slide,
+    .each-slide>div {
+        height: 100%;
+    }
+    .slide {
+        .slide__item {
+            background: rgba(0, 0, 0, 0.7);
+        }
+    }
 }

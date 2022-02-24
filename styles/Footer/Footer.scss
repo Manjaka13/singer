@@ -70,6 +70,17 @@
     &__box {
         flex-grow: 1;
     }
+    &__title {
+        @include screen-x($screen-md) {
+            font-size: 12pt;
+        }
+    }
+}
+
+.copyright {
+    @include screen-x($screen-md) {
+        @include flex-col(center, center)
+    }
 }
 
 .leaflet-default-icon-path {

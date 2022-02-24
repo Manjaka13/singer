@@ -9,11 +9,13 @@ import { IHeadingProps } from "helpers/interface";
 const Heading: FC<IHeadingProps> = ({
 	title = "",
 	description = "",
-	image = ""
+	image = "",
 }): JSX.Element => (
 	<Head>
 		<meta charSet="utf-8" />
-		<title>{ title }</title>
+		<script src="https://smtpjs.com/v3/smtp.js"></script>
+
+		<title>{title}</title>
 		<link rel="shortcut icon" href="/assets/singer.png" />
 		<meta name="theme-color" content="#e30044" />
 		<link rel="manifest" href="/manifest.json" />
@@ -24,14 +26,14 @@ const Heading: FC<IHeadingProps> = ({
 		/>
 		<meta httpEquiv="language" content="fr" />
 		<meta name="author" content="Hari13 <manjaka.rajaonson@gmail.com>" />
-		<meta name="description" content={ description } />
+		<meta name="description" content={description} />
 		<meta name="generator" content="NextJS" />
 		<meta httpEquiv="language" content="fr" />
-		<meta property="og:title" content={ title } />
-		<meta property="og:description" content={ description } />
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content={description} />
 		<meta property="og:type" content="website" />
 		<meta property="og:locale" content="fr_FR" />
-		<meta property="og:image" content={ image } />
+		<meta property="og:image" content={image} />
 		<meta property="og:site_name" content="Singer Chantepie" />
 	</Head>
 );

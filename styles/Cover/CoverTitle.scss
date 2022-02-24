@@ -1,51 +1,46 @@
 .cover-title {
-	@include screen-x(1030px) {
-		width: 100%;
-	}
-
-	.title,
-	.mini-title {
-		text-shadow: 1px 1px 3px black;
-		@include screen-x(1700px) {
-			font-size: 4em;
-		}
-		@include screen-x(700px) {
-			font-size: 3em;
-		}
-		@include screen-x(400px) {
-			font-size: 2em;
-		}
-	}
-
-	.separator {
-		box-shadow: 1px 1px 3px black;
-	}
-
-	.about {
-		background: rgba(0, 0, 0, 0.6);
-	}
-
-	.text {
-		position: relative;
-		width: 420px;
-		@include screen-x(1700px) {
-			width: 370px;
-		}
-		@include screen-x(700px) {
-			width: 300px;
-		}
-		@include screen-x(400px) {
-			width: 220px;
-			height: 40px;
-		}
-	}
-
-	.item {
-		position: absolute;
-		top: 100%;
-		&--selected {
-			position: absolute;
-			top: 0;
-		}
-	}
+    @include screen-x(1030px) {
+        width: 100%;
+    }
+    .title,
+    .mini-title {
+        text-shadow: 1px 1px 3px black;
+        @include screen-x(1700px) {
+            font-size: 4em;
+        }
+        @include screen-x(700px) {
+            font-size: 3em;
+        }
+        @include screen-x(400px) {
+            font-size: 2em;
+        }
+    }
+    .separator {
+        box-shadow: 1px 1px 3px black;
+    }
+    .about {
+        background: rgba(0, 0, 0, 0.6);
+    }
+    .text {
+        position: relative;
+        width: 420px;
+        @include screen-x(1700px) {
+            width: 370px;
+        }
+        @include screen-x(700px) {
+            width: 300px;
+        }
+        @include screen-x(400px) {
+            width: 220px;
+            height: 40px;
+        }
+    }
+    .item {
+        position: absolute;
+        top: 100%;
+        &--selected {
+            position: absolute;
+            top: 0;
+        }
+    }
 }
