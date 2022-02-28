@@ -18,7 +18,7 @@ const SOCIAL: Array<ISocial> = [
 	{
 		icon: ["fab", "instagram"],
 		title: "Nous suivre sur Instagram",
-		link: "#0",
+		link: "https://www.instagram.com/singerchantepie35/",
 	},
 	{
 		icon: ["fas", "envelope"],
@@ -64,11 +64,11 @@ const HARI: IProfile = {
 const CONTACT: Array<IContact> = [
 	{
 		icon: ["fas", "phone"],
-		content: "+33 67 127 891 12",
+		content: "02 23 62 34 82",
 	},
 	{
 		icon: ["fas", "envelope"],
-		content: "chantepie@singer.fr",
+		content: "singer-chantepie35@orange.fr",
 	},
 	{
 		icon: ["fab", "facebook"],
@@ -78,7 +78,7 @@ const CONTACT: Array<IContact> = [
 	{
 		icon: ["fab", "instagram"],
 		content: "Nous sommes sur insta !",
-		link: "#0",
+		link: "https://www.instagram.com/singerchantepie35/",
 	},
 ];
 
@@ -141,22 +141,19 @@ const TYPE_MACHINE: Array<ITypeMachine> = [
 		name: "Machine à coudre mécanique",
 		description:
 			"Facile d’utilisation, vous retrouvez les points principaux d'une machine : le droit, le zigzag, la boutonnière, idéal pour la couture de base, type ourlet, réparation d'accros…",
-		image:
-			"/assets/type-machine/0.jpg",
+		image: "/assets/type-machine/0.jpg",
 	},
 	{
 		name: "Machine à coudre éléctronique",
 		description:
 			"D’une grande simplicité et très ludique, vous l'utiliserez pour la couture de base, mais surtout pour tous les loisirs créatifs, sacs, trousses, personnalisation grâce aux lettrages, et aux points fantaisies ,customisation de vos vêtements, confection……. Ainsi qu’une multitude de réglage facilitant la couture !",
-		image:
-			"/assets/type-machine/1.jpg",
+		image: "/assets/type-machine/1.jpg",
 	},
 	{
 		name: "Brodeuse",
 		description:
 			"La brodeuse sera votre meilleur copine pour vos activités créatives de broderies et lettrages. Vous pourrez personnaliser vos vêtements, linges de maisons,… la seule limite votre imagination !!!",
-		image:
-			"/assets/type-machine/2.jpg",
+		image: "/assets/type-machine/2.jpg",
 	},
 ];
 
@@ -165,8 +162,7 @@ const SLIDE_MERCERIE: Array<IMercerie> = [
 		name: "Accessoire",
 		description:
 			"Proin porta iaculis purus, et congue nibh placerat eu. Mauris interdum lectus aliquet erat tincidunt suscipit ultricies eget purus. Nulla mattis orci eget iaculis pharetra. Vestibulum mattis magna non volutpat malesuada",
-		image:
-			"/assets/mercerie/0.jpg",
+		image: "/assets/mercerie/0.jpg",
 	},
 	/* {
 		name: "Pièces détachées",

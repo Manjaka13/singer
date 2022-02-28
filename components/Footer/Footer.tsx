@@ -78,18 +78,19 @@ const Footer = (): JSX.Element => {
 							<p className="pd-b-20">
 								Horaires: <span className="b">9h30</span> à{" "}
 								<span className="b">13h</span> - <span className="b">14h30</span> à{" "}
-								<span className="b">18h30</span>
+								<span className="b">18h30</span> et le samedi de{" "}
+								<span className="b">10h</span> à <span className="b">14h</span>
 							</p>
 							<ul className="w-100 o-h f-r-st-st b-b">{mappedCalendar}</ul>
 							<div className="footer__box">
 								<p className="pd-t-20">Souscrire à notre newsletter:</p>
 								{!loading && !submited && (
 									<form
-										action="https://formsubmit.co/aventure.couture.newsletter@gmail.com
+										action="https://formsubmit.co/newsletteraventurecouture@gmail.com
+
 "
 										method="POST"
 										className="f-r-st-ce mg-t-20 b-b"
-										/* onSubmit={() => handleSubmit()} */
 									>
 										<input
 											className="input"
