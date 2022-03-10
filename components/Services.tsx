@@ -3,6 +3,7 @@ import { v4 as uuidv4 } from "uuid";
 import { Slide } from "react-slideshow-image";
 import SectionTitle from "components/SectionTitle";
 import { SLIDE_SERVICE, SERVICE } from "helpers/const";
+import { FontAwesomeIcon as Icon } from "@fortawesome/react-fontawesome";
 
 /*
 	Service offert section
@@ -64,6 +65,27 @@ const Services = (): JSX.Element => (
 							</p>
 						</div>
 					</div>
+				</div>
+				<div className="services__pickup">
+					<h2 className="title tx-c white pd-t-20 pd-b-20 fs-300 w-100">
+						<Icon className="title__icon" icon={["fas", "map-marker-alt"]} /> Nos
+						points relais
+					</h2>
+					<div className="separator w-60 h-5px br-5 bg-t mg-a"></div>
+					<p className="tx-j pd-10">
+						Vous pouvez également nous laisser vos machines dans les deux points
+						relais suivants :
+					</p>
+					<ul className="relay-list">
+						<li className="relay-list__item">
+							<Icon className="icon" icon={["fas", "map-marker-alt"]} /> TOOTIM 8 rue
+							du maréchal de lattre de tassigny 35580 Guichen
+						</li>
+						<li className="relay-list__item">
+							<Icon className="icon" icon={["fas", "map-marker-alt"]} /> L'espace
+							ménager bruzois 35170 Bruz
+						</li>
+					</ul>
 				</div>
 			</div>
 		</div>

@@ -1,4 +1,42 @@
 .services {
+    &__pickup {
+        .title {
+            color: rgb(36, 27, 27);
+            @include screen-x(600px) {
+                font-size: 2em;
+            }
+            &__icon {
+                color: rgb(202, 27, 27);
+                text-shadow: 1px 1px 3px black;
+            }
+        }
+        .separator {
+            box-shadow: 1px 1px 3px rgb(214, 0, 0);
+            margin-bottom: 15px;
+        }
+        .relay-list {
+            margin: 20px 40px auto;
+            font-weight: bold;
+            &__item {
+                font-size: 20px;
+                text-shadow: 1px 1px 3px rgb(255, 255, 255);
+                padding: 5px;
+                @include screen-x(600px) {
+                    font-size: 15px;
+                    margin: 0;
+                }
+                .icon {
+                    font-size: 25px;
+                    color: rgb(202, 27, 27);
+                    margin-right: 10px;
+                }
+            }
+            @include screen-x(600px) {
+                font-size: 15px;
+                margin: 10px auto;
+            }
+        }
+    }
     &__content {
         height: 450px;
         @include screen-x(800px) {
