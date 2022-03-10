@@ -42,10 +42,10 @@ const Services = (): JSX.Element => (
 							<h3 className="pd-10">Expertise</h3>
 							<div className="w-30 h-5px mg-l-10 br-5 bg-t"></div>
 							<p className="tx-j pd-10 fs-90">
-								Les machines à coudre n`&apos;`ayant pas toutes la même puissance
-								moteur, les mêmes programmes, les mêmes possibilités, nous vous aiderons
-								dans le choix de la machine à coudre adaptée à vos besoins. Pour cela,
-								nous prendrons le temps de voir avec vous, tous ce que vous envisagez de
+								Les machines à coudre n&apos;ayant pas toutes la même puissance moteur,
+								les mêmes programmes, les mêmes possibilités, nous vous aiderons dans le
+								choix de la machine à coudre adaptée à vos besoins. Pour cela, nous
+								prendrons le temps de voir avec vous, tous ce que vous envisagez de
 								faire à court terme et à long terme avec votre machine. Afin de vous
 								proposer la machine à coudre qui deviendra votre meilleur amie pour
 								toute vos envies couture !
@@ -82,8 +82,8 @@ const Services = (): JSX.Element => (
 							du maréchal de lattre de tassigny 35580 Guichen
 						</li>
 						<li className="relay-list__item">
-							<Icon className="icon" icon={["fas", "map-marker-alt"]} /> L
-							`&apos;`espace ménager bruzois 35170 Bruz
+							<Icon className="icon" icon={["fas", "map-marker-alt"]} /> L &apos;espace
+							ménager bruzois 35170 Bruz
 						</li>
 					</ul>
 				</div>
