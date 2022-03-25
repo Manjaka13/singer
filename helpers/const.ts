@@ -40,7 +40,7 @@ const SECTION: Array<ISection> = [
 		link: "#mercerie",
 	},
 	{
-		name: "Services offert",
+		name: "Services offerts",
 		icon: ["fas", "star"],
 		title: "Divers services offert chez Singer Chantepie.",
 		link: "#services",
@@ -125,15 +125,15 @@ const SLIDE_SERVICE: Array<string> = [
 ];
 const SERVICE: Array<IService> = [
 	{
-		title: "Réparation de machines à coudres",
+		title: "Réparation de machine à coudres",
 		content:
-			"Aventure couture répare et entretien sur place,  les machines à coudre toutes marques. La vérification et le devis sont gratuit !",
+			"Aventure Couture répare et entretient sur place les machines à coudre toutes marques. La vérification et le devis sont gratuits !",
 	},
 
 	{
-		title: "Vente d'accessoires et merceries",
+		title: "Vente d'accessoire et mercerie",
 		content:
-			"Aiguilles, canettes, semelle surjet, semelle pose biais et d'autre.",
+			"Aiguilles, canettes, semelles surjet, semelle pose biais et autres.",
 	},
 ];
 const TYPE_MACHINE: Array<ITypeMachine> = [
@@ -144,15 +144,15 @@ const TYPE_MACHINE: Array<ITypeMachine> = [
 		image: "/assets/type-machine/0.jpg",
 	},
 	{
-		name: "Machine à coudre éléctronique",
+		name: "Machine à coudre électronique",
 		description:
-			"D’une grande simplicité et très ludique, vous l'utiliserez pour la couture de base, mais surtout pour tous les loisirs créatifs, sacs, trousses, personnalisation grâce aux lettrages, et aux points fantaisies ,customisation de vos vêtements, confection……. Ainsi qu’une multitude de réglage facilitant la couture !",
+			"D’une grande simplicité et très ludique, vous l'utiliserez pour la couture de base, mais surtout pour tous les loisirs créatifs, la réalisation sacs, trousses, la possibilité de personnalisation grâce aux lettrages et aux points fantaisies, la customisation de vos vêtements, confection…… sans oublier la multitude de réglages facilitant la couture !",
 		image: "/assets/type-machine/1.jpg",
 	},
 	{
 		name: "Brodeuse",
 		description:
-			"La brodeuse sera votre meilleur copine pour vos activités créatives de broderies et lettrages. Vous pourrez personnaliser vos vêtements, linges de maisons,… la seule limite votre imagination !!!",
+			"La brodeuse sera votre meilleure copine pour vos activités créatives de broderies et lettrages. Vous pourrez personnaliser vos vêtements, linge de maison,… la seule limite votre imagination !!!",
 		image: "/assets/type-machine/2.jpg",
 	},
 ];
@@ -164,12 +164,7 @@ const SLIDE_MERCERIE: Array<IMercerie> = [
 			"Proin porta iaculis purus, et congue nibh placerat eu. Mauris interdum lectus aliquet erat tincidunt suscipit ultricies eget purus. Nulla mattis orci eget iaculis pharetra. Vestibulum mattis magna non volutpat malesuada",
 		image: "/assets/mercerie/0.jpg",
 	},
-	/* {
-		name: "Pièces détachées",
-		description:
-			"Suspendisse pellentesque vehicula nulla vel faucibus. Nullam hendrerit augue in dapibus eleifend. Nullam aliquet luctus posuere. Morbi ornare porttitor sodales. In luctus feugiat malesuada. Phasellus consectetur nec.",
-		image: "/assets/cover-slide/slide2.jpg",
-	}, */
+	
 ];
 
 export {

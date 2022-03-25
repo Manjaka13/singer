@@ -45,22 +45,22 @@ const Services = (): JSX.Element => (
 								Les machines à coudre n&apos;ayant pas toutes la même puissance moteur,
 								les mêmes programmes, les mêmes possibilités, nous vous aiderons dans le
 								choix de la machine à coudre adaptée à vos besoins. Pour cela, nous
-								prendrons le temps de voir avec vous, tous ce que vous envisagez de
-								faire à court terme et à long terme avec votre machine. Afin de vous
-								proposer la machine à coudre qui deviendra votre meilleur amie pour
-								toute vos envies couture !
+								prendrons le temps de voir avec vous, tout ce que vous envisagez de
+								faire à court terme et à long terme avec votre machine afin de vous
+								proposer la machine à coudre qui deviendra votre meilleure amie pour
+								toutes vos envies couture !
 							</p>
 						</div>
 						<div className="item-little w-100 b-b o-h bg-white">
 							<h3 className="pd-10">Professionalisme</h3>
 							<div className="w-30 h-5px mg-l-10 br-5 bg-t"></div>
 							<p className="tx-j pd-10 fs-90">
-								Dans notre magasin , pour les machines achetées chez nous, les cours de
-								prises en main, et toutes les questions en relation avec votre machine
-								sont gratuits et à volontés.
+								Dans notre magasin, pour les machines achetées chez nous, les cours de
+								prise en main et toutes les questions en relation avec votre machine
+								sont gratuits et à volonté.
 								<br />
 								Vous pourrez ainsi tout savoir sur le fonctionnement de votre machine,
-								canette, enfilage, utilisations des accessoires, et comment entretenir
+								sur la canette, sur l &apos;enfilage, sur l &apos;utilisation des accessoires, et comment entretenir
 								votre machine.
 							</p>
 						</div>

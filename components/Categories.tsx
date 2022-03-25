@@ -30,9 +30,9 @@ const Categories = () => (
 				<SectionTitle icon={["fas", "shopping-cart"]} title="Nos produits" />
 				<p className="tx-j">
 					Dans notre atelier, découvrez différentes machines à coudre de marque
-					reconnue; adaptée selon vos besoins tels que Madam 2 qui va vous
+					reconnue; adaptées selon vos besoins telles que Madam 2 qui va vous
 					accompagner dans vos créativités avec sa ligne moderne et généreuse et ses
-					capacités de Couture très variée! Stylist 4085 dotés de technologies
+					capacités de Couture très variées! Stylist 4085 dotée de technologies
 					modernes ou encore la brodeuse SE300 qui elle est complète et élégante!
 				</p>
 				{/* f-r-be-st f-w pd-t-20 */}

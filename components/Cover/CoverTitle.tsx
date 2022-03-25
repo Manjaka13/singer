@@ -31,7 +31,7 @@ const CoverTitle = (): JSX.Element => {
 
 	return (
 		<div className="cover-title f-c-st-ce w-60 h-100">
-			<h1 className="title white fs-500">Chez Singer, profitez de divers:</h1>
+			<h1 className="title white fs-500">Chez Singer, profitez de multiples :</h1>
 			<div className="text h-80px o-h br-10 bg-t mg-t-10">{mappedText}</div>
 		</div>
 	);
