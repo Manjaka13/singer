@@ -19,6 +19,8 @@ import {
     faHome,
     faUser,
     faKey,
+    faBullhorn,
+    faMoneyBillWave
 } from "@fortawesome/free-solid-svg-icons";
 
 /*
@@ -48,5 +50,7 @@ library.add(
     faCogs,
     faHome,
     faUser,
-    faKey
+    faKey,
+    faBullhorn,
+    faMoneyBillWave
 );

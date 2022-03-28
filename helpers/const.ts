@@ -7,6 +7,7 @@ import {
 	IService,
 	ITypeMachine,
 	IMercerie,
+	IPromotion,
 } from "helpers/interface";
 
 const SOCIAL: Array<ISocial> = [
@@ -164,8 +165,13 @@ const SLIDE_MERCERIE: Array<IMercerie> = [
 			"Proin porta iaculis purus, et congue nibh placerat eu. Mauris interdum lectus aliquet erat tincidunt suscipit ultricies eget purus. Nulla mattis orci eget iaculis pharetra. Vestibulum mattis magna non volutpat malesuada",
 		image: "/assets/mercerie/0.jpg",
 	},
-	
 ];
+
+const PROMOTION : IPromotion = {
+	description:"machine à coudre d'occasion",
+	price:"89€"
+}
+
 
 export {
 	SOCIAL,
@@ -178,4 +184,5 @@ export {
 	SERVICE,
 	TYPE_MACHINE,
 	SLIDE_MERCERIE,
+	PROMOTION
 };

@@ -9,38 +9,38 @@
 
 .t,
 .theme {
-    color: $color-theme;
+	color: $color-theme;
 }
 
 .bg-t,
 .bg-theme {
-    background: $color-theme;
+	background: $color-theme;
 }
 
 .white {
-    color: white;
+	color: white;
 }
 
 .bg-white {
-    background: white;
+	background: white;
 }
 
 .container {
-    @include flex-row(initial, flex-start);
-    width: 1400px;
-    margin: auto;
-    
-    @include screen-x(1700px) {
-        width: 1000px;
-    }
+	@include flex-row(initial, flex-start);
+	width: 1400px;
+	margin: auto;
 
-    @include screen-x(1400px) {
-        width: 90%;
-    }
+	@include screen-x(1700px) {
+		width: 1000px;
+	}
 
-    @include screen-x(900px) {
-        width: calc(100% - 20px);
-    }
+	@include screen-x(1400px) {
+		width: 90%;
+	}
+
+	@include screen-x(900px) {
+		width: calc(100% - 20px);
+	}
 }
 
 @import "./Navigation/Navbar.scss";
@@ -56,3 +56,4 @@
 @import "./Mercerie.scss";
 @import "./Login.scss";
 @import "./Spinner.scss";
+@import "./Promotion.scss";

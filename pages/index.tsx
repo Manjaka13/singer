@@ -6,6 +6,7 @@ import Footer from "components/Footer/Footer";
 import Services from "components/Services";
 import Categories from "components/Categories";
 import Mercerie from "components/Mercerie";
+import Promotion from "components/Promotion";
 
 /*
 	Home page
@@ -21,6 +22,7 @@ const HomePage = (): JSX.Element => (
 		<main className="w-100">
 			<Navigation />
 			<Cover />
+			<Promotion />
 			<Categories />
 			<Mercerie />
 			<Services />

@@ -62,3 +62,7 @@ export interface IMercerie {
 	description: string;
 	image: string;
 }
+export interface IPromotion{
+	description:string;
+	price : string
+}
