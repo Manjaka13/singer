@@ -15,9 +15,9 @@ import Promotion from "components/Promotion";
 const HomePage = (): JSX.Element => (
 	<Fragment>
 		<Heading
-			title="Acheter une machine à coudre Singer France"
-			description="Achetez des produits Singer France ou profitez de divers services."
-			image="/assets/representation.jpg"
+			title="Aventure Couture concenssionnaire SINGER"
+			description="Achetez des produits Aventure Couture et profitez de divers services."
+			image="/assets/representation.png"
 		/>
 		<main className="w-100">
 			<Navigation />

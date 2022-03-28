@@ -34,7 +34,7 @@ const Heading: FC<IHeadingProps> = ({
 		<meta property="og:type" content="website" />
 		<meta property="og:locale" content="fr_FR" />
 		<meta property="og:image" content={image} />
-		<meta property="og:site_name" content="Singer Chantepie" />
+		<meta property="og:site_name" content="Aventure Couture" />
 	</Head>
 );
 
