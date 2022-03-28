@@ -17,7 +17,7 @@ const HomePage = (): JSX.Element => (
 		<Heading
 			title="Aventure Couture concenssionnaire SINGER"
 			description="Achetez des produits Singer France ou profitez de divers services."
-			image="/assets/representation.png"
+			image="/assets/representation.jpg"
 		/>
 		<main className="w-100">
 			<Navigation />
