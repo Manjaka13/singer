@@ -13,8 +13,6 @@ const Heading: FC<IHeadingProps> = ({
 }): JSX.Element => (
 	<Head>
 		<meta charSet="utf-8" />
-		<script src="https://smtpjs.com/v3/smtp.js"></script>
-
 		<title>{title}</title>
 		<link rel="shortcut icon" href="/assets/singer.png" />
 		<meta name="theme-color" content="#e30044" />
