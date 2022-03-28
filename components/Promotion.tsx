@@ -14,7 +14,7 @@ const Promotion = (): JSX.Element => (
                 <SectionTitle icon={["fas", "bullhorn"]} title="Nos promotions du jour!" />
                 <p className="tx-j">
                     En ce moment chez Aventure Couture : achetez une <Icon className="icon__star" icon={["fas", "star"]} /><span className="bold">{PROMOTION.description}</span><Icon className="icon__star" icon={["fas", "star"]} />
-                    pour seulement à <Icon className="icon__price" icon={["fas", "money-bill-wave"]} /> <span className="price">{PROMOTION.price}</span> <Icon className="icon__price" icon={["fas", "money-bill-wave"]} /> !
+                    à partir de <Icon className="icon__price" icon={["fas", "money-bill-wave"]} /> <span className="price">{PROMOTION.price}</span> <Icon className="icon__price" icon={["fas", "money-bill-wave"]} /> !
                 </p>
             </div>
         </div>
